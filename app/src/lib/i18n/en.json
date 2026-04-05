@@ -72,7 +72,8 @@
     "exportJSON": "Export as JSON",
     "exportCSV": "Export as CSV",
     "startOver": "Start over",
-    "backToHome": "Back to Navigator"
+    "backToHome": "Back to Navigator",
+    "orType": "or type"
   },
   "footer": {
     "basedOn": "Based on the",

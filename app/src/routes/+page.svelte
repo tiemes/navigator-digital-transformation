@@ -19,7 +19,7 @@
   let step = $state('vision');
   let visionText = $state('');
   let analyzing = $state(false);
-  let ttsEnabled = $state(false);
+  let ttsEnabled = $state(true);
   let aiAnalysis = $state(null);
   let selectedBarriers = $state([]);
   let currentBarrierIndex = $state(0);
@@ -182,6 +182,7 @@ Nenne 4-8 Hindernisse, verteilt auf mindestens 2 Ebenen. Antworte in der Sprache
       barrier={selectedBarriers[currentBarrierIndex]}
       index={currentBarrierIndex}
       total={selectedBarriers.length}
+      {ttsEnabled}
       ondone={handleReflectionDone}
     />
   {:else if step === 'summary'}

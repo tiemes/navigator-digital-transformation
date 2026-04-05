@@ -1,8 +1,9 @@
 /**
  * api.js — Client-side API calls to the proxy server.
- * Sends requests to the Hono API proxy which forwards them to the LLM.
+ * Sends requests to the Hono API proxy which forwards them
+ * to the LLM, STT, and TTS endpoints.
  *
- * Used by: barrier lens flow, future voice integration
+ * Used by: conversation view, VoiceButton
  */
 
 const API_BASE = '/api';
@@ -30,6 +31,51 @@ export async function chat(messages, options = {}) {
   }
 
   return res.json();
+}
+
+/**
+ * Send audio to the STT proxy for transcription.
+ * @param {Blob} audioBlob - Audio data (webm/opus)
+ * @param {string} [language] - Language hint (default: 'de')
+ * @returns {Promise<string>} Transcribed text
+ */
+export async function transcribe(audioBlob, language = 'de') {
+  const formData = new FormData();
+  formData.append('file', audioBlob, 'recording.webm');
+  formData.append('language', language);
+
+  const res = await fetch(`${API_BASE}/transcribe`, {
+    method: 'POST',
+    body: formData,
+  });
+
+  if (!res.ok) {
+    const error = await res.json().catch(() => ({ error: 'Transcription failed' }));
+    throw new Error(error.error || `STT error: ${res.status}`);
+  }
+
+  const result = await res.json();
+  return result.text;
+}
+
+/**
+ * Send text to the TTS proxy and get audio back.
+ * @param {string} text - Text to speak
+ * @returns {Promise<Blob>} Audio blob (mp3)
+ */
+export async function speak(text) {
+  const res = await fetch(`${API_BASE}/tts`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ text }),
+  });
+
+  if (!res.ok) {
+    const error = await res.json().catch(() => ({ error: 'TTS failed' }));
+    throw new Error(error.error || `TTS error: ${res.status}`);
+  }
+
+  return res.blob();
 }
 
 /** Check if the API proxy is running and configured */

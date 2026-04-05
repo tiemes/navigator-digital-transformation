@@ -12,8 +12,20 @@
   },
   "nav": {
     "back": "Zurück",
+    "explore": "Kompass",
     "quickPulse": "Quick Pulse",
     "barriers": "Hindernisse"
+  },
+  "chat": {
+    "welcome": "Willkommen beim Navigator Digitaler Wandel",
+    "intro": "Dieser Navigator unterstützt dich und dein Team dabei, über den digitalen Wandel an eurer Schule nachzudenken. Es gibt keine richtigen oder falschen Antworten — nur eure Perspektive zählt.",
+    "placeholder": "Erzähl mir von eurer Schule...",
+    "send": "Senden",
+    "speak": "Sprechen",
+    "thinking": "Nachdenken...",
+    "disclaimer": "Der Navigator bewertet nicht — er regt zum Nachdenken an.",
+    "ttsOn": "Vorlesen an",
+    "ttsOff": "Vorlesen aus"
   },
   "topic": {
     "questions": "Reflexionsfragen",

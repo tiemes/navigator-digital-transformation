@@ -12,8 +12,20 @@
   },
   "nav": {
     "back": "Back",
+    "explore": "Compass",
     "quickPulse": "Quick Pulse",
     "barriers": "Barriers"
+  },
+  "chat": {
+    "welcome": "Welcome to the Navigator for Digital Transformation",
+    "intro": "This Navigator supports you and your team in reflecting on digital transformation at your school. There are no right or wrong answers — only your perspective matters.",
+    "placeholder": "Tell me about your school...",
+    "send": "Send",
+    "speak": "Speak",
+    "thinking": "Thinking...",
+    "disclaimer": "The Navigator does not judge — it provokes reflection.",
+    "ttsOn": "Read aloud on",
+    "ttsOff": "Read aloud off"
   },
   "topic": {
     "questions": "Reflection questions",

@@ -1,0 +1,51 @@
+{
+  "app": {
+    "title": "Navigator Digitaler Wandel",
+    "subtitle": "Selbstreflexion für Schulen im digitalen Wandel"
+  },
+  "compass": {
+    "title": "Kompass erkunden",
+    "description": "Wähle ein Thema, das dich interessiert. Es gibt keine richtige Reihenfolge — folge deiner Neugier.",
+    "questionCount": "Fragen",
+    "newQuestions": "NEU",
+    "visited": "besucht"
+  },
+  "nav": {
+    "back": "Zurück",
+    "quickPulse": "Quick Pulse",
+    "barriers": "Hindernisse"
+  },
+  "topic": {
+    "questions": "Reflexionsfragen",
+    "connected": "Verwandte Themen — wohin möchtest du als nächstes?",
+    "notes": "Deine Gedanken (optional)..."
+  },
+  "pulse": {
+    "skip": "Überspringen",
+    "next": "Weiter",
+    "finish": "Auswerten",
+    "result": "Dein Startpunkt",
+    "resultDesc": "Basierend auf deinen Antworten könnte dieses Thema ein guter Ausgangspunkt für vertieftes Nachdenken sein:",
+    "startHere": "Hier starten"
+  },
+  "barriers": {
+    "title": "Was bremst euch?",
+    "description": "Statt den Kompass linear durchzugehen, erkunde die Hindernisse. Auf welcher Ebene vermutest du die grössten Bremsen?",
+    "teacherLevel": "Ebene Lehrperson",
+    "teacherLevelDesc": "Kompetenzen, Haltungen, Unsicherheit, Zeitmangel",
+    "schoolLevel": "Ebene Schule",
+    "schoolLevelDesc": "Fehlende Vision, schwache Führung, keine Strukturen, wenig Kooperation",
+    "systemLevel": "Ebene System",
+    "systemLevelDesc": "Infrastruktur, Finanzierung, rechtlicher Rahmen, externer Support"
+  },
+  "footer": {
+    "basedOn": "Basierend auf dem",
+    "framework": "Kompass Digitaler Wandel",
+    "by": "der PH Zürich",
+    "license": "CC BY-SA"
+  },
+  "common": {
+    "loading": "Wird geladen...",
+    "error": "Ein Fehler ist aufgetreten"
+  }
+}

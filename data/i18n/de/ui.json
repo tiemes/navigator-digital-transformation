@@ -1,0 +1,68 @@
+{
+  "app": {
+    "title": "Navigator Digitaler Wandel",
+    "subtitle": "Selbstreflexion für Schulen im digitalen Wandel",
+    "description": "Ein interaktives Werkzeug basierend auf dem Kompass für den digitalen Wandel der PH Zürich"
+  },
+  "nav": {
+    "home": "Start",
+    "explore": "Entdecken",
+    "reflect": "Reflektieren",
+    "chat": "Gespräch",
+    "about": "Über uns",
+    "language": "Sprache"
+  },
+  "dimensions": {
+    "label": "Dimensionen",
+    "count": "{{count}} Themen"
+  },
+  "topics": {
+    "questions": "Reflexionsfragen",
+    "connections": "Verbindungen",
+    "relatedTopics": "Verwandte Themen",
+    "explore": "Thema erkunden",
+    "back": "Zurück zur Übersicht"
+  },
+  "reflection": {
+    "title": "Geführte Selbstreflexion",
+    "intro": "Die Fragen sollen zum Nachdenken anregen — es gibt keine richtigen oder falschen Antworten.",
+    "startPrompt": "Mit welcher Dimension möchten Sie beginnen?",
+    "yourThoughts": "Ihre Gedanken...",
+    "next": "Weiter",
+    "previous": "Zurück",
+    "skip": "Überspringen",
+    "finish": "Abschliessen",
+    "progress": "Fortschritt",
+    "explored": "erkundet",
+    "unexplored": "offen"
+  },
+  "chat": {
+    "title": "Freie Reflexion",
+    "placeholder": "Stellen Sie eine Frage zum digitalen Wandel...",
+    "send": "Senden",
+    "thinking": "Nachdenken...",
+    "disclaimer": "Der Navigator unterstützt Ihre Reflexion — er bewertet oder beurteilt nicht."
+  },
+  "common": {
+    "loading": "Wird geladen...",
+    "error": "Ein Fehler ist aufgetreten",
+    "retry": "Erneut versuchen",
+    "close": "Schliessen",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "yes": "Ja",
+    "no": "Nein"
+  },
+  "footer": {
+    "basedOn": "Basierend auf dem",
+    "framework": "Kompass für den digitalen Wandel",
+    "by": "der PH Zürich, Zentrum Medienbildung und Informatik",
+    "license": "Lizenziert unter CC BY-SA 4.0"
+  },
+  "glossary": {
+    "picts": "PICTS: Pädagogischer ICT-Support — Expert:innen für die didaktische Umsetzung von Medien und Informatik",
+    "ticts": "TICTS: Technischer ICT-Support",
+    "fourK": "4K: Kreativität, kritisches Denken, Kollaboration, Kommunikation",
+    "mi": "MI: Medien und Informatik"
+  }
+}

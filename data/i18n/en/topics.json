@@ -1,0 +1,397 @@
+{
+  "dimensions": {
+    "people-skills": {
+      "name": "People/Skills",
+      "shortName": "People"
+    },
+    "teaching-learning": {
+      "name": "Teaching/Learning",
+      "shortName": "Teaching"
+    },
+    "organisation-structures": {
+      "name": "Organisation/Structures",
+      "shortName": "Organisation"
+    },
+    "cooperation-team": {
+      "name": "Team/Cooperation",
+      "shortName": "Team"
+    },
+    "infrastructure": {
+      "name": "Infrastructure",
+      "shortName": "Infrastructure"
+    }
+  },
+  "topics": {
+    "personal-social-skills": {
+      "name": "Personal/social skills",
+      "questions": [
+        "How do we recognise we exemplify the 4 Cs (creativity, critical thinking, collaboration, communication)?",
+        "Do we consider ourselves learners? Do learners also perceive us in this way?",
+        "How do we motivate ourselves to learn new things?",
+        "How do we learn to understand mistakes as something useful?",
+        "How do we deal with our own mistakes? How do we deal with learners' mistakes?",
+        "How do we deal with change? How can team members participate in change processes?",
+        "How do we collaborate with others?",
+        "How do we deal with different mindsets and perspectives within the team?",
+        "How are the team members' self-management skills? How can digital tools support them?"
+      ]
+    },
+    "professional-skills-media-cs": {
+      "name": "Professional skills in media and computer science",
+      "questions": [
+        "How do we build and expand professional knowledge in the areas of media education and computer science? What support and training programmes are needed?",
+        "What role does school management (PICTS, TICTS, subject leaders, etc.) play in building professional competence?"
+      ]
+    },
+    "specialised-didactics-media-cs": {
+      "name": "Specialised didactics in media and computer science",
+      "questions": [
+        "How can interdisciplinary references to media and computer science succeed?",
+        "Which methods are suitable for promoting the learners' professional knowledge in media and computer science?",
+        "What support and training programmes are needed?"
+      ]
+    },
+    "media-didactics": {
+      "name": "Media didactics",
+      "questions": [
+        "How can digital media be didactically embedded in teaching and learning units in order to develop new teaching content and expand skills? (media didactic skills)",
+        "How can we always keep digital media in mind as a self-evident teaching and learning tool for all subject areas?",
+        "What support and training programmes are needed?"
+      ]
+    },
+    "application-skills-teachers": {
+      "name": "Application skills (teachers)",
+      "questions": [
+        "What application skills do teachers need for their everyday school life (teaching, but also teamwork)?",
+        "How do we ensure that all employees have these skills?",
+        "How do we strengthen and expand employee skills in dealing with newer technologies?",
+        "What support and training programmes are needed?"
+      ]
+    },
+    "mindsets": {
+      "name": "Mindsets",
+      "questions": [
+        "How open / curious / flexible / motivated / innovative / persistent are we? How do we use these mindsets for our own development?",
+        "What values are important to us? How can we cultivate these values when faced with the digital transformation?",
+        "How high is our ability to reflect? How do we deal with opposition?",
+        "How do we deal with different mindsets in our team?",
+        "How do we define good teaching? How do we define learning?",
+        "What are the opportunities and risks involved in the use of digital media in the classroom?",
+        "How is our understanding of learning, education and roles changing as a result of the digital transformation?"
+      ]
+    },
+    "parent-participation": {
+      "name": "Parent participation",
+      "questions": [
+        "How do we work together with parents? How do we assume joint responsibility when it comes to media education?",
+        "How do we involve parents in our school development process?",
+        "How do students learn with digital media at home? What rules apply for the use of school devices?",
+        "How do we explain to parents our ideas on learning with, using and despite the media?",
+        "How do we work successfully with parents who speak a different language at home?"
+      ]
+    },
+    "learning-culture": {
+      "name": "Learning culture",
+      "questions": [
+        "How do we define \"learning\"? How and what should our learners be able to learn with us?",
+        "How do we define education? How is this definition changing in view of the digital transformation?",
+        "How can we constantly improve the quality of teaching? What contribution can digital media make to improving the quality of teaching?",
+        "How can all participants take responsibility for their own learning?",
+        "How is the role of the teacher changing as a result of the digital transformation? (For example, all of humanity's knowledge can now be accessed anytime, anywhere). And how is the role of the learner changing?",
+        "How do learners give feedback to the teacher and to each other?"
+      ]
+    },
+    "interdisciplinary-skills": {
+      "name": "(Inter-)disciplinary skills",
+      "questions": [
+        "What requirements await students when entering their working lives with regard to the digital transformation?",
+        "How do we promote interdisciplinary skills? Which skills are important for the 21st century? How do we promote the 4 Cs?",
+        "Which (inter-)disciplinary competencies can be enhanced through the use of digital media?",
+        "How do we enable skills-based learning?",
+        "Skills build up from knowledge, ability and will – how can we support this \"will\"? What influence do digital media have on learning motivation?"
+      ]
+    },
+    "assessment": {
+      "name": "Assessment",
+      "questions": [
+        "Why do we assess?",
+        "How do we assess learning processes, products, (inter-)disciplinary skills, etc.?",
+        "How do we make use of digital media in (skills-based) assessment?",
+        "When do we use formative and when do we use summative assessment, and for what purpose?",
+        "How do we create an overall assessment? How do we convert this into a grade?",
+        "Do we work with portfolios? If yes: how? If no: why not?"
+      ]
+    },
+    "teaching-learning-units": {
+      "name": "Teaching/learning units",
+      "questions": [
+        "How do we use media in the classroom for: discovery learning / cooperative learning / frontal teaching / workshop teaching / weekly plan / project teaching / blended learning / collective or individualised teaching? And what impact do we expect this media use to have on student learning?",
+        "Which model do we use for planning, implementing and evaluating our lessons?",
+        "How do we support students individually on their learning path?",
+        "In which ways do we give students feedback on their learning processes? How often do we do this and for what purpose? What is the potential and what are the limitations of digital media when giving feedback?"
+      ]
+    },
+    "learning-platforms-tools": {
+      "name": "Learning platforms, teaching resources, tools",
+      "questions": [
+        "Which learning platforms do we use for the personalised support of students?",
+        "Which digital resources do we use to build reproducible knowledge and basic skills?",
+        "Which tools do we use to document and reflect on the learning process?",
+        "Which digital tools do we use for creative activities and for experimenting?",
+        "What digital teaching resources and materials are available to us for knowledge building?"
+      ]
+    },
+    "media-cs-curriculum": {
+      "name": "Media and computer science curriculum",
+      "questions": [
+        "Do we know what the content of the media and computer science curriculum is?",
+        "How can students build these skills?",
+        "When do we work on which skills? What time frames do we set up?",
+        "How do we communicate with each other? How do we incorporate media and computer science into our annual planning?",
+        "Where and how do we already implement the media and computer science curriculum?",
+        "What teaching resources, materials, technologies, etc., do we work with?",
+        "What cross-curricular references can be made to the media and computer science curriculum?"
+      ]
+    },
+    "media-education-rules": {
+      "name": "Media education and rules",
+      "questions": [
+        "What rules apply to the use of media at our school?",
+        "How do we support students in developing a critical, autonomous and productive approach to digital media?",
+        "How do we integrate the children's environment (which is strongly influenced by digital media) into our lessons?",
+        "How do we deal with the potential for distraction?",
+        "Who supports us in questions of media education?"
+      ]
+    },
+    "class-administration": {
+      "name": "Class administration",
+      "questions": [
+        "How are classes prepared?",
+        "How and where is learning progress documented?",
+        "How and where are absences, notes on parent meetings or assessments recorded?",
+        "How is this information shared among stakeholders?"
+      ]
+    },
+    "vision": {
+      "name": "Vision",
+      "questions": [
+        "Who are we? How could our pedagogical profile be described in one sentence?",
+        "What is the definition of learning at our school?",
+        "What are the contents of our mission statement and how are they implemented?",
+        "How do we envision our school in 2030? In which directions do we want our school to develop?",
+        "How does our vision relate to our roadmap?",
+        "How do we create shared energy to achieve challenging goals?",
+        "How should our school react to the digital transformation?"
+      ]
+    },
+    "structures-processes": {
+      "name": "Structures and processes",
+      "questions": [
+        "Which steering groups/project groups exist? What is their task? Who leads them? What is the optimal group composition? How is the cooperation with the school management/authority regulated?",
+        "How can we streamline our administration?",
+        "How is student data managed?",
+        "How efficient and flexible are our processes?",
+        "Which processes do we adapt? Which ones are to be digitised, and which ones are deliberately not?",
+        "Which legal framework is required for the adaptation of structures and processes? How much leeway do we have within this framework?"
+      ]
+    },
+    "concept": {
+      "name": "Concept",
+      "questions": [
+        "Is there a defined (pedagogical) media and ICT concept? Is it up to date? Is it known across the team and how is it being applied?",
+        "What is the impact that the (pedagogical) ICT concept should aim to achieve?",
+        "How is our perception of learning reflected in the concept?",
+        "Who is involved in developing the concept? Who takes on which role?",
+        "How can we prevent the concept only being successful on paper, but having no meaning in real life?"
+      ]
+    },
+    "support": {
+      "name": "Support",
+      "questions": [
+        "Who will provide technical and educational support? How many working hours are provided?",
+        "What does the support job profile include?",
+        "What skills do these people need to have? What are their strengths?",
+        "How is the exchange and teamwork between these two departments organised?",
+        "What time slots are set up for support?",
+        "How is it ensured that use is made of this offer?"
+      ]
+    },
+    "leadership": {
+      "name": "Leadership",
+      "questions": [
+        "In which aspects does the school management act as a role model with regard to the digital transformation? And in the future?",
+        "What is the role and expertise of school leadership in this field?",
+        "Who else has relevant expertise on the digital transformation and how is this shared? Where do we still have shortcomings and how does the management deal with them?",
+        "How does the school management team empower pedagogical and technical ICT support staff in their functions?",
+        "What is the role of the school board and what format does this teamwork take?",
+        "How are employees involved and informed by the school management team during changes in processes?",
+        "How are freedom/autonomy and commitment/standards handled?",
+        "How are priorities for individual and team training determined?"
+      ]
+    },
+    "learning-spaces": {
+      "name": "Learning spaces",
+      "questions": [
+        "Where do the students learn, where do the employees learn? How do they learn there?",
+        "How do we describe the ideal learning space?",
+        "How are the learning spaces designed and furnished?",
+        "How can we make the best use of the space available at our school?"
+      ]
+    },
+    "innovation": {
+      "name": "Innovation",
+      "questions": [
+        "Why is innovation needed?",
+        "How do we define \"innovation\" and \"change\"?",
+        "Which people and groups are the innovation drivers at our school? Who are the preservers?",
+        "How do we succeed in involving all employees? How do we deal with sceptics and motivate them?",
+        "Do we have clear objectives and timelines for our innovation projects?",
+        "Which methods can support us throughout our change processes?",
+        "How are innovative teachers attracted? What ensures that the school remains attractive to this group of teachers?"
+      ]
+    },
+    "public-relations": {
+      "name": "Public relations",
+      "questions": [
+        "What channels do we use to communicate with the public?",
+        "How do we inform the community about our activities?",
+        "How and where do we display our pedagogical profile?",
+        "How do we make our everyday school life visible to parents and the public? What image do we convey with our website and our social media presence?",
+        "What is the public's impression of us?"
+      ]
+    },
+    "cooperation": {
+      "name": "Cooperation",
+      "questions": [
+        "How high is the willingness to cooperate?",
+        "When and how do we work together in which groups?",
+        "What do we need to be able to work together productively?",
+        "How do we build trust? How do we support each other?",
+        "How is the teamwork organised? To what extent does the school management demand mandatory cooperation?",
+        "How can we use resources more effectively through teamwork?",
+        "Which tools do we use to cooperate (independent of time and location)?",
+        "How do we build a network with other schools, experts and organisations?"
+      ]
+    },
+    "knowledge-management": {
+      "name": "Knowledge management",
+      "questions": [
+        "How do we exchange our knowledge? Which formal and informal channels are used?",
+        "Are we willing to share our materials? Are we willing to use other people's materials? Is the sharing of materials mandatory?",
+        "How do we structure our file system so that the files can be found permanently within a useful period of time? Who is responsible for maintaining the file system?",
+        "What resources are available for the further development and transfer of organisational knowledge?"
+      ]
+    },
+    "communication": {
+      "name": "Communication",
+      "questions": [
+        "Where and how do we communicate, online or offline?",
+        "Which meeting has which purpose? What do we use the meeting time for? Is everyone present at the meeting? Who needs to be there? Can we have meetings online?",
+        "How do we exchange information in the different teams, school levels, departments?",
+        "How do we interact with the community?",
+        "How do we involve all stakeholders?",
+        "Which response times and formal requirements apply to which channels?",
+        "How do we exchange ideas with students, other teachers, school management and parents?"
+      ]
+    },
+    "team-culture": {
+      "name": "Team culture",
+      "questions": [
+        "What can we do to make everyone involved take responsibility for themselves and the community?",
+        "How do we involve the various professions and part-time employees as effectively as possible?",
+        "How do we promote social awareness among all stakeholders?",
+        "Where and how do we intentionally emphasise community building?",
+        "How do we navigate in a world that is becoming more and more complex? How do we exemplify this to our students?",
+        "How do we explain our team and error culture to parents and the public? (cooperation)"
+      ]
+    },
+    "dynamics-emotions": {
+      "name": "Dynamics and emotions",
+      "questions": [
+        "What is the level of willingness/energy in the team to embrace innovation?",
+        "What dynamics and emotions are found in our team during innovations?",
+        "How can positive energies be bundled to move forward together?",
+        "What conditions favour positive dynamics?",
+        "How can emotions and stress be dealt with constructively and appropriately?",
+        "How do we make stakeholders feel socially and emotionally safe?"
+      ]
+    },
+    "working-devices": {
+      "name": "Working devices",
+      "questions": [
+        "Which working devices are available to the students? Which ones are available to the employees?",
+        "Which quantity framework per grade do we choose?",
+        "How do we distribute/manage software (MDM)?",
+        "How must the student devices be configured? What restrictions are necessary?",
+        "Which apps and services are available to students? Which software can be installed on the work device? Which ones are already preinstalled?",
+        "How satisfied are we with the current infrastructure? How difficult would it be to switch to another operating system?",
+        "What factors are considered when making acquisition decisions?"
+      ]
+    },
+    "basic-infrastructure": {
+      "name": "Basic infrastructure",
+      "questions": [
+        "Is our network secure, fast and stable enough?",
+        "Is the bandwidth of our internet connection sufficient? Do we need a redundant line?",
+        "Are wired and wireless connections available where needed?",
+        "Which multimedia technology do we need in which rooms? What forms of teaching and learning does it encourage?",
+        "Who must be able to print where?",
+        "What equipment do we need?",
+        "Is the safety technology in our buildings up to date?"
+      ]
+    },
+    "software-services": {
+      "name": "Software/services",
+      "questions": [
+        "Which operating system do we work with?",
+        "What software / tools / platforms do we need to achieve our goals?",
+        "How is the software managed? Who is responsible for licenses and accounts?",
+        "How is the procurement and renewal process for software and licenses organised?",
+        "Where is the data stored? Does our school comply with the rules on data protection?",
+        "How do we ensure that students and employees can work and learn regardless of location and time?"
+      ]
+    },
+    "security": {
+      "name": "Security",
+      "questions": [
+        "What does our risk culture look like? How can the school ensure that everyone involved can move safely?",
+        "Which safety aspects have to be considered?",
+        "What do stakeholders (students, teachers, school management, PICTS, TICTS, etc.) need to know about safety? How do they have to act accordingly?",
+        "What technical security measures do we have (virus protection, updates, filters, etc.)?",
+        "How do we ensure physical protection? (storage, server room, cabinets, access regulations)",
+        "How do we ensure data security? Who is responsible for backups?"
+      ]
+    },
+    "services": {
+      "name": "Services",
+      "questions": [
+        "How is the technical support organised (1st, 2nd, 3rd level)?",
+        "What services are available to us?",
+        "How fast and reliable is the support provided by external service companies?",
+        "How well are we advised on new acquisitions? How important are pedagogical requirements?",
+        "How will we be trained to use new services?"
+      ]
+    },
+    "legal-aspects": {
+      "name": "Legal aspects",
+      "questions": [
+        "How do we raise awareness of data protection issues? How do we protect the data of all stakeholders?",
+        "Have liability issues for material and immaterial damage been clarified?",
+        "How are licences managed and by whom? How do we ensure there are no licence agreement violations?",
+        "How do we make sure that all parties involved comply with copyright law? What rights do we grant to the school's intellectual property?",
+        "How do we assume our responsibility under criminal law? How do we proceed in the event of violations?"
+      ]
+    },
+    "funding": {
+      "name": "Funding",
+      "questions": [
+        "What is the school's procurement process?",
+        "Who determines the decision-making basis for new acquisitions? Who is involved in the decision, when and how?",
+        "Do we need a public bidding process? Do we need support for this?",
+        "How are (recurring) costs for the software, support, training and maintenance calculated?",
+        "Do we fund the renewals through leasing or purchase?",
+        "If teachers bring their own devices: what annual amount do they receive for this?"
+      ]
+    }
+  }
+}

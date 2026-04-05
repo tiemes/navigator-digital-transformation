@@ -1,0 +1,14 @@
+{
+  "name": "navigator-api",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.12",
+    "hono": "^4.7.0"
+  }
+}

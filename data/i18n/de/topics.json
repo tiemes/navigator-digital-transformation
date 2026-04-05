@@ -1,0 +1,399 @@
+{
+  "dimensions": {
+    "people-skills": {
+      "name": "Personen/Kompetenzen",
+      "shortName": "Personen"
+    },
+    "teaching-learning": {
+      "name": "Unterricht",
+      "shortName": "Unterricht"
+    },
+    "organisation-structures": {
+      "name": "Organisation/Strukturen",
+      "shortName": "Organisation"
+    },
+    "cooperation-team": {
+      "name": "Team/Kooperation",
+      "shortName": "Team"
+    },
+    "infrastructure": {
+      "name": "Infrastruktur",
+      "shortName": "Infrastruktur"
+    }
+  },
+  "topics": {
+    "personal-social-skills": {
+      "name": "Personale/soziale Kompetenzen",
+      "questions": [
+        "Woran erkennt man, dass wir die 4K vorleben?",
+        "Sind wir selbst Lernende? Nehmen uns auch die Lernenden so wahr?",
+        "Wie motivieren wir uns, Neuland zu beschreiten?",
+        "Wie lernen wir, Fehler als etwas Sinnvolles zu verstehen, aus denen wir lernen können?",
+        "Wie gehen wir mit eigenen Fehlern um? Wie mit jenen der Lernenden?",
+        "Wie gehen wir mit Veränderungen um? Wie werden diese angenommen und mitgestaltet?",
+        "Wie arbeiten wir mit anderen zusammen?",
+        "Wie gehen wir mit unterschiedlichen Haltungen/Sichtweisen im Team um?",
+        "Wie ist die Selbstorganisationskompetenz der einzelnen Personen? Wie unterstützen uns digitale Werkzeuge dabei?"
+      ]
+    },
+    "professional-skills-media-cs": {
+      "name": "Fachkompetenz Medien Informatik",
+      "questions": [
+        "Wie bauen wir das fachliche Wissen in den Bereichen Medienbildung und Informatik auf und aus? (Fachkompetenz Medien Informatik)",
+        "Welche Unterstützungs- und Weiterbildungsmassnahmen werden benötigt?",
+        "Welche Rolle übernehmen Schulleitung, PICTS, Fachverantwortliche etc. beim Aufbau der Fachkompetenz?"
+      ]
+    },
+    "specialised-didactics-media-cs": {
+      "name": "Fachdidaktik Medien Informatik",
+      "questions": [
+        "Wie können bei den Lernenden die Kompetenzen des Lehrplans 21 in den Bereichen MI aufgebaut werden? (fachdidaktische Kompetenz Medien Informatik)",
+        "Wie gelingen fächerübergreifende Bezüge zu MI?",
+        "Welche Methoden eigenen sich, um das fachliche Wissen bei den Schüler:innen zu fördern? Wie gestalten wir den MI-Unterricht anregend und zielführend?",
+        "Welche Unterstützungs- und Weiterbildungsmassnahmen werden benötigt?"
+      ]
+    },
+    "media-didactics": {
+      "name": "Mediendidaktik",
+      "questions": [
+        "Wie können digitale Medien didaktisch sinnvoll in Lehr- und Lernarrangements eingebettet werden, um neue Unterrichtsinhalte zu erarbeiten und Kompetenzen zu erweitern? (mediendidaktische Kompetenz)",
+        "Wie können wir digitale Medien als selbstverständliches Lehr- und Lernwerkzeug für alle Fachbereichen immer im Auge haben? (Stichwort: Medienbrille)",
+        "Welche Unterstützungs- und Weiterbildungsmassnahmen werden benötigt?"
+      ]
+    },
+    "application-skills-teachers": {
+      "name": "Anwendungskompetenzen LP",
+      "questions": [
+        "Welche Anwendungskompetenzen benötigen LP für den Schulalltag (Unterricht, aber auch Zusammenarbeit im Team)?",
+        "Wie stellen wir sicher, dass alle Mitarbeitenden über diese Kompetenzen verfügen?",
+        "Wie stärken und erweitern wir die Skills und Kompetenzen der Mitarbeitenden im Umgang mit neueren Technologien?",
+        "Welche Unterstützungs- und Weiterbildungsmassnahmen werden benötigt?"
+      ]
+    },
+    "mindsets": {
+      "name": "Haltungen",
+      "questions": [
+        "Wie offen / neugierig / flexibel / motiviert / innovativ / beharrlich sind wir? Wie nutzen wir diese Haltungen für unsere Entwicklung?",
+        "Welche Werte sind uns wichtig? Wie können wir unter den Voraussetzungen des digitalen Wandels diese Werte pflegen?",
+        "Wie hoch ist unsere Reflexionsfähigkeit? Wie gehen wir mit Widerständen um?",
+        "Wie gehen wir mit unterschiedlichen Haltungen in unserem Team um?",
+        "Was verstehen wir unter gutem Unterricht? Was heisst für uns Lernen?",
+        "Welche Chancen und Risiken sehen wir bei der Nutzung von digitalen Medien im Unterricht?",
+        "Wie verändert sich unser Lern-, Bildungs- und Rollenverständnis durch den digitalen Wandel?"
+      ]
+    },
+    "parent-participation": {
+      "name": "Zusammenarbeit mit Eltern",
+      "questions": [
+        "Wie arbeiten wir mit den Eltern zusammen? Wie nehmen wir die gemeinsame Verantwortung in Bezug auf die Medienerziehung wahr?",
+        "Wie beziehen wir die Eltern in unseren Schulentwicklungsprozess ein?",
+        "Wie lernen die Schülerinnen und Schüler zu Hause mit digitalen Medien? Welche Regeln gelten für die Nutzung schulischer Geräte?",
+        "Wie erklären wir den Eltern unsere Vorstellungen über das Lernen mit, über und trotz Medien?",
+        "Wie gestalten wir die Zusammenarbeit mit fremdsprachigen Eltern?"
+      ]
+    },
+    "learning-culture": {
+      "name": "Lernkultur",
+      "questions": [
+        "Was verstehen wir unter «Lernen»? Wie und was sollen unsere Schülerinnen und Schüler bei uns lernen können?",
+        "Was verstehen wir unter Bildung? Wie ändert sich dieses Verständnis angesichts des digitalen Wandels?",
+        "Wie können wir die Unterrichtsqualität ständig verbessern? Welchen Beitrag können digitale Medien zur Verbesserung der Unterrichtsqualität leisten?",
+        "Wie können alle Beteiligten Verantwortung für ihr Lernen übernehmen?",
+        "Wie verändert sich die Rolle der Lehrperson durch den digitalen Wandel, beispielsweise durch den Umstand, dass das gesamte Wissen der Menschheit jederzeit und überall abrufbar ist? Und wie verändert sich die Rolle der Lernenden?",
+        "Wie geben die Lernenden der Lehrperson und sich gegenseitig Feedbacks?"
+      ]
+    },
+    "interdisciplinary-skills": {
+      "name": "(über-)fachliche Kompetenzen",
+      "questions": [
+        "Welche Anforderungen erwarten die Lernenden im Zeichen des digitalen Wandels beim Eintritt ins Arbeitsleben?",
+        "Wie fördern wir die überfachlichen Kompetenzen? Welche Kompetenzen sind für das 21. Jahrhundert wichtig? Wie fördern wir die 4K?",
+        "Welche (über-)fachlichen Kompetenzen können durch den Einsatz von digitalen Medien gefördert werden?",
+        "Wie ermöglichen wir kompetenzorientiertes Lernen?",
+        "Kompetenzen bauen sich aus Wissen, Können, Wollen auf – was fördert das «Wollen»? Welchen Einfluss können digitale Medien auf die Lernmotivation haben?"
+      ]
+    },
+    "assessment": {
+      "name": "Beurteilung",
+      "questions": [
+        "Warum beurteilen wir?",
+        "Wie beurteilen wir die Lernprozesse, Produkte, die (über-)fachlichen Kompetenzen usw.?",
+        "Wie setzen wir digitale Medien bei der (kompetenzorientierten) Beurteilung ein?",
+        "Wann nutzen wir die formativen und wann die summativen Beurteilungsformen und zu welchem Zweck?",
+        "Wie erstellen wir eine Gesamtbeurteilung? Wie überführen wir diese in eine Zeugnisnote?",
+        "Arbeiten wir mit Portfolios? Falls ja: Wie? Falls nein: Warum nicht?"
+      ]
+    },
+    "teaching-learning-units": {
+      "name": "Arrangements",
+      "questions": [
+        "Wie werden Medien im Unterricht eingesetzt für: entdeckendes Lernen / kooperatives Lernen / Frontalunterricht / Werkstattunterricht / Wochenplan / Projektunterricht / Blended Learning / gemeinsamen oder individualisierten Unterricht? Und welchen Einfluss versprechen wir uns von diesem Medieneinsatz auf das Lernen der Schülerinnen und Schüler?",
+        "An welchem Modell orientieren wir uns bei der Planung, Durchführung und Auswertung unseres Unterrichts?",
+        "Wie begleiten wir Lernende individuell auf ihrem Lernweg?",
+        "In welcher Form geben wir den Lernenden Feedback zu ihren Lernprozessen? Wie häufig tun wir dies und zu welchem Zweck? Welche Chancen und Grenzen bieten digitale Medien zum Geben von Feedback?"
+      ]
+    },
+    "learning-platforms-tools": {
+      "name": "Lernplattformen, Lehrmittel, Tools",
+      "questions": [
+        "Welche Lernplattformen nutzen wir für die individuelle Begleitung der Lernenden?",
+        "Welche digitalen Angebote nutzen wir für den Aufbau von reproduzierbarem Wissen und Grundfertigkeiten?",
+        "Welche Tools nutzen wir, um den Lernprozess zu dokumentieren und reflektieren?",
+        "Welche digitalen Werkzeuge nutzen wir für kreative Aktivitäten und fürs Experimentieren?",
+        "Welche digitalen Lehrmittel und Materialien stehen uns für den Wissenserwerb zur Verfügung?"
+      ]
+    },
+    "media-cs-curriculum": {
+      "name": "Modullehrplan Medien Informatik",
+      "questions": [
+        "Kennen wir die Inhalte des Modullehrplans MI?",
+        "Wie kann der Aufbau dieser Kompetenzen bei den Schülerinnen und Schüler gefördert werden?",
+        "Wann arbeiten wir an welchen Kompetenzen? Welche Zeitgefässe richten wir ein?",
+        "Wie sprechen wir uns ab? Wie binden wir MI in unsere Jahresplanung mit ein?",
+        "Wo und wie setzen wir den Modullehrplan schon um?",
+        "Mit welchen Lehrmitteln, Materialien, Technologien usw. arbeiten wir?",
+        "Welche fächerübergreifenden Bezüge können zum Modullehrplan hergestellt werden?"
+      ]
+    },
+    "media-education-rules": {
+      "name": "Medienerziehung, Regeln",
+      "questions": [
+        "Welche Regeln gelten für die Mediennutzung an unserer Schule?",
+        "Wie unterstützen wir die Lernenden bei der Entwicklung eines kritischen, selbstbestimmten und produktiven Umgangs mit digitalen Medien?",
+        "Wie nehmen wir die von digitalen Medien geprägte Lebenswelt der Kinder im Unterricht auf?",
+        "Wie gehen wir mit dem Ablenkungspotential um?",
+        "Wer unterstützt uns in medienerzieherischen Fragen?"
+      ]
+    },
+    "class-administration": {
+      "name": "Klassenadministration",
+      "questions": [
+        "Wie wird Unterricht vorbereitet?",
+        "Wie und wo werden Lernfortschritte dokumentiert?",
+        "Wie und wo werden Absenzen, Entschuldigungen, Notizen zu Elterngesprächen oder Beurteilungen festgehalten?",
+        "Wie werden diese Informationen unter den Beteiligten ausgetauscht?"
+      ]
+    },
+    "vision": {
+      "name": "Vision",
+      "questions": [
+        "Wer sind wir? Wie könnte man unser pädagogisches Profil mit einem Satz beschreiben?",
+        "Welches Bild von Lernen haben wir an unserer Schule?",
+        "Was sind die Inhalte unseres Leitbildes und wie werden diese gelebt?",
+        "Wie stellen wir uns unsere Schule im Jahr 2030 vor? Wohin wollen wir?",
+        "Wie fliesst unsere Vision in die Legislaturziele und ins Schulprogramm ein?",
+        "Wie schaffen wir gemeinsame Energie für herausfordernde Ziele?",
+        "Wie soll unsere Schule auf den digitalen Wandel reagieren?"
+      ]
+    },
+    "structures-processes": {
+      "name": "Strukturen und Prozesse",
+      "questions": [
+        "Welche Steuergruppen/Projektgruppen gibt es? Was ist ihre Aufgabe? Wer leitet diese? Wie sieht eine optimale Zusammensetzung aus? Wie ist die Kooperation mit der Schulleitung/Behörde?",
+        "Wie verschlanken wir unsere Administration?",
+        "Wie werden Daten von Schüler:innen verwaltet?",
+        "Wie effizient und flexibel sind unsere Prozesse?",
+        "Welche Prozesse passen wir an? Welche werden digitalisiert, welche bewusst nicht?",
+        "Welches ist der gesetzliche Rahmen für die Anpassung von Strukturen und Prozessen? Welche Freiräume können wir nutzen?"
+      ]
+    },
+    "concept": {
+      "name": "Konzept",
+      "questions": [
+        "Existiert ein (pädagogisches) Medien- und ICT-Konzept? Ist es aktuell? Ist es im Team bekannt und wie wird es gelebt?",
+        "Was soll das (pädagogische) ICT-Konzept bewirken?",
+        "Wie wird unser Verständnis des Lernens im Konzept abgebildet?",
+        "Wer beteiligt sich an der Konzeptentwicklung? Wer hat welche Rolle?",
+        "Wie kann ein «Papiertiger» verhindert werden?"
+      ]
+    },
+    "support": {
+      "name": "Support",
+      "questions": [
+        "Wer übernimmt den technischen und pädagogischen Support mit wie vielen Stunden?",
+        "Was beinhaltet das Stellenprofil des Supports?",
+        "Weshalb sind diese Personen besonders für diese Aufgabe geeignet? Was sind ihre Stärken?",
+        "Wie wird der Austausch und die Zusammenarbeit zwischen diesen beiden Stellen organisiert?",
+        "Welche Supportgefässe werden eingerichtet?",
+        "Wie wird sichergestellt, dass das Angebot abgeholt wird?"
+      ]
+    },
+    "leadership": {
+      "name": "Führung",
+      "questions": [
+        "Wo übernimmt die Schulleitung eine Vorbildfunktion in Bezug auf den digitalen Wandel? Und in Zukunft?",
+        "Welche Rolle und Expertise hat die Schulleitung in diesem Themenfeld?",
+        "Wer hat sonst relevante Expertise zum digitalen Wandel und wie wird diese eingebracht? Wo haben wir noch Lücken und wie geht die Führung damit um?",
+        "Wo stärkt die Schulleitung pädagogische und technische ICT-Supportpersonen in ihren Funktionen?",
+        "Welche Rolle hat die Schulbehörde und wie gestaltet sich die Zusammenarbeit?",
+        "Wie sind Mitarbeitende bei Veränderungsprozessen durch die Schulleitung beteiligt und informiert?",
+        "Wie gestaltet sich der Umgang mit Freiheit/Autonomie und Verbindlichkeit/Standards?",
+        "Wie werden Schwerpunkte für die individuelle und teaminterne Weiterbildung festgelegt?"
+      ]
+    },
+    "learning-spaces": {
+      "name": "Lernorte",
+      "questions": [
+        "Wo lernen die Schülerinnen und Schüler, wo lernen die Mitarbeitenden? Wie lernen sie dort?",
+        "Was gehört alles zum Lernort Schule?",
+        "Wie sind die Lernräume gestaltet, eingerichtet?",
+        "Wie können wir den uns zur Verfügung stehenden Raum an unserer Schule optimal nutzen und einsetzen?"
+      ]
+    },
+    "innovation": {
+      "name": "Innovation",
+      "questions": [
+        "Warum braucht es Innovation?",
+        "Was verstehen wir unter «Innovation» und «Change»?",
+        "Welche Personen und Gruppen sind die Innovationstreiber:innen an unserer Schule? Wer sind die Bewahrer:innen?",
+        "Wie gelingt die Beteiligung aller Mitarbeitenden? Wie nehmen wir die Skeptikerinnen und Skeptiker mit auf den Weg?",
+        "Haben wir klare Ziel- und Zeitvorgaben für unsere Innovationsprojekte?",
+        "Welche Methoden unterstützen uns bei unseren Change-Prozessen?",
+        "Wie werden innovative Lehrpersonen angezogen? Was sorgt dafür, dass die Schule für solche Personen attraktiv bleibt?"
+      ]
+    },
+    "public-relations": {
+      "name": "Öffentlichkeitsarbeit",
+      "questions": [
+        "Welche Kanäle nutzen wir für die Kommunikation mit der Öffentlichkeit?",
+        "Wie informieren wir unser Umfeld über unsere Aktivitäten?",
+        "Wie und wo bilden wir unser pädagogisches Profil ab?",
+        "Wie machen wir unseren Schulalltag für Eltern und Öffentlichkeit sichtbar? Welches Bild geben wir mit unserer Website und unserem Social-Media-Auftritt ab?",
+        "Wie werden wir in der Bevölkerung wahrgenommen?"
+      ]
+    },
+    "cooperation": {
+      "name": "Kooperation",
+      "questions": [
+        "Wie hoch ist die Kooperationsbereitschaft?",
+        "Wann und wie arbeiten wir in welchen Konstellationen zusammen?",
+        "Was brauchen wir, um produktiv miteinander arbeiten zu können?",
+        "Wie schaffen wir Vertrauen? Wie unterstützen wir uns?",
+        "Wie ist die Zusammenarbeit organisiert? Inwiefern fordert die Schulleitung verbindliche Kooperation ein?",
+        "Wie können wir durch die Zusammenarbeit Ressourcen sparen?",
+        "Welche Tools nutzen wir um zeit- und ortsunabhängig zusammenzuarbeiten?",
+        "Wie pflegen wir das Netzwerk mit anderen Schulen, Expert:innen und Organisationen?"
+      ]
+    },
+    "knowledge-management": {
+      "name": "Wissensmanagement",
+      "questions": [
+        "Wie tauschen wir unser Wissen aus? Welche formellen und informellen Kanäle werden genutzt?",
+        "Wie ist unsere Bereitschaft Materialien zu teilen? Wie ist die Bereitschaft fremde Materialien zu nutzen? Welche Verbindlichkeiten gibt es?",
+        "Wie strukturieren wir unsere Ablage so, dass die Dateien dauerhaft innert nützlicher Frist gefunden werden? Wer ist für die Bewirtschaftung der Ordnung verantwortlich?",
+        "Welche Ressourcen stehen für die Weiterentwicklung und Weitergabe des organisationalen Wissens zur Verfügung?"
+      ]
+    },
+    "communication": {
+      "name": "Kommunikation",
+      "questions": [
+        "Wo und wie diskutieren wir, on- oder offline?",
+        "Welche Sitzung hat welchen Zweck? Wofür nutzen wir die Sitzungszeit? Sind dabei alle Anwesenden vor Ort? Wer muss dabei sein? Können wir Diskussionen auch online führen?",
+        "Wie tauschen wir uns in den verschiedenen Arbeits- und Lerngruppierungen aus? Wie in den Stufen- oder Zyklussitzungen?",
+        "Wie treten wir mit dem Umfeld in den Austausch?",
+        "Wie beziehen wir alle Stakeholder ein?",
+        "Für welche Kanäle gelten welche Antwortzeiten und formale Anforderungen?",
+        "Wie tauschen wir uns mit Schülerinnen und Schülern, anderen Lehrpersonen und Schulleitungen, Eltern aus?"
+      ]
+    },
+    "team-culture": {
+      "name": "Teamkultur",
+      "questions": [
+        "Was können wir tun, damit alle Beteiligten für sich und die Gemeinschaft Verantwortung übernehmen?",
+        "Wie binden wir die verschiedenen Professionen und Teilzeitmitarbeitende möglichst zweckmässig ein?",
+        "Wie fördern wir das soziale Bewusstsein bei allen Beteiligten?",
+        "Wo und wie legen wir bewusst Wert auf die Gemeinschaftsbildung?",
+        "Wie finden wir in einer immer komplexer werdenden Welt Orientierung? Wie leben wir das unseren Lernenden vor?",
+        "Wie erklären wir unsere Team- und Fehlerkultur den Eltern und der Öffentlichkeit? (Kooperation)"
+      ]
+    },
+    "dynamics-emotions": {
+      "name": "Dynamiken und Emotionen",
+      "questions": [
+        "Wie hoch ist die Bereitschaft/Energie im Team, sich auf den Veränderungsprozess einzulassen?",
+        "Welche Dynamiken und Emotionen sind in unserem Team bei Veränderungsprozessen anzutreffen?",
+        "Wie lassen sich positive Energien bündeln, um eine gemeinsame Stossrichtung zu erzielen?",
+        "Welche Rahmenbedingungen begünstigen positive Dynamiken?",
+        "Wie lässt sich mit Emotionen und Stress konstruktiv und adäquat umgehen?",
+        "Wie erreichen wir, dass sich die Beteiligten sozial-emotional sicher fühlen?"
+      ]
+    },
+    "working-devices": {
+      "name": "Arbeitsgeräte",
+      "questions": [
+        "Welche Arbeitsgeräte stehen den Lernenden zur Verfügung? Welche den Mitarbeitenden?",
+        "Welches Mengengerüst pro Stufe wählen wir?",
+        "Wie verteilen/verwalten wir Software (MDM)?",
+        "Wie müssen die Geräte der Lernenden konfiguriert sein? Welche Restriktionen sind nötig?",
+        "Welche Apps und Dienste stehen den Lernenden zur Verfügung? Welche Software kann auf dem Arbeitsgerät installiert werden? Welche sind bereits vorinstalliert?",
+        "Wie zufrieden sind wir mit der bisherigen Infrastruktur? Wie schwierig wäre ein Wechsel auf ein anderes Betriebssystem?",
+        "Aufgrund welcher Kriterien werden Anschaffungsentscheidungen getroffen?"
+      ]
+    },
+    "basic-infrastructure": {
+      "name": "Basisinfrastruktur",
+      "questions": [
+        "Ist unser Netzwerk genug sicher, schnell und stabil?",
+        "Reicht die Bandbreite unseres Internetanschlusses? Brauchen wir eine redundante Leitung?",
+        "Sind kabelgebundene und kabellose Anschlüsse überall vorhanden wo nötig?",
+        "Welche Multimedia-Technik brauchen wir in welchen Räumen? Welche Lehr- und Lernformen werden dadurch begünstigt?",
+        "Wer muss wo drucken können?",
+        "Welches Zubehör brauchen wir?",
+        "Ist unsere Gebäude- und Sicherheitstechnik auf dem neuesten Stand?"
+      ]
+    },
+    "software-services": {
+      "name": "Software/Dienste",
+      "questions": [
+        "Mit welchem Betriebssystem arbeiten wir?",
+        "Welche Software / Tools / Plattformen brauchen wir, um unsere Ziele zu erreichen?",
+        "Wie wird die Software verwaltet? Wer ist für Lizenzen und Accounts zuständig?",
+        "Wie ist der Beschaffungs- und Erneuerungsprozess für Software und Lizenzen?",
+        "Wo werden die Daten gespeichert? Arbeitet unsere Schule datenschutzkonform?",
+        "Wie gewährleisten wir, dass jederzeit orts- und zeitunabhängig gearbeitet und gelernt werden kann?"
+      ]
+    },
+    "security": {
+      "name": "Sicherheit",
+      "questions": [
+        "Wie sieht unsere Risikokultur aus? Wie können wir als Schule sicherstellen, dass sich alle Beteiligten sicher bewegen können und genügend Spielraum haben?",
+        "Welche Sicherheitsaspekte müssen berücksichtigt werden?",
+        "Was müssen Beteiligte (Schüler:innen, Lehrpersonen, Schulleitung, PICTS etc.) in Bezug auf Sicherheit wissen? Wie müssen sie sich entsprechend verhalten?",
+        "Welche technischen Sicherheitsmassnahmen treffen wir (Virenschutz, Updates, Filter...)?",
+        "Wie stellen wir physischen Schutz sicher? (Aufbewahrung, Serverraum, Schränke, Zutrittsregelungen)",
+        "Wie gewährleisten wir die Datensicherheit? Wer ist für Backups verantwortlich?"
+      ]
+    },
+    "services": {
+      "name": "Dienstleistungen",
+      "questions": [
+        "Wie ist der technische Support organisiert (1st, 2nd, 3rd-Level)?",
+        "Welche Dienstleistungen stehen uns zur Verfügung?",
+        "Wie schnell und zufriedenstellend ist die Unterstützung durch die externe Dienstleistungsfirma?",
+        "Wie gut werden wir bei Neuanschaffungen beraten? Inwiefern sind dabei pädagogische Anforderungen im Zentrum?",
+        "Wie werden wir für die Nutzung neuer Dienste geschult?"
+      ]
+    },
+    "legal-aspects": {
+      "name": "Rechtliche Aspekte",
+      "questions": [
+        "Wie sensibilisieren wir für Datenschutzfragen? Wie schützen wir die Daten aller Beteiligten?",
+        "Sind Haftungsfragen für materielle und immaterielle Schäden geklärt?",
+        "Wie und von wem werden Lizenzen verwaltet? Wie verhindern wir Verstösse gegen Lizenzvereinbarungen?",
+        "Wie stellen wir sicher, dass alle Beteiligten das Urheberrecht einhalten? Welche Rechte gewähren wir auf geistiges Eigentum der Schule?",
+        "Wie nehmen wir unsere strafrechtliche Verantwortung wahr? Wie verfahren wir bei Verstössen?"
+      ]
+    },
+    "funding": {
+      "name": "Finanzierung",
+      "questions": [
+        "Wie läuft der Beschaffungsprozess der Schule ab?",
+        "Wer schafft die Entscheidungsgrundlage für Neuanschaffungen? Wer wird wann und wie in die Entscheidung einbezogen?",
+        "Braucht es eine öffentliche Ausschreibung? Brauchen wir hierfür Unterstützung?",
+        "Wie werden (wiederkehrende) Kosten für die Software, den Support, die Schulung und die Wartung berechnet?",
+        "Finanzieren wir die Erneuerungen über Leasing oder Kauf?",
+        "Falls die Lehrpersonen eigene Geräte mitbringen: Welchen jährlichen Betrag erhalten sie dafür?"
+      ]
+    }
+  }
+}

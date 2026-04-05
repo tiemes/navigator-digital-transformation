@@ -1,0 +1,42 @@
+# docker-compose.yml — Development environment
+# Runs frontend (SvelteKit dev), API proxy, and optionally Ollama.
+#
+# Usage: docker compose up
+
+services:
+  app:
+    build:
+      context: ./app
+      dockerfile: ../Dockerfile.dev
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./app/src:/app/src
+      - ./data:/data
+    environment:
+      - PUBLIC_API_URL=http://localhost:3001
+
+  api:
+    build:
+      context: ./api
+      dockerfile: ../Dockerfile.api-dev
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./api:/app
+      - /app/node_modules
+    env_file:
+      - ./api/.env
+    environment:
+      - PORT=3001
+
+  # Uncomment for local/offline LLM
+  # ollama:
+  #   image: ollama/ollama
+  #   ports:
+  #     - "11434:11434"
+  #   volumes:
+  #     - ollama-data:/root/.ollama
+
+# volumes:
+#   ollama-data:

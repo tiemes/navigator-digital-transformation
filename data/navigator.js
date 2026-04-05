@@ -1,0 +1,4478 @@
+window.__NAVIGATOR_DATA__ = {
+  "version": "2.0.0",
+  "framework": {
+    "name": "Kompass Digitaler Wandel",
+    "source": "PHZH — Zentrum Medienbildung und Informatik",
+    "authors": [
+      "Andrea Kern",
+      "Thomas Staub",
+      "Larissa Meyer",
+      "Reto Braun"
+    ],
+    "license": "CC BY-SA 4.0",
+    "website": "https://kompassdigitalerwandel.ch/",
+    "reference": "Schulz-Zander, Renate. Neue Medien als Bestandteil von Schulentwicklung. In: Jahrbuch Medienpädagogik 1. Opladen: Leske + Budrich, 2001, S. 263-281."
+  },
+  "dimensions": [
+    {
+      "id": "people-skills",
+      "color": "#E6007E",
+      "illustration": "_Personen-Kompetenzen.png",
+      "i18n": {
+        "de": {
+          "name": "Personen/Kompetenzen",
+          "shortName": "Personen"
+        },
+        "en": {
+          "name": "People/Skills",
+          "shortName": "People"
+        }
+      }
+    },
+    {
+      "id": "teaching-learning",
+      "color": "#E30613",
+      "illustration": "_Unterricht.png",
+      "i18n": {
+        "de": {
+          "name": "Unterricht",
+          "shortName": "Unterricht"
+        },
+        "en": {
+          "name": "Teaching/Learning",
+          "shortName": "Teaching"
+        }
+      }
+    },
+    {
+      "id": "organisation-structures",
+      "color": "#95C11F",
+      "illustration": "_Organisation-Strukturen.png",
+      "i18n": {
+        "de": {
+          "name": "Organisation/Strukturen",
+          "shortName": "Organisation"
+        },
+        "en": {
+          "name": "Organisation/Structures",
+          "shortName": "Organisation"
+        }
+      }
+    },
+    {
+      "id": "cooperation-team",
+      "color": "#F5A623",
+      "illustration": "_Kooperation-Team.png",
+      "i18n": {
+        "de": {
+          "name": "Team/Kooperation",
+          "shortName": "Team"
+        },
+        "en": {
+          "name": "Team/Cooperation",
+          "shortName": "Team"
+        }
+      }
+    },
+    {
+      "id": "infrastructure",
+      "color": "#00B4D5",
+      "illustration": "_Infrastruktur.png",
+      "i18n": {
+        "de": {
+          "name": "Infrastruktur",
+          "shortName": "Infrastruktur"
+        },
+        "en": {
+          "name": "Infrastructure",
+          "shortName": "Infrastructure"
+        }
+      }
+    }
+  ],
+  "topics": [
+    {
+      "id": "personal-social-skills",
+      "number": 1,
+      "dimension": "people-skills",
+      "illustration": "Personale-soziale-Kompetenzen.png",
+      "links": [
+        "mindsets",
+        "learning-culture",
+        "team-culture",
+        "cooperation",
+        "communication"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Personale/soziale Kompetenzen"
+        },
+        "en": {
+          "name": "Personal/social skills"
+        }
+      },
+      "questions": [
+        {
+          "id": "personal-social-skills-q1",
+          "source": "kompass-original",
+          "tags": [
+            "4k",
+            "self-determination"
+          ],
+          "roles": [
+            "teacher",
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Woran erkennt man, dass wir die 4K vorleben?",
+            "en": "How do we recognise we exemplify the 4 Cs (creativity, critical thinking, collaboration, communication)?"
+          }
+        },
+        {
+          "id": "personal-social-skills-q2",
+          "source": "kompass-original",
+          "tags": [
+            "growth-mindset",
+            "self-determination"
+          ],
+          "roles": [
+            "teacher",
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Sind wir selbst Lernende? Nehmen uns auch die Lernenden so wahr?",
+            "en": "Do we consider ourselves learners? Do learners also perceive us in this way?"
+          }
+        },
+        {
+          "id": "personal-social-skills-q3",
+          "source": "kompass-original",
+          "tags": [
+            "growth-mindset",
+            "change-management"
+          ],
+          "roles": [
+            "teacher",
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie motivieren wir uns, Neuland zu beschreiten?",
+            "en": "How do we motivate ourselves to learn new things?"
+          }
+        },
+        {
+          "id": "personal-social-skills-q4",
+          "source": "kompass-original",
+          "tags": [
+            "growth-mindset",
+            "self-determination"
+          ],
+          "roles": [
+            "teacher",
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie lernen wir, Fehler als etwas Sinnvolles zu verstehen, aus denen wir lernen können?",
+            "en": "How do we learn to understand mistakes as something useful?"
+          }
+        },
+        {
+          "id": "personal-social-skills-q5",
+          "source": "kompass-original",
+          "tags": [
+            "growth-mindset",
+            "self-determination"
+          ],
+          "roles": [
+            "teacher",
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie gehen wir mit eigenen Fehlern um? Wie mit jenen der Lernenden?",
+            "en": "How do we deal with our own mistakes? How do we deal with learners' mistakes?"
+          }
+        },
+        {
+          "id": "personal-social-skills-q6",
+          "source": "kompass-original",
+          "tags": [
+            "change-management",
+            "team"
+          ],
+          "roles": [
+            "teacher",
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie gehen wir mit Veränderungen um? Wie werden diese angenommen und mitgestaltet?",
+            "en": "How do we deal with change? How can team members participate in change processes?"
+          }
+        },
+        {
+          "id": "personal-social-skills-q7",
+          "source": "kompass-original",
+          "tags": [
+            "cooperation",
+            "team"
+          ],
+          "roles": [
+            "teacher",
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie arbeiten wir mit anderen zusammen?",
+            "en": "How do we collaborate with others?"
+          }
+        },
+        {
+          "id": "personal-social-skills-q8",
+          "source": "kompass-original",
+          "tags": [
+            "team-culture",
+            "dynamics"
+          ],
+          "roles": [
+            "teacher",
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie gehen wir mit unterschiedlichen Haltungen/Sichtweisen im Team um?",
+            "en": "How do we deal with different mindsets and perspectives within the team?"
+          }
+        },
+        {
+          "id": "personal-social-skills-q9",
+          "source": "kompass-original",
+          "tags": [
+            "self-determination",
+            "application-skills"
+          ],
+          "roles": [
+            "teacher",
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie ist die Selbstorganisationskompetenz der einzelnen Personen? Wie unterstützen uns digitale Werkzeuge dabei?",
+            "en": "How are the team members' self-management skills? How can digital tools support them?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "professional-skills-media-cs",
+      "number": 2,
+      "dimension": "people-skills",
+      "illustration": "Fachkompetenz-Medien-Informatik.png",
+      "links": [
+        "media-cs-curriculum",
+        "specialised-didactics-media-cs"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Fachkompetenz Medien Informatik"
+        },
+        "en": {
+          "name": "Professional skills in media and computer science"
+        }
+      },
+      "questions": [
+        {
+          "id": "professional-skills-media-cs-q1",
+          "source": "kompass-original",
+          "tags": [
+            "tpack",
+            "digcompedu"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie bauen wir das fachliche Wissen in den Bereichen Medienbildung und Informatik auf und aus? (Fachkompetenz Medien Informatik)",
+            "en": "How do we build and expand professional knowledge in the areas of media education and computer science? What support and training programmes are needed?"
+          }
+        },
+        {
+          "id": "professional-skills-media-cs-q2",
+          "source": "kompass-original",
+          "tags": [
+            "tpack",
+            "digcompedu",
+            "support"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Unterstützungs- und Weiterbildungsmassnahmen werden benötigt?",
+            "en": "What role does school management (PICTS, TICTS, subject leaders, etc.) play in building professional competence?"
+          }
+        },
+        {
+          "id": "professional-skills-media-cs-q3",
+          "source": "kompass-original",
+          "tags": [
+            "leadership",
+            "support"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Rolle übernehmen Schulleitung, PICTS, Fachverantwortliche etc. beim Aufbau der Fachkompetenz?",
+            "en": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "specialised-didactics-media-cs",
+      "number": 3,
+      "dimension": "people-skills",
+      "illustration": "Fachdidaktik-Medien-Informatik.png",
+      "links": [
+        "media-cs-curriculum",
+        "teaching-learning-units",
+        "interdisciplinary-skills",
+        "media-didactics",
+        "support"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Fachdidaktik Medien Informatik"
+        },
+        "en": {
+          "name": "Specialised didactics in media and computer science"
+        }
+      },
+      "questions": [
+        {
+          "id": "specialised-didactics-media-cs-q1",
+          "source": "kompass-original",
+          "tags": [
+            "tpack",
+            "digcompedu"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie können bei den Lernenden die Kompetenzen des Lehrplans 21 in den Bereichen MI aufgebaut werden? (fachdidaktische Kompetenz Medien Informatik)",
+            "en": "How can students build these skills?"
+          }
+        },
+        {
+          "id": "specialised-didactics-media-cs-q2",
+          "source": "kompass-original",
+          "tags": [
+            "tpack",
+            "curriculum"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie gelingen fächerübergreifende Bezüge zu MI?",
+            "en": "How can interdisciplinary references to media and computer science succeed?"
+          }
+        },
+        {
+          "id": "specialised-didactics-media-cs-q3",
+          "source": "kompass-original",
+          "tags": [
+            "tpack",
+            "pedagogy"
+          ],
+          "roles": [
+            "teacher"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Methoden eigenen sich, um das fachliche Wissen bei den Schüler:innen zu fördern? Wie gestalten wir den MI-Unterricht anregend und zielführend?",
+            "en": "Which methods are suitable for promoting the learners' professional knowledge in media and computer science?"
+          }
+        },
+        {
+          "id": "specialised-didactics-media-cs-q4",
+          "source": "kompass-original",
+          "tags": [
+            "support",
+            "professional-development"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Unterstützungs- und Weiterbildungsmassnahmen werden benötigt?",
+            "en": "What support and training programmes are needed?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "media-didactics",
+      "number": 4,
+      "dimension": "people-skills",
+      "illustration": "Mediendidaktik.png",
+      "links": [
+        "teaching-learning-units",
+        "support",
+        "application-skills-teachers",
+        "specialised-didactics-media-cs",
+        "media-cs-curriculum"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Mediendidaktik"
+        },
+        "en": {
+          "name": "Media didactics"
+        }
+      },
+      "questions": [
+        {
+          "id": "media-didactics-q1",
+          "source": "kompass-original",
+          "tags": [
+            "tpack",
+            "digcompedu"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie können digitale Medien didaktisch sinnvoll in Lehr- und Lernarrangements eingebettet werden, um neue Unterrichtsinhalte zu erarbeiten und Kompetenzen zu erweitern? (mediendidaktische Kompetenz)",
+            "en": "How can digital media be didactically embedded in teaching and learning units in order to develop new teaching content and expand skills? (media didactic skills)"
+          }
+        },
+        {
+          "id": "media-didactics-q2",
+          "source": "kompass-original",
+          "tags": [
+            "tpack",
+            "media-literacy"
+          ],
+          "roles": [
+            "teacher"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie können wir digitale Medien als selbstverständliches Lehr- und Lernwerkzeug für alle Fachbereichen immer im Auge haben? (Stichwort: Medienbrille)",
+            "en": "How can we always keep digital media in mind as a self-evident teaching and learning tool for all subject areas?"
+          }
+        },
+        {
+          "id": "media-didactics-q3",
+          "source": "kompass-original",
+          "tags": [
+            "support",
+            "professional-development"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Unterstützungs- und Weiterbildungsmassnahmen werden benötigt?",
+            "en": "What support and training programmes are needed?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "application-skills-teachers",
+      "number": 5,
+      "dimension": "people-skills",
+      "illustration": "Anwendungskompetenzen.png",
+      "links": [
+        "media-cs-curriculum",
+        "concept",
+        "support",
+        "professional-skills-media-cs",
+        "services"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Anwendungskompetenzen LP"
+        },
+        "en": {
+          "name": "Application skills (teachers)"
+        }
+      },
+      "questions": [
+        {
+          "id": "application-skills-teachers-q1",
+          "source": "kompass-original",
+          "tags": [
+            "digcompedu",
+            "application-skills"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Anwendungskompetenzen benötigen LP für den Schulalltag (Unterricht, aber auch Zusammenarbeit im Team)?",
+            "en": "What application skills do teachers need for their everyday school life (teaching, but also teamwork)?"
+          }
+        },
+        {
+          "id": "application-skills-teachers-q2",
+          "source": "kompass-original",
+          "tags": [
+            "digcompedu",
+            "support"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie stellen wir sicher, dass alle Mitarbeitenden über diese Kompetenzen verfügen?",
+            "en": "How do we ensure that all employees have these skills?"
+          }
+        },
+        {
+          "id": "application-skills-teachers-q3",
+          "source": "kompass-original",
+          "tags": [
+            "digcompedu",
+            "professional-development"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie stärken und erweitern wir die Skills und Kompetenzen der Mitarbeitenden im Umgang mit neueren Technologien?",
+            "en": "How do we strengthen and expand employee skills in dealing with newer technologies?"
+          }
+        },
+        {
+          "id": "application-skills-teachers-q4",
+          "source": "kompass-original",
+          "tags": [
+            "support",
+            "professional-development"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Unterstützungs- und Weiterbildungsmassnahmen werden benötigt?",
+            "en": "What support and training programmes are needed?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mindsets",
+      "number": 6,
+      "dimension": "people-skills",
+      "illustration": "Haltungen.png",
+      "links": [
+        "personal-social-skills",
+        "team-culture",
+        "learning-culture",
+        "vision",
+        "dynamics-emotions"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Haltungen"
+        },
+        "en": {
+          "name": "Mindsets"
+        }
+      },
+      "questions": [
+        {
+          "id": "mindsets-q1",
+          "source": "kompass-original",
+          "tags": [
+            "growth-mindset",
+            "self-determination"
+          ],
+          "roles": [
+            "teacher",
+            "leader",
+            "team"
+          ],
+          "quickPulse": true,
+          "i18n": {
+            "de": "Wie offen / neugierig / flexibel / motiviert / innovativ / beharrlich sind wir? Wie nutzen wir diese Haltungen für unsere Entwicklung?",
+            "en": "How open / curious / flexible / motivated / innovative / persistent are we? How do we use these mindsets for our own development?"
+          }
+        },
+        {
+          "id": "mindsets-q2",
+          "source": "kompass-original",
+          "tags": [
+            "values",
+            "self-determination"
+          ],
+          "roles": [
+            "teacher",
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Werte sind uns wichtig? Wie können wir unter den Voraussetzungen des digitalen Wandels diese Werte pflegen?",
+            "en": "What values are important to us? How can we cultivate these values when faced with the digital transformation?"
+          }
+        },
+        {
+          "id": "mindsets-q3",
+          "source": "kompass-original",
+          "tags": [
+            "reflection",
+            "change-management"
+          ],
+          "roles": [
+            "teacher",
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie hoch ist unsere Reflexionsfähigkeit? Wie gehen wir mit Widerständen um?",
+            "en": "How high is our ability to reflect? How do we deal with opposition?"
+          }
+        },
+        {
+          "id": "mindsets-q4",
+          "source": "kompass-original",
+          "tags": [
+            "team-culture",
+            "dynamics"
+          ],
+          "roles": [
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie gehen wir mit unterschiedlichen Haltungen in unserem Team um?",
+            "en": "How do we deal with different mindsets in our team?"
+          }
+        },
+        {
+          "id": "mindsets-q5",
+          "source": "kompass-original",
+          "tags": [
+            "pedagogy",
+            "self-determination"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Was verstehen wir unter gutem Unterricht? Was heisst für uns Lernen?",
+            "en": "How do we define good teaching? How do we define learning?"
+          }
+        },
+        {
+          "id": "mindsets-q6",
+          "source": "kompass-original",
+          "tags": [
+            "media-literacy",
+            "self-determination"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Chancen und Risiken sehen wir bei der Nutzung von digitalen Medien im Unterricht?",
+            "en": "What are the opportunities and risks involved in the use of digital media in the classroom?"
+          }
+        },
+        {
+          "id": "mindsets-q7",
+          "source": "kompass-original",
+          "tags": [
+            "digital-transformation",
+            "change-management"
+          ],
+          "roles": [
+            "teacher",
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie verändert sich unser Lern-, Bildungs- und Rollenverständnis durch den digitalen Wandel?",
+            "en": "How is our understanding of learning, education and roles changing as a result of the digital transformation?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "artificial-intelligence",
+      "number": 36,
+      "dimension": "people-skills",
+      "illustration": "Kuenstliche-Intelligenz.png",
+      "links": [
+        "mindsets",
+        "media-didactics",
+        "application-skills-teachers",
+        "interdisciplinary-skills",
+        "assessment",
+        "media-education-rules",
+        "software-services",
+        "security",
+        "professional-skills-media-cs"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Künstliche Intelligenz"
+        },
+        "en": {
+          "name": "Artificial Intelligence"
+        }
+      },
+      "questions": [
+        {
+          "id": "artificial-intelligence-q1",
+          "source": "research-addition",
+          "tags": [
+            "ai-literacy",
+            "self-determination"
+          ],
+          "roles": [
+            "teacher",
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welches Verständnis haben wir von künstlicher Intelligenz? Was können KI-Systeme, was nicht? Welche Chancen und Grenzen sehen wir?",
+            "en": "What understanding do we have of artificial intelligence? What can AI systems do, what can't they do? What opportunities and limits do we see?"
+          }
+        },
+        {
+          "id": "artificial-intelligence-q2",
+          "source": "research-addition",
+          "tags": [
+            "ai-literacy",
+            "digcompedu"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie sollen Schüler:innen über KI lernen (Funktionsweise, Stärken, Schwächen, Ethik), um informierte Nutzer:innen und kritische Denker:innen zu werden?",
+            "en": "How should students learn about AI (how it works, strengths, weaknesses, ethics) to become informed users and critical thinkers?"
+          }
+        },
+        {
+          "id": "artificial-intelligence-q3",
+          "source": "research-addition",
+          "tags": [
+            "ai-literacy",
+            "tpack"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche KI-Tools nutzen oder könnten wir nutzen? Für welche pädagogischen Zwecke? Welche Vorbehalte haben wir?",
+            "en": "Which AI tools do we use or could we use? For which pedagogical purposes? What reservations do we have?"
+          }
+        },
+        {
+          "id": "artificial-intelligence-q4",
+          "source": "research-addition",
+          "tags": [
+            "ai-literacy",
+            "assessment"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie gehen wir damit um, dass Schüler:innen KI-Tools bei Aufgaben nutzen können? Wo liegt die Grenze zwischen Unterstützung und Betrug? Wie müssen wir unsere Beurteilung anpassen?",
+            "en": "How do we handle the fact that students can use AI tools for assignments? Where is the line between support and cheating? How must we adapt our assessment?"
+          }
+        },
+        {
+          "id": "artificial-intelligence-q5",
+          "source": "research-addition",
+          "tags": [
+            "ai-literacy",
+            "data-literacy",
+            "security"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie transparent und ethisch gehen wir mit KI-Systemen um? Wie adressieren wir Datenschutz, Bias und Urheberrecht bei KI-generierten Inhalten?",
+            "en": "How transparently and ethically do we handle AI systems? How do we address data protection, bias, and copyright with AI-generated content?"
+          }
+        },
+        {
+          "id": "artificial-intelligence-q6",
+          "source": "research-addition",
+          "tags": [
+            "ai-literacy",
+            "professional-development"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche KI-Kompetenzen brauchen Lehrpersonen? Wo sehen wir Qualifizierungsbedarf? Wie unterstützen wir Lehrpersonen, die unsicher sind?",
+            "en": "What AI competencies do teachers need? Where do we see training needs? How do we support teachers who are uncertain?"
+          }
+        },
+        {
+          "id": "artificial-intelligence-q7",
+          "source": "research-addition",
+          "tags": [
+            "ai-literacy",
+            "pedagogy"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie verändert KI die Rolle von Lehrpersonen und Schüler:innen? Welche Aspekte der menschlichen Beziehung werden unverzichtbar?",
+            "en": "How does AI change the role of teachers and students? Which aspects of human relationships become indispensable?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "parent-participation",
+      "number": 7,
+      "dimension": "people-skills",
+      "illustration": "Elternzusammenarbeit.png",
+      "links": [
+        "communication",
+        "public-relations",
+        "vision",
+        "media-education-rules",
+        "learning-culture"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Zusammenarbeit mit Eltern"
+        },
+        "en": {
+          "name": "Parent participation"
+        }
+      },
+      "questions": [
+        {
+          "id": "parent-participation-q1",
+          "source": "kompass-original",
+          "tags": [
+            "parent-engagement",
+            "media-education"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie arbeiten wir mit den Eltern zusammen? Wie nehmen wir die gemeinsame Verantwortung in Bezug auf die Medienerziehung wahr?",
+            "en": "How do we work together with parents? How do we assume joint responsibility when it comes to media education?"
+          }
+        },
+        {
+          "id": "parent-participation-q2",
+          "source": "kompass-original",
+          "tags": [
+            "leadership",
+            "change-management"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie beziehen wir die Eltern in unseren Schulentwicklungsprozess ein?",
+            "en": "How do we involve parents in our school development process?"
+          }
+        },
+        {
+          "id": "parent-participation-q3",
+          "source": "kompass-original",
+          "tags": [
+            "media-education",
+            "parent-engagement"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie lernen die Schülerinnen und Schüler zu Hause mit digitalen Medien? Welche Regeln gelten für die Nutzung schulischer Geräte?",
+            "en": "How do students learn with digital media at home? What rules apply for the use of school devices?"
+          }
+        },
+        {
+          "id": "parent-participation-q4",
+          "source": "kompass-original",
+          "tags": [
+            "communication",
+            "parent-engagement"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie erklären wir den Eltern unsere Vorstellungen über das Lernen mit, über und trotz Medien?",
+            "en": "How do we explain to parents our ideas on learning with, using and despite the media?"
+          }
+        },
+        {
+          "id": "parent-participation-q5",
+          "source": "kompass-original",
+          "tags": [
+            "communication",
+            "inclusion"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie gestalten wir die Zusammenarbeit mit fremdsprachigen Eltern?",
+            "en": "How do we work successfully with parents who speak a different language at home?"
+          }
+        },
+        {
+          "id": "parent-participation-q6",
+          "source": "research-addition",
+          "tags": [
+            "equity",
+            "digital-divide"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Unterschiede gibt es beim Zugang zu Geräten, Kompetenzen und Nutzungsmöglichkeiten zwischen den Familien? Wie begegnen wir diesen Unterschieden?",
+            "en": "What differences exist in access to devices, skills, and usage opportunities between families? How do we address these differences?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "learning-culture",
+      "number": 8,
+      "dimension": "teaching-learning",
+      "illustration": "Lernkultur.png",
+      "links": [
+        "vision",
+        "mindsets",
+        "learning-spaces",
+        "team-culture",
+        "teaching-learning-units"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Lernkultur"
+        },
+        "en": {
+          "name": "Learning culture"
+        }
+      },
+      "questions": [
+        {
+          "id": "learning-culture-q1",
+          "source": "kompass-original",
+          "tags": [
+            "pedagogy",
+            "self-determination"
+          ],
+          "roles": [
+            "teacher",
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Was verstehen wir unter «Lernen»? Wie und was sollen unsere Schülerinnen und Schüler bei uns lernen können?",
+            "en": "How do we define \"learning\"? How and what should our learners be able to learn with us?"
+          }
+        },
+        {
+          "id": "learning-culture-q2",
+          "source": "kompass-original",
+          "tags": [
+            "pedagogy",
+            "digital-transformation"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Was verstehen wir unter Bildung? Wie ändert sich dieses Verständnis angesichts des digitalen Wandels?",
+            "en": "How do we define education? How is this definition changing in view of the digital transformation?"
+          }
+        },
+        {
+          "id": "learning-culture-q3",
+          "source": "kompass-original",
+          "tags": [
+            "pedagogy",
+            "digcompedu"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": true,
+          "i18n": {
+            "de": "Wie können wir die Unterrichtsqualität ständig verbessern? Welchen Beitrag können digitale Medien zur Verbesserung der Unterrichtsqualität leisten?",
+            "en": "How can we constantly improve the quality of teaching? What contribution can digital media make to improving the quality of teaching?"
+          }
+        },
+        {
+          "id": "learning-culture-q4",
+          "source": "kompass-original",
+          "tags": [
+            "self-determination",
+            "autonomy"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie können alle Beteiligten Verantwortung für ihr Lernen übernehmen?",
+            "en": "How can all participants take responsibility for their own learning?"
+          }
+        },
+        {
+          "id": "learning-culture-q5",
+          "source": "kompass-original",
+          "tags": [
+            "pedagogy",
+            "digital-transformation"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie verändert sich die Rolle der Lehrperson durch den digitalen Wandel, beispielsweise durch den Umstand, dass das gesamte Wissen der Menschheit jederzeit und überall abrufbar ist? Und wie verändert sich die Rolle der Lernenden?",
+            "en": "How is the role of the teacher changing as a result of the digital transformation? (For example, all of humanity's knowledge can now be accessed anytime, anywhere). And how is the role of the learner changing?"
+          }
+        },
+        {
+          "id": "learning-culture-q6",
+          "source": "kompass-original",
+          "tags": [
+            "feedback",
+            "assessment"
+          ],
+          "roles": [
+            "teacher"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie geben die Lernenden der Lehrperson und sich gegenseitig Feedbacks?",
+            "en": "How do learners give feedback to the teacher and to each other?"
+          }
+        },
+        {
+          "id": "learning-culture-q7",
+          "source": "research-addition",
+          "tags": [
+            "equity",
+            "wellbeing"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie stellen wir sicher, dass digitale Medien die Chancengerechtigkeit fördern und nicht bestehende Ungleichheiten verstärken?",
+            "en": "How do we ensure that digital media promote equal opportunities and do not reinforce existing inequalities?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "interdisciplinary-skills",
+      "number": 9,
+      "dimension": "teaching-learning",
+      "illustration": "Ueberfachliche_Kompetenzen.png",
+      "links": [
+        "learning-culture",
+        "vision",
+        "assessment",
+        "learning-platforms-tools"
+      ],
+      "i18n": {
+        "de": {
+          "name": "(über-)fachliche Kompetenzen"
+        },
+        "en": {
+          "name": "(Inter-)disciplinary skills"
+        }
+      },
+      "questions": [
+        {
+          "id": "interdisciplinary-skills-q1",
+          "source": "kompass-original",
+          "tags": [
+            "4k",
+            "future-skills"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Anforderungen erwarten die Lernenden im Zeichen des digitalen Wandels beim Eintritt ins Arbeitsleben?",
+            "en": "What requirements await students when entering their working lives with regard to the digital transformation?"
+          }
+        },
+        {
+          "id": "interdisciplinary-skills-q2",
+          "source": "kompass-original",
+          "tags": [
+            "4k",
+            "digcompedu"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie fördern wir die überfachlichen Kompetenzen? Welche Kompetenzen sind für das 21. Jahrhundert wichtig? Wie fördern wir die 4K?",
+            "en": "How do we promote interdisciplinary skills? Which skills are important for the 21st century? How do we promote the 4 Cs?"
+          }
+        },
+        {
+          "id": "interdisciplinary-skills-q3",
+          "source": "kompass-original",
+          "tags": [
+            "digcompedu",
+            "tpack"
+          ],
+          "roles": [
+            "teacher"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche (über-)fachlichen Kompetenzen können durch den Einsatz von digitalen Medien gefördert werden?",
+            "en": "Which (inter-)disciplinary competencies can be enhanced through the use of digital media?"
+          }
+        },
+        {
+          "id": "interdisciplinary-skills-q4",
+          "source": "kompass-original",
+          "tags": [
+            "pedagogy",
+            "assessment"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie ermöglichen wir kompetenzorientiertes Lernen?",
+            "en": "How do we enable skills-based learning?"
+          }
+        },
+        {
+          "id": "interdisciplinary-skills-q5",
+          "source": "kompass-original",
+          "tags": [
+            "motivation",
+            "self-determination"
+          ],
+          "roles": [
+            "teacher"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Kompetenzen bauen sich aus Wissen, Können, Wollen auf – was fördert das «Wollen»? Welchen Einfluss können digitale Medien auf die Lernmotivation haben?",
+            "en": "Skills build up from knowledge, ability and will – how can we support this \"will\"? What influence do digital media have on learning motivation?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "assessment",
+      "number": 10,
+      "dimension": "teaching-learning",
+      "illustration": "Beurteilung.png",
+      "links": [
+        "learning-culture",
+        "teaching-learning-units",
+        "interdisciplinary-skills"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Beurteilung"
+        },
+        "en": {
+          "name": "Assessment"
+        }
+      },
+      "questions": [
+        {
+          "id": "assessment-q1",
+          "source": "kompass-original",
+          "tags": [
+            "assessment"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Warum beurteilen wir?",
+            "en": "Why do we assess?"
+          }
+        },
+        {
+          "id": "assessment-q2",
+          "source": "kompass-original",
+          "tags": [
+            "assessment"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie beurteilen wir die Lernprozesse, Produkte, die (über-)fachlichen Kompetenzen usw.?",
+            "en": "How do we assess learning processes, products, (inter-)disciplinary skills, etc.?"
+          }
+        },
+        {
+          "id": "assessment-q3",
+          "source": "kompass-original",
+          "tags": [
+            "assessment",
+            "digcompedu"
+          ],
+          "roles": [
+            "teacher"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie setzen wir digitale Medien bei der (kompetenzorientierten) Beurteilung ein?",
+            "en": "How do we make use of digital media in (skills-based) assessment?"
+          }
+        },
+        {
+          "id": "assessment-q4",
+          "source": "kompass-original",
+          "tags": [
+            "assessment"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wann nutzen wir die formativen und wann die summativen Beurteilungsformen und zu welchem Zweck?",
+            "en": "When do we use formative and when do we use summative assessment, and for what purpose?"
+          }
+        },
+        {
+          "id": "assessment-q5",
+          "source": "kompass-original",
+          "tags": [
+            "assessment"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie erstellen wir eine Gesamtbeurteilung? Wie überführen wir diese in eine Zeugnisnote?",
+            "en": "How do we create an overall assessment? How do we convert this into a grade?"
+          }
+        },
+        {
+          "id": "assessment-q6",
+          "source": "kompass-original",
+          "tags": [
+            "assessment"
+          ],
+          "roles": [
+            "teacher"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Arbeiten wir mit Portfolios? Falls ja: Wie? Falls nein: Warum nicht?",
+            "en": "Do we work with portfolios? If yes: how? If no: why not?"
+          }
+        },
+        {
+          "id": "assessment-q7",
+          "source": "research-addition",
+          "tags": [
+            "data-literacy",
+            "digcompedu"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Daten über das Lernen unserer Schüler:innen sammeln digitale Tools? Wie nutzen wir diese Daten, um den Unterricht zu verbessern?",
+            "en": "What data about our students' learning do digital tools collect? How do we use this data to improve teaching?"
+          }
+        },
+        {
+          "id": "assessment-q8",
+          "source": "research-addition",
+          "tags": [
+            "data-literacy",
+            "security"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie stellen wir sicher, dass Daten verantwortungsvoll genutzt werden und nicht zu einer Überwachungskultur führen?",
+            "en": "How do we ensure that data is used responsibly and does not lead to a surveillance culture?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "teaching-learning-units",
+      "number": 11,
+      "dimension": "teaching-learning",
+      "illustration": "Arrangements.jpg.png",
+      "links": [
+        "vision",
+        "learning-culture",
+        "media-didactics",
+        "support"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Arrangements"
+        },
+        "en": {
+          "name": "Teaching/learning units"
+        }
+      },
+      "questions": [
+        {
+          "id": "teaching-learning-units-q1",
+          "source": "kompass-original",
+          "tags": [
+            "pedagogy",
+            "tpack"
+          ],
+          "roles": [
+            "teacher"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie werden Medien im Unterricht eingesetzt für: entdeckendes Lernen / kooperatives Lernen / Frontalunterricht / Werkstattunterricht / Wochenplan / Projektunterricht / Blended Learning / gemeinsamen oder individualisierten Unterricht? Und welchen Einfluss versprechen wir uns von diesem Medieneinsatz auf das Lernen der Schülerinnen und Schüler?",
+            "en": "How do we use media in the classroom for: discovery learning / cooperative learning / frontal teaching / workshop teaching / weekly plan / project teaching / blended learning / collective or individualised teaching? And what impact do we expect this media use to have on student learning?"
+          }
+        },
+        {
+          "id": "teaching-learning-units-q2",
+          "source": "kompass-original",
+          "tags": [
+            "pedagogy",
+            "planning"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "An welchem Modell orientieren wir uns bei der Planung, Durchführung und Auswertung unseres Unterrichts?",
+            "en": "Which model do we use for planning, implementing and evaluating our lessons?"
+          }
+        },
+        {
+          "id": "teaching-learning-units-q3",
+          "source": "kompass-original",
+          "tags": [
+            "pedagogy",
+            "differentiation"
+          ],
+          "roles": [
+            "teacher"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie begleiten wir Lernende individuell auf ihrem Lernweg?",
+            "en": "How do we support students individually on their learning path?"
+          }
+        },
+        {
+          "id": "teaching-learning-units-q4",
+          "source": "kompass-original",
+          "tags": [
+            "feedback",
+            "assessment"
+          ],
+          "roles": [
+            "teacher"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "In welcher Form geben wir den Lernenden Feedback zu ihren Lernprozessen? Wie häufig tun wir dies und zu welchem Zweck? Welche Chancen und Grenzen bieten digitale Medien zum Geben von Feedback?",
+            "en": "In which ways do we give students feedback on their learning processes? How often do we do this and for what purpose? What is the potential and what are the limitations of digital media when giving feedback?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "learning-platforms-tools",
+      "number": 12,
+      "dimension": "teaching-learning",
+      "illustration": "Lernplattformen_Lehrmittel-Tools.png",
+      "links": [
+        "media-didactics",
+        "assessment",
+        "teaching-learning-units",
+        "software-services",
+        "class-administration"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Lernplattformen, Lehrmittel, Tools"
+        },
+        "en": {
+          "name": "Learning platforms, teaching resources, tools"
+        }
+      },
+      "questions": [
+        {
+          "id": "learning-platforms-tools-q1",
+          "source": "kompass-original",
+          "tags": [
+            "technology",
+            "pedagogy"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Lernplattformen nutzen wir für die individuelle Begleitung der Lernenden?",
+            "en": "Which learning platforms do we use for the personalised support of students?"
+          }
+        },
+        {
+          "id": "learning-platforms-tools-q2",
+          "source": "kompass-original",
+          "tags": [
+            "technology",
+            "pedagogy"
+          ],
+          "roles": [
+            "teacher"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche digitalen Angebote nutzen wir für den Aufbau von reproduzierbarem Wissen und Grundfertigkeiten?",
+            "en": "Which digital resources do we use to build reproducible knowledge and basic skills?"
+          }
+        },
+        {
+          "id": "learning-platforms-tools-q3",
+          "source": "kompass-original",
+          "tags": [
+            "technology",
+            "reflection"
+          ],
+          "roles": [
+            "teacher"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Tools nutzen wir, um den Lernprozess zu dokumentieren und reflektieren?",
+            "en": "Which tools do we use to document and reflect on the learning process?"
+          }
+        },
+        {
+          "id": "learning-platforms-tools-q4",
+          "source": "kompass-original",
+          "tags": [
+            "technology",
+            "creativity"
+          ],
+          "roles": [
+            "teacher"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche digitalen Werkzeuge nutzen wir für kreative Aktivitäten und fürs Experimentieren?",
+            "en": "Which digital tools do we use for creative activities and for experimenting?"
+          }
+        },
+        {
+          "id": "learning-platforms-tools-q5",
+          "source": "kompass-original",
+          "tags": [
+            "technology",
+            "resources"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche digitalen Lehrmittel und Materialien stehen uns für den Wissenserwerb zur Verfügung?",
+            "en": "What digital teaching resources and materials are available to us for knowledge building?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "media-cs-curriculum",
+      "number": 13,
+      "dimension": "teaching-learning",
+      "illustration": "Modullehrplan_Medien-Informatik.png",
+      "links": [
+        "professional-skills-media-cs",
+        "specialised-didactics-media-cs",
+        "media-didactics",
+        "teaching-learning-units"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Modullehrplan Medien Informatik"
+        },
+        "en": {
+          "name": "Media and computer science curriculum"
+        }
+      },
+      "questions": [
+        {
+          "id": "media-cs-curriculum-q1",
+          "source": "kompass-original",
+          "tags": [
+            "curriculum",
+            "digcompedu"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Kennen wir die Inhalte des Modullehrplans MI?",
+            "en": "Do we know what the content of the media and computer science curriculum is?"
+          }
+        },
+        {
+          "id": "media-cs-curriculum-q2",
+          "source": "kompass-original",
+          "tags": [
+            "curriculum",
+            "pedagogy"
+          ],
+          "roles": [
+            "teacher"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie kann der Aufbau dieser Kompetenzen bei den Schülerinnen und Schüler gefördert werden?",
+            "en": "How can students build these skills?"
+          }
+        },
+        {
+          "id": "media-cs-curriculum-q3",
+          "source": "kompass-original",
+          "tags": [
+            "curriculum",
+            "planning"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wann arbeiten wir an welchen Kompetenzen? Welche Zeitgefässe richten wir ein?",
+            "en": "When do we work on which skills? What time frames do we set up?"
+          }
+        },
+        {
+          "id": "media-cs-curriculum-q4",
+          "source": "kompass-original",
+          "tags": [
+            "curriculum",
+            "cooperation"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie sprechen wir uns ab? Wie binden wir MI in unsere Jahresplanung mit ein?",
+            "en": "How do we communicate with each other? How do we incorporate media and computer science into our annual planning?"
+          }
+        },
+        {
+          "id": "media-cs-curriculum-q5",
+          "source": "kompass-original",
+          "tags": [
+            "curriculum",
+            "implementation"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wo und wie setzen wir den Modullehrplan schon um?",
+            "en": "Where and how do we already implement the media and computer science curriculum?"
+          }
+        },
+        {
+          "id": "media-cs-curriculum-q6",
+          "source": "kompass-original",
+          "tags": [
+            "curriculum",
+            "resources"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Mit welchen Lehrmitteln, Materialien, Technologien usw. arbeiten wir?",
+            "en": "What teaching resources, materials, technologies, etc., do we work with?"
+          }
+        },
+        {
+          "id": "media-cs-curriculum-q7",
+          "source": "kompass-original",
+          "tags": [
+            "curriculum",
+            "integration"
+          ],
+          "roles": [
+            "teacher"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche fächerübergreifenden Bezüge können zum Modullehrplan hergestellt werden?",
+            "en": "What cross-curricular references can be made to the media and computer science curriculum?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "media-education-rules",
+      "number": 14,
+      "dimension": "teaching-learning",
+      "illustration": "Medienerziehung.png",
+      "links": [
+        "mindsets",
+        "professional-skills-media-cs",
+        "support",
+        "parent-participation",
+        "legal-aspects"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Medienerziehung, Regeln"
+        },
+        "en": {
+          "name": "Media education and rules"
+        }
+      },
+      "questions": [
+        {
+          "id": "media-education-rules-q1",
+          "source": "kompass-original",
+          "tags": [
+            "media-education",
+            "rules"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Regeln gelten für die Mediennutzung an unserer Schule?",
+            "en": "What rules apply to the use of media at our school?"
+          }
+        },
+        {
+          "id": "media-education-rules-q2",
+          "source": "kompass-original",
+          "tags": [
+            "media-literacy",
+            "autonomy"
+          ],
+          "roles": [
+            "teacher"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie unterstützen wir die Lernenden bei der Entwicklung eines kritischen, selbstbestimmten und produktiven Umgangs mit digitalen Medien?",
+            "en": "How do we support students in developing a critical, autonomous and productive approach to digital media?"
+          }
+        },
+        {
+          "id": "media-education-rules-q3",
+          "source": "kompass-original",
+          "tags": [
+            "media-literacy",
+            "pedagogy"
+          ],
+          "roles": [
+            "teacher"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie nehmen wir die von digitalen Medien geprägte Lebenswelt der Kinder im Unterricht auf?",
+            "en": "How do we integrate the children's environment (which is strongly influenced by digital media) into our lessons?"
+          }
+        },
+        {
+          "id": "media-education-rules-q4",
+          "source": "kompass-original",
+          "tags": [
+            "media-literacy",
+            "distraction"
+          ],
+          "roles": [
+            "teacher"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie gehen wir mit dem Ablenkungspotential um?",
+            "en": "How do we deal with the potential for distraction?"
+          }
+        },
+        {
+          "id": "media-education-rules-q5",
+          "source": "kompass-original",
+          "tags": [
+            "media-education",
+            "support"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wer unterstützt uns in medienerzieherischen Fragen?",
+            "en": "Who supports us in questions of media education?"
+          }
+        },
+        {
+          "id": "media-education-rules-q6",
+          "source": "research-addition",
+          "tags": [
+            "wellbeing",
+            "digital-wellness"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie fördern wir einen gesunden Umgang mit digitalen Medien — bei Schüler:innen UND bei uns selbst als Lehrpersonen?",
+            "en": "How do we promote healthy use of digital media — for students AND for ourselves as teachers?"
+          }
+        },
+        {
+          "id": "media-education-rules-q7",
+          "source": "research-addition",
+          "tags": [
+            "wellbeing",
+            "burnout"
+          ],
+          "roles": [
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie erkennen und adressieren wir digitalen Stress, Erschöpfung oder Überforderung im Team?",
+            "en": "How do we recognize and address digital stress, exhaustion, or overwhelm in the team?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "class-administration",
+      "number": 15,
+      "dimension": "teaching-learning",
+      "illustration": "Klassenadministration.png",
+      "links": [
+        "structures-processes",
+        "cooperation",
+        "assessment",
+        "learning-platforms-tools",
+        "learning-culture"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Klassenadministration"
+        },
+        "en": {
+          "name": "Class administration"
+        }
+      },
+      "questions": [
+        {
+          "id": "class-administration-q1",
+          "source": "kompass-original",
+          "tags": [
+            "administration",
+            "planning"
+          ],
+          "roles": [
+            "teacher"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie wird Unterricht vorbereitet?",
+            "en": "How are classes prepared?"
+          }
+        },
+        {
+          "id": "class-administration-q2",
+          "source": "kompass-original",
+          "tags": [
+            "administration",
+            "documentation"
+          ],
+          "roles": [
+            "teacher"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie und wo werden Lernfortschritte dokumentiert?",
+            "en": "How and where is learning progress documented?"
+          }
+        },
+        {
+          "id": "class-administration-q3",
+          "source": "kompass-original",
+          "tags": [
+            "administration",
+            "documentation"
+          ],
+          "roles": [
+            "teacher"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie und wo werden Absenzen, Entschuldigungen, Notizen zu Elterngesprächen oder Beurteilungen festgehalten?",
+            "en": "How and where are absences, notes on parent meetings or assessments recorded?"
+          }
+        },
+        {
+          "id": "class-administration-q4",
+          "source": "kompass-original",
+          "tags": [
+            "administration",
+            "communication"
+          ],
+          "roles": [
+            "teacher"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie werden diese Informationen unter den Beteiligten ausgetauscht?",
+            "en": "How is this information shared among stakeholders?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "vision",
+      "number": 16,
+      "dimension": "organisation-structures",
+      "illustration": "Vision.png",
+      "links": [
+        "innovation",
+        "mindsets",
+        "concept",
+        "leadership",
+        "public-relations"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Vision"
+        },
+        "en": {
+          "name": "Vision"
+        }
+      },
+      "questions": [
+        {
+          "id": "vision-q1",
+          "source": "kompass-original",
+          "tags": [
+            "vision",
+            "leadership"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wer sind wir? Wie könnte man unser pädagogisches Profil mit einem Satz beschreiben?",
+            "en": "Who are we? How could our pedagogical profile be described in one sentence?"
+          }
+        },
+        {
+          "id": "vision-q2",
+          "source": "kompass-original",
+          "tags": [
+            "vision",
+            "pedagogy"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welches Bild von Lernen haben wir an unserer Schule?",
+            "en": "What is the definition of learning at our school?"
+          }
+        },
+        {
+          "id": "vision-q3",
+          "source": "kompass-original",
+          "tags": [
+            "vision",
+            "values"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Was sind die Inhalte unseres Leitbildes und wie werden diese gelebt?",
+            "en": "What are the contents of our mission statement and how are they implemented?"
+          }
+        },
+        {
+          "id": "vision-q4",
+          "source": "kompass-original",
+          "tags": [
+            "vision",
+            "strategy"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": true,
+          "i18n": {
+            "de": "Wie stellen wir uns unsere Schule im Jahr 2030 vor? Wohin wollen wir?",
+            "en": "How do we envision our school in 2030? In which directions do we want our school to develop?"
+          }
+        },
+        {
+          "id": "vision-q5",
+          "source": "kompass-original",
+          "tags": [
+            "vision",
+            "planning"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie fliesst unsere Vision in die Legislaturziele und ins Schulprogramm ein?",
+            "en": "How does our vision relate to our roadmap?"
+          }
+        },
+        {
+          "id": "vision-q6",
+          "source": "kompass-original",
+          "tags": [
+            "vision",
+            "engagement"
+          ],
+          "roles": [
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie schaffen wir gemeinsame Energie für herausfordernde Ziele?",
+            "en": "How do we create shared energy to achieve challenging goals?"
+          }
+        },
+        {
+          "id": "vision-q7",
+          "source": "kompass-original",
+          "tags": [
+            "vision",
+            "digital-transformation"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie soll unsere Schule auf den digitalen Wandel reagieren?",
+            "en": "How should our school react to the digital transformation?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "structures-processes",
+      "number": 17,
+      "dimension": "organisation-structures",
+      "illustration": "Strukturen-Prozesse.png",
+      "links": [
+        "cooperation",
+        "concept",
+        "leadership",
+        "funding"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Strukturen und Prozesse"
+        },
+        "en": {
+          "name": "Structures and processes"
+        }
+      },
+      "questions": [
+        {
+          "id": "structures-processes-q1",
+          "source": "kompass-original",
+          "tags": [
+            "structures",
+            "leadership"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Steuergruppen/Projektgruppen gibt es? Was ist ihre Aufgabe? Wer leitet diese? Wie sieht eine optimale Zusammensetzung aus? Wie ist die Kooperation mit der Schulleitung/Behörde?",
+            "en": "Which steering groups/project groups exist? What is their task? Who leads them? What is the optimal group composition? How is the cooperation with the school management/authority regulated?"
+          }
+        },
+        {
+          "id": "structures-processes-q2",
+          "source": "kompass-original",
+          "tags": [
+            "structures",
+            "efficiency"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie verschlanken wir unsere Administration?",
+            "en": "How can we streamline our administration?"
+          }
+        },
+        {
+          "id": "structures-processes-q3",
+          "source": "kompass-original",
+          "tags": [
+            "structures",
+            "data-management"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie werden Daten von Schüler:innen verwaltet?",
+            "en": "How is student data managed?"
+          }
+        },
+        {
+          "id": "structures-processes-q4",
+          "source": "kompass-original",
+          "tags": [
+            "structures",
+            "efficiency"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie effizient und flexibel sind unsere Prozesse?",
+            "en": "How efficient and flexible are our processes?"
+          }
+        },
+        {
+          "id": "structures-processes-q5",
+          "source": "kompass-original",
+          "tags": [
+            "structures",
+            "digitalization"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Prozesse passen wir an? Welche werden digitalisiert, welche bewusst nicht?",
+            "en": "Which processes do we adapt? Which ones are to be digitised, and which ones are deliberately not?"
+          }
+        },
+        {
+          "id": "structures-processes-q6",
+          "source": "kompass-original",
+          "tags": [
+            "structures",
+            "legal"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welches ist der gesetzliche Rahmen für die Anpassung von Strukturen und Prozessen? Welche Freiräume können wir nutzen?",
+            "en": "Which legal framework is required for the adaptation of structures and processes? How much leeway do we have within this framework?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "concept",
+      "number": 18,
+      "dimension": "organisation-structures",
+      "illustration": "Konzept.png",
+      "links": [
+        "vision",
+        "structures-processes",
+        "leadership"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Konzept"
+        },
+        "en": {
+          "name": "Concept"
+        }
+      },
+      "questions": [
+        {
+          "id": "concept-q1",
+          "source": "kompass-original",
+          "tags": [
+            "concept",
+            "implementation"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Existiert ein (pädagogisches) Medien- und ICT-Konzept? Ist es aktuell? Ist es im Team bekannt und wie wird es gelebt?",
+            "en": "Is there a defined (pedagogical) media and ICT concept? Is it up to date? Is it known across the team and how is it being applied?"
+          }
+        },
+        {
+          "id": "concept-q2",
+          "source": "kompass-original",
+          "tags": [
+            "concept",
+            "strategy"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Was soll das (pädagogische) ICT-Konzept bewirken?",
+            "en": "What is the impact that the (pedagogical) ICT concept should aim to achieve?"
+          }
+        },
+        {
+          "id": "concept-q3",
+          "source": "kompass-original",
+          "tags": [
+            "concept",
+            "pedagogy"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie wird unser Verständnis des Lernens im Konzept abgebildet?",
+            "en": "How is our perception of learning reflected in the concept?"
+          }
+        },
+        {
+          "id": "concept-q4",
+          "source": "kompass-original",
+          "tags": [
+            "concept",
+            "participation"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wer beteiligt sich an der Konzeptentwicklung? Wer hat welche Rolle?",
+            "en": "Who is involved in developing the concept? Who takes on which role?"
+          }
+        },
+        {
+          "id": "concept-q5",
+          "source": "kompass-original",
+          "tags": [
+            "concept",
+            "implementation"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie kann ein «Papiertiger» verhindert werden?",
+            "en": "How can we prevent the concept only being successful on paper, but having no meaning in real life?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "support",
+      "number": 19,
+      "dimension": "organisation-structures",
+      "illustration": "Support.png",
+      "links": [
+        "concept",
+        "structures-processes",
+        "cooperation"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Support"
+        },
+        "en": {
+          "name": "Support"
+        }
+      },
+      "questions": [
+        {
+          "id": "support-q1",
+          "source": "kompass-original",
+          "tags": [
+            "support",
+            "resources"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wer übernimmt den technischen und pädagogischen Support mit wie vielen Stunden?",
+            "en": "Who will provide technical and educational support? How many working hours are provided?"
+          }
+        },
+        {
+          "id": "support-q2",
+          "source": "kompass-original",
+          "tags": [
+            "support",
+            "staffing"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Was beinhaltet das Stellenprofil des Supports?",
+            "en": "What does the support job profile include?"
+          }
+        },
+        {
+          "id": "support-q3",
+          "source": "kompass-original",
+          "tags": [
+            "support",
+            "staffing"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Weshalb sind diese Personen besonders für diese Aufgabe geeignet? Was sind ihre Stärken?",
+            "en": "What skills do these people need to have? What are their strengths?"
+          }
+        },
+        {
+          "id": "support-q4",
+          "source": "kompass-original",
+          "tags": [
+            "support",
+            "cooperation"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie wird der Austausch und die Zusammenarbeit zwischen diesen beiden Stellen organisiert?",
+            "en": "How is the exchange and teamwork between these two departments organised?"
+          }
+        },
+        {
+          "id": "support-q5",
+          "source": "kompass-original",
+          "tags": [
+            "support",
+            "planning"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Supportgefässe werden eingerichtet?",
+            "en": "What time slots are set up for support?"
+          }
+        },
+        {
+          "id": "support-q6",
+          "source": "kompass-original",
+          "tags": [
+            "support",
+            "engagement"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie wird sichergestellt, dass das Angebot abgeholt wird?",
+            "en": "How is it ensured that use is made of this offer?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "leadership",
+      "number": 20,
+      "dimension": "organisation-structures",
+      "illustration": "Fuehrung.png",
+      "links": [
+        "mindsets",
+        "innovation",
+        "structures-processes",
+        "team-culture",
+        "dynamics-emotions"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Führung"
+        },
+        "en": {
+          "name": "Leadership"
+        }
+      },
+      "questions": [
+        {
+          "id": "leadership-q1",
+          "source": "kompass-original",
+          "tags": [
+            "leadership",
+            "digital-transformation"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wo übernimmt die Schulleitung eine Vorbildfunktion in Bezug auf den digitalen Wandel? Und in Zukunft?",
+            "en": "In which aspects does the school management act as a role model with regard to the digital transformation? And in the future?"
+          }
+        },
+        {
+          "id": "leadership-q2",
+          "source": "kompass-original",
+          "tags": [
+            "leadership",
+            "expertise"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Rolle und Expertise hat die Schulleitung in diesem Themenfeld?",
+            "en": "What is the role and expertise of school leadership in this field?"
+          }
+        },
+        {
+          "id": "leadership-q3",
+          "source": "kompass-original",
+          "tags": [
+            "leadership",
+            "expertise"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wer hat sonst relevante Expertise zum digitalen Wandel und wie wird diese eingebracht? Wo haben wir noch Lücken und wie geht die Führung damit um?",
+            "en": "Who else has relevant expertise on the digital transformation and how is this shared? Where do we still have shortcomings and how does the management deal with them?"
+          }
+        },
+        {
+          "id": "leadership-q4",
+          "source": "kompass-original",
+          "tags": [
+            "leadership",
+            "support"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wo stärkt die Schulleitung pädagogische und technische ICT-Supportpersonen in ihren Funktionen?",
+            "en": "How does the school management team empower pedagogical and technical ICT support staff in their functions?"
+          }
+        },
+        {
+          "id": "leadership-q5",
+          "source": "kompass-original",
+          "tags": [
+            "leadership",
+            "governance"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Rolle hat die Schulbehörde und wie gestaltet sich die Zusammenarbeit?",
+            "en": "What is the role of the school board and what format does this teamwork take?"
+          }
+        },
+        {
+          "id": "leadership-q6",
+          "source": "kompass-original",
+          "tags": [
+            "leadership",
+            "change-management"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie sind Mitarbeitende bei Veränderungsprozessen durch die Schulleitung beteiligt und informiert?",
+            "en": "How are employees involved and informed by the school management team during changes in processes?"
+          }
+        },
+        {
+          "id": "leadership-q7",
+          "source": "kompass-original",
+          "tags": [
+            "leadership",
+            "autonomy"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie gestaltet sich der Umgang mit Freiheit/Autonomie und Verbindlichkeit/Standards?",
+            "en": "How are freedom/autonomy and commitment/standards handled?"
+          }
+        },
+        {
+          "id": "leadership-q8",
+          "source": "kompass-original",
+          "tags": [
+            "leadership",
+            "professional-development"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie werden Schwerpunkte für die individuelle und teaminterne Weiterbildung festgelegt?",
+            "en": "How are priorities for individual and team training determined?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "learning-spaces",
+      "number": 21,
+      "dimension": "organisation-structures",
+      "illustration": "Lernorte.png",
+      "links": [
+        "learning-culture",
+        "vision",
+        "teaching-learning-units",
+        "concept"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Lernorte"
+        },
+        "en": {
+          "name": "Learning spaces"
+        }
+      },
+      "questions": [
+        {
+          "id": "learning-spaces-q1",
+          "source": "kompass-original",
+          "tags": [
+            "learning-spaces",
+            "pedagogy"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wo lernen die Schülerinnen und Schüler, wo lernen die Mitarbeitenden? Wie lernen sie dort?",
+            "en": "Where do the students learn, where do the employees learn? How do they learn there?"
+          }
+        },
+        {
+          "id": "learning-spaces-q2",
+          "source": "kompass-original",
+          "tags": [
+            "learning-spaces",
+            "definition"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Was gehört alles zum Lernort Schule?",
+            "en": "How do we describe the ideal learning space?"
+          }
+        },
+        {
+          "id": "learning-spaces-q3",
+          "source": "kompass-original",
+          "tags": [
+            "learning-spaces",
+            "design"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie sind die Lernräume gestaltet, eingerichtet?",
+            "en": "How are the learning spaces designed and furnished?"
+          }
+        },
+        {
+          "id": "learning-spaces-q4",
+          "source": "kompass-original",
+          "tags": [
+            "learning-spaces",
+            "efficiency"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie können wir den uns zur Verfügung stehenden Raum an unserer Schule optimal nutzen und einsetzen?",
+            "en": "How can we make the best use of the space available at our school?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "innovation",
+      "number": 22,
+      "dimension": "organisation-structures",
+      "illustration": "Innovation.png",
+      "links": [
+        "vision",
+        "leadership",
+        "team-culture"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Innovation"
+        },
+        "en": {
+          "name": "Innovation"
+        }
+      },
+      "questions": [
+        {
+          "id": "innovation-q1",
+          "source": "kompass-original",
+          "tags": [
+            "innovation",
+            "change-management"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Warum braucht es Innovation?",
+            "en": "Why is innovation needed?"
+          }
+        },
+        {
+          "id": "innovation-q2",
+          "source": "kompass-original",
+          "tags": [
+            "innovation",
+            "terminology"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Was verstehen wir unter «Innovation» und «Change»?",
+            "en": "How do we define \"innovation\" and \"change\"?"
+          }
+        },
+        {
+          "id": "innovation-q3",
+          "source": "kompass-original",
+          "tags": [
+            "innovation",
+            "leadership"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Personen und Gruppen sind die Innovationstreiber:innen an unserer Schule? Wer sind die Bewahrer:innen?",
+            "en": "Which people and groups are the innovation drivers at our school? Who are the preservers?"
+          }
+        },
+        {
+          "id": "innovation-q4",
+          "source": "kompass-original",
+          "tags": [
+            "innovation",
+            "participation"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie gelingt die Beteiligung aller Mitarbeitenden? Wie nehmen wir die Skeptikerinnen und Skeptiker mit auf den Weg?",
+            "en": "How do we succeed in involving all employees? How do we deal with sceptics and motivate them?"
+          }
+        },
+        {
+          "id": "innovation-q5",
+          "source": "kompass-original",
+          "tags": [
+            "innovation",
+            "planning"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Haben wir klare Ziel- und Zeitvorgaben für unsere Innovationsprojekte?",
+            "en": "Do we have clear objectives and timelines for our innovation projects?"
+          }
+        },
+        {
+          "id": "innovation-q6",
+          "source": "kompass-original",
+          "tags": [
+            "innovation",
+            "methods"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Methoden unterstützen uns bei unseren Change-Prozessen?",
+            "en": "Which methods can support us throughout our change processes?"
+          }
+        },
+        {
+          "id": "innovation-q7",
+          "source": "kompass-original",
+          "tags": [
+            "innovation",
+            "culture"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie werden innovative Lehrpersonen angezogen? Was sorgt dafür, dass die Schule für solche Personen attraktiv bleibt?",
+            "en": "How are innovative teachers attracted? What ensures that the school remains attractive to this group of teachers?"
+          }
+        },
+        {
+          "id": "innovation-q8",
+          "source": "research-addition",
+          "tags": [
+            "innovation",
+            "sustainability"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie stellen wir sicher, dass Innovationen nachhaltig verankert werden und nicht versanden, wenn die Projektzeit vorbei ist?",
+            "en": "How do we ensure that innovations are sustainably anchored and do not fizzle out when the project period is over?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "public-relations",
+      "number": 23,
+      "dimension": "organisation-structures",
+      "illustration": "Oeffentlichkeitsarbeit.png",
+      "links": [
+        "parent-participation",
+        "concept",
+        "communication"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Öffentlichkeitsarbeit"
+        },
+        "en": {
+          "name": "Public relations"
+        }
+      },
+      "questions": [
+        {
+          "id": "public-relations-q1",
+          "source": "kompass-original",
+          "tags": [
+            "communication",
+            "channels"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Kanäle nutzen wir für die Kommunikation mit der Öffentlichkeit?",
+            "en": "What channels do we use to communicate with the public?"
+          }
+        },
+        {
+          "id": "public-relations-q2",
+          "source": "kompass-original",
+          "tags": [
+            "communication",
+            "transparency"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie informieren wir unser Umfeld über unsere Aktivitäten?",
+            "en": "How do we inform the community about our activities?"
+          }
+        },
+        {
+          "id": "public-relations-q3",
+          "source": "kompass-original",
+          "tags": [
+            "communication",
+            "branding"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie und wo bilden wir unser pädagogisches Profil ab?",
+            "en": "How and where do we display our pedagogical profile?"
+          }
+        },
+        {
+          "id": "public-relations-q4",
+          "source": "kompass-original",
+          "tags": [
+            "communication",
+            "digital"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie machen wir unseren Schulalltag für Eltern und Öffentlichkeit sichtbar? Welches Bild geben wir mit unserer Website und unserem Social-Media-Auftritt ab?",
+            "en": "How do we make our everyday school life visible to parents and the public? What image do we convey with our website and our social media presence?"
+          }
+        },
+        {
+          "id": "public-relations-q5",
+          "source": "kompass-original",
+          "tags": [
+            "communication",
+            "perception"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie werden wir in der Bevölkerung wahrgenommen?",
+            "en": "What is the public's impression of us?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cooperation",
+      "number": 24,
+      "dimension": "cooperation-team",
+      "illustration": "Kooperation.png",
+      "links": [
+        "knowledge-management",
+        "team-culture",
+        "teaching-learning-units",
+        "class-administration"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Kooperation"
+        },
+        "en": {
+          "name": "Cooperation"
+        }
+      },
+      "questions": [
+        {
+          "id": "cooperation-q1",
+          "source": "kompass-original",
+          "tags": [
+            "cooperation",
+            "willingness"
+          ],
+          "roles": [
+            "teacher",
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie hoch ist die Kooperationsbereitschaft?",
+            "en": "How high is the willingness to cooperate?"
+          }
+        },
+        {
+          "id": "cooperation-q2",
+          "source": "kompass-original",
+          "tags": [
+            "cooperation",
+            "structure"
+          ],
+          "roles": [
+            "teacher",
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wann und wie arbeiten wir in welchen Konstellationen zusammen?",
+            "en": "When and how do we work together in which groups?"
+          }
+        },
+        {
+          "id": "cooperation-q3",
+          "source": "kompass-original",
+          "tags": [
+            "cooperation",
+            "conditions"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Was brauchen wir, um produktiv miteinander arbeiten zu können?",
+            "en": "What do we need to be able to work together productively?"
+          }
+        },
+        {
+          "id": "cooperation-q4",
+          "source": "kompass-original",
+          "tags": [
+            "cooperation",
+            "trust"
+          ],
+          "roles": [
+            "teacher",
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie schaffen wir Vertrauen? Wie unterstützen wir uns?",
+            "en": "How do we build trust? How do we support each other?"
+          }
+        },
+        {
+          "id": "cooperation-q5",
+          "source": "kompass-original",
+          "tags": [
+            "cooperation",
+            "organization"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie ist die Zusammenarbeit organisiert? Inwiefern fordert die Schulleitung verbindliche Kooperation ein?",
+            "en": "How is the teamwork organised? To what extent does the school management demand mandatory cooperation?"
+          }
+        },
+        {
+          "id": "cooperation-q6",
+          "source": "kompass-original",
+          "tags": [
+            "cooperation",
+            "efficiency"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie können wir durch die Zusammenarbeit Ressourcen sparen?",
+            "en": "How can we use resources more effectively through teamwork?"
+          }
+        },
+        {
+          "id": "cooperation-q7",
+          "source": "kompass-original",
+          "tags": [
+            "cooperation",
+            "tools"
+          ],
+          "roles": [
+            "teacher",
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Tools nutzen wir um zeit- und ortsunabhängig zusammenzuarbeiten?",
+            "en": "Which tools do we use to cooperate (independent of time and location)?"
+          }
+        },
+        {
+          "id": "cooperation-q8",
+          "source": "kompass-original",
+          "tags": [
+            "cooperation",
+            "networking"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie pflegen wir das Netzwerk mit anderen Schulen, Expert:innen und Organisationen?",
+            "en": "How do we build a network with other schools, experts and organisations?"
+          }
+        },
+        {
+          "id": "cooperation-q9",
+          "source": "research-addition",
+          "tags": [
+            "plc",
+            "professional-development"
+          ],
+          "roles": [
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Funktionieren bei uns professionelle Lerngemeinschaften? Welche Rahmenbedingungen brauchen sie, um wirksam zu sein?",
+            "en": "Do professional learning communities function in our school? What conditions do they need to be effective?"
+          }
+        },
+        {
+          "id": "cooperation-q10",
+          "source": "research-addition",
+          "tags": [
+            "plc",
+            "networking"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie pflegen wir das Netzwerk mit Lehrpersonen anderer Schulen, die ähnliche Herausforderungen haben?",
+            "en": "How do we maintain a network with teachers at other schools facing similar challenges?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "knowledge-management",
+      "number": 25,
+      "dimension": "cooperation-team",
+      "illustration": "Wissensmanagement.png",
+      "links": [
+        "cooperation",
+        "leadership",
+        "structures-processes"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Wissensmanagement"
+        },
+        "en": {
+          "name": "Knowledge management"
+        }
+      },
+      "questions": [
+        {
+          "id": "knowledge-management-q1",
+          "source": "kompass-original",
+          "tags": [
+            "knowledge-management",
+            "sharing"
+          ],
+          "roles": [
+            "teacher",
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie tauschen wir unser Wissen aus? Welche formellen und informellen Kanäle werden genutzt?",
+            "en": "How do we exchange our knowledge? Which formal and informal channels are used?"
+          }
+        },
+        {
+          "id": "knowledge-management-q2",
+          "source": "kompass-original",
+          "tags": [
+            "knowledge-management",
+            "sharing"
+          ],
+          "roles": [
+            "teacher",
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie ist unsere Bereitschaft Materialien zu teilen? Wie ist die Bereitschaft fremde Materialien zu nutzen? Welche Verbindlichkeiten gibt es?",
+            "en": "Are we willing to share our materials? Are we willing to use other people's materials? Is the sharing of materials mandatory?"
+          }
+        },
+        {
+          "id": "knowledge-management-q3",
+          "source": "kompass-original",
+          "tags": [
+            "knowledge-management",
+            "organization"
+          ],
+          "roles": [
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie strukturieren wir unsere Ablage so, dass die Dateien dauerhaft innert nützlicher Frist gefunden werden? Wer ist für die Bewirtschaftung der Ordnung verantwortlich?",
+            "en": "How do we structure our file system so that the files can be found permanently within a useful period of time? Who is responsible for maintaining the file system?"
+          }
+        },
+        {
+          "id": "knowledge-management-q4",
+          "source": "kompass-original",
+          "tags": [
+            "knowledge-management",
+            "resources"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Ressourcen stehen für die Weiterentwicklung und Weitergabe des organisationalen Wissens zur Verfügung?",
+            "en": "What resources are available for the further development and transfer of organisational knowledge?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "communication",
+      "number": 26,
+      "dimension": "cooperation-team",
+      "illustration": "Kommunikation.png",
+      "links": [
+        "interdisciplinary-skills",
+        "leadership",
+        "structures-processes",
+        "public-relations"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Kommunikation"
+        },
+        "en": {
+          "name": "Communication"
+        }
+      },
+      "questions": [
+        {
+          "id": "communication-q1",
+          "source": "kompass-original",
+          "tags": [
+            "communication",
+            "channels"
+          ],
+          "roles": [
+            "teacher",
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wo und wie diskutieren wir, on- oder offline?",
+            "en": "Where and how do we communicate, online or offline?"
+          }
+        },
+        {
+          "id": "communication-q2",
+          "source": "kompass-original",
+          "tags": [
+            "communication",
+            "meetings"
+          ],
+          "roles": [
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Sitzung hat welchen Zweck? Wofür nutzen wir die Sitzungszeit? Sind dabei alle Anwesenden vor Ort? Wer muss dabei sein? Können wir Diskussionen auch online führen?",
+            "en": "Which meeting has which purpose? What do we use the meeting time for? Is everyone present at the meeting? Who needs to be there? Can we have meetings online?"
+          }
+        },
+        {
+          "id": "communication-q3",
+          "source": "kompass-original",
+          "tags": [
+            "communication",
+            "structure"
+          ],
+          "roles": [
+            "teacher",
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie tauschen wir uns in den verschiedenen Arbeits- und Lerngruppierungen aus? Wie in den Stufen- oder Zyklussitzungen?",
+            "en": "How do we exchange information in the different teams, school levels, departments?"
+          }
+        },
+        {
+          "id": "communication-q4",
+          "source": "kompass-original",
+          "tags": [
+            "communication",
+            "stakeholders"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie treten wir mit dem Umfeld in den Austausch?",
+            "en": "How do we interact with the community?"
+          }
+        },
+        {
+          "id": "communication-q5",
+          "source": "kompass-original",
+          "tags": [
+            "communication",
+            "inclusion"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie beziehen wir alle Stakeholder ein?",
+            "en": "How do we involve all stakeholders?"
+          }
+        },
+        {
+          "id": "communication-q6",
+          "source": "kompass-original",
+          "tags": [
+            "communication",
+            "channels"
+          ],
+          "roles": [
+            "teacher",
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Für welche Kanäle gelten welche Antwortzeiten und formale Anforderungen?",
+            "en": "Which response times and formal requirements apply to which channels?"
+          }
+        },
+        {
+          "id": "communication-q7",
+          "source": "kompass-original",
+          "tags": [
+            "communication",
+            "stakeholders"
+          ],
+          "roles": [
+            "teacher",
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie tauschen wir uns mit Schülerinnen und Schülern, anderen Lehrpersonen und Schulleitungen, Eltern aus?",
+            "en": "How do we exchange ideas with students, other teachers, school management and parents?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "team-culture",
+      "number": 27,
+      "dimension": "cooperation-team",
+      "illustration": "Teamkultur.png",
+      "links": [
+        "dynamics-emotions",
+        "learning-culture",
+        "mindsets",
+        "communication",
+        "cooperation"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Teamkultur"
+        },
+        "en": {
+          "name": "Team culture"
+        }
+      },
+      "questions": [
+        {
+          "id": "team-culture-q1",
+          "source": "kompass-original",
+          "tags": [
+            "team-culture",
+            "responsibility"
+          ],
+          "roles": [
+            "teacher",
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Was können wir tun, damit alle Beteiligten für sich und die Gemeinschaft Verantwortung übernehmen?",
+            "en": "What can we do to make everyone involved take responsibility for themselves and the community?"
+          }
+        },
+        {
+          "id": "team-culture-q2",
+          "source": "kompass-original",
+          "tags": [
+            "team-culture",
+            "inclusion"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie binden wir die verschiedenen Professionen und Teilzeitmitarbeitende möglichst zweckmässig ein?",
+            "en": "How do we involve the various professions and part-time employees as effectively as possible?"
+          }
+        },
+        {
+          "id": "team-culture-q3",
+          "source": "kompass-original",
+          "tags": [
+            "team-culture",
+            "awareness"
+          ],
+          "roles": [
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie fördern wir das soziale Bewusstsein bei allen Beteiligten?",
+            "en": "How do we promote social awareness among all stakeholders?"
+          }
+        },
+        {
+          "id": "team-culture-q4",
+          "source": "kompass-original",
+          "tags": [
+            "team-culture",
+            "community"
+          ],
+          "roles": [
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wo und wie legen wir bewusst Wert auf die Gemeinschaftsbildung?",
+            "en": "Where and how do we intentionally emphasise community building?"
+          }
+        },
+        {
+          "id": "team-culture-q5",
+          "source": "kompass-original",
+          "tags": [
+            "team-culture",
+            "orientation"
+          ],
+          "roles": [
+            "teacher",
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie finden wir in einer immer komplexer werdenden Welt Orientierung? Wie leben wir das unseren Lernenden vor?",
+            "en": "How do we navigate in a world that is becoming more and more complex? How do we exemplify this to our students?"
+          }
+        },
+        {
+          "id": "team-culture-q6",
+          "source": "kompass-original",
+          "tags": [
+            "team-culture",
+            "communication"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie erklären wir unsere Team- und Fehlerkultur den Eltern und der Öffentlichkeit? (Kooperation)",
+            "en": "How do we explain our team and error culture to parents and the public? (cooperation)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "dynamics-emotions",
+      "number": 28,
+      "dimension": "cooperation-team",
+      "illustration": "Dynamiken_Emotionen.png",
+      "links": [
+        "mindsets",
+        "team-culture",
+        "cooperation",
+        "personal-social-skills"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Dynamiken und Emotionen"
+        },
+        "en": {
+          "name": "Dynamics and emotions"
+        }
+      },
+      "questions": [
+        {
+          "id": "dynamics-emotions-q1",
+          "source": "kompass-original",
+          "tags": [
+            "dynamics",
+            "change-readiness"
+          ],
+          "roles": [
+            "leader",
+            "team"
+          ],
+          "quickPulse": true,
+          "i18n": {
+            "de": "Wie hoch ist die Bereitschaft/Energie im Team, sich auf den Veränderungsprozess einzulassen?",
+            "en": "What is the level of willingness/energy in the team to embrace innovation?"
+          }
+        },
+        {
+          "id": "dynamics-emotions-q2",
+          "source": "kompass-original",
+          "tags": [
+            "dynamics",
+            "emotions"
+          ],
+          "roles": [
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Dynamiken und Emotionen sind in unserem Team bei Veränderungsprozessen anzutreffen?",
+            "en": "What dynamics and emotions are found in our team during innovations?"
+          }
+        },
+        {
+          "id": "dynamics-emotions-q3",
+          "source": "kompass-original",
+          "tags": [
+            "dynamics",
+            "engagement"
+          ],
+          "roles": [
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie lassen sich positive Energien bündeln, um eine gemeinsame Stossrichtung zu erzielen?",
+            "en": "How can positive energies be bundled to move forward together?"
+          }
+        },
+        {
+          "id": "dynamics-emotions-q4",
+          "source": "kompass-original",
+          "tags": [
+            "dynamics",
+            "conditions"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Rahmenbedingungen begünstigen positive Dynamiken?",
+            "en": "What conditions favour positive dynamics?"
+          }
+        },
+        {
+          "id": "dynamics-emotions-q5",
+          "source": "kompass-original",
+          "tags": [
+            "dynamics",
+            "wellbeing"
+          ],
+          "roles": [
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie lässt sich mit Emotionen und Stress konstruktiv und adäquat umgehen?",
+            "en": "How can emotions and stress be dealt with constructively and appropriately?"
+          }
+        },
+        {
+          "id": "dynamics-emotions-q6",
+          "source": "kompass-original",
+          "tags": [
+            "dynamics",
+            "psychological-safety"
+          ],
+          "roles": [
+            "leader",
+            "team"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie erreichen wir, dass sich die Beteiligten sozial-emotional sicher fühlen?",
+            "en": "How do we make stakeholders feel socially and emotionally safe?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "working-devices",
+      "number": 29,
+      "dimension": "infrastructure",
+      "illustration": "Arbeitsgeräte.png",
+      "links": [
+        "concept",
+        "funding",
+        "services"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Arbeitsgeräte"
+        },
+        "en": {
+          "name": "Working devices"
+        }
+      },
+      "questions": [
+        {
+          "id": "working-devices-q1",
+          "source": "kompass-original",
+          "tags": [
+            "infrastructure",
+            "equipment"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": true,
+          "i18n": {
+            "de": "Welche Arbeitsgeräte stehen den Lernenden zur Verfügung? Welche den Mitarbeitenden?",
+            "en": "Which working devices are available to the students? Which ones are available to the employees?"
+          }
+        },
+        {
+          "id": "working-devices-q2",
+          "source": "kompass-original",
+          "tags": [
+            "infrastructure",
+            "planning"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welches Mengengerüst pro Stufe wählen wir?",
+            "en": "Which quantity framework per grade do we choose?"
+          }
+        },
+        {
+          "id": "working-devices-q3",
+          "source": "kompass-original",
+          "tags": [
+            "infrastructure",
+            "management"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie verteilen/verwalten wir Software (MDM)?",
+            "en": "How do we distribute/manage software (MDM)?"
+          }
+        },
+        {
+          "id": "working-devices-q4",
+          "source": "kompass-original",
+          "tags": [
+            "infrastructure",
+            "configuration"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie müssen die Geräte der Lernenden konfiguriert sein? Welche Restriktionen sind nötig?",
+            "en": "How must the student devices be configured? What restrictions are necessary?"
+          }
+        },
+        {
+          "id": "working-devices-q5",
+          "source": "kompass-original",
+          "tags": [
+            "infrastructure",
+            "software"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Apps und Dienste stehen den Lernenden zur Verfügung? Welche Software kann auf dem Arbeitsgerät installiert werden? Welche sind bereits vorinstalliert?",
+            "en": "Which apps and services are available to students? Which software can be installed on the work device? Which ones are already preinstalled?"
+          }
+        },
+        {
+          "id": "working-devices-q6",
+          "source": "kompass-original",
+          "tags": [
+            "infrastructure",
+            "satisfaction"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie zufrieden sind wir mit der bisherigen Infrastruktur? Wie schwierig wäre ein Wechsel auf ein anderes Betriebssystem?",
+            "en": "How satisfied are we with the current infrastructure? How difficult would it be to switch to another operating system?"
+          }
+        },
+        {
+          "id": "working-devices-q7",
+          "source": "kompass-original",
+          "tags": [
+            "infrastructure",
+            "decision-making"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Aufgrund welcher Kriterien werden Anschaffungsentscheidungen getroffen?",
+            "en": "What factors are considered when making acquisition decisions?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "basic-infrastructure",
+      "number": 30,
+      "dimension": "infrastructure",
+      "illustration": "Basisinfrastruktur.png",
+      "links": [
+        "concept",
+        "funding",
+        "services",
+        "security",
+        "support"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Basisinfrastruktur"
+        },
+        "en": {
+          "name": "Basic infrastructure"
+        }
+      },
+      "questions": [
+        {
+          "id": "basic-infrastructure-q1",
+          "source": "kompass-original",
+          "tags": [
+            "infrastructure",
+            "network"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Ist unser Netzwerk genug sicher, schnell und stabil?",
+            "en": "Is our network secure, fast and stable enough?"
+          }
+        },
+        {
+          "id": "basic-infrastructure-q2",
+          "source": "kompass-original",
+          "tags": [
+            "infrastructure",
+            "bandwidth"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Reicht die Bandbreite unseres Internetanschlusses? Brauchen wir eine redundante Leitung?",
+            "en": "Is the bandwidth of our internet connection sufficient? Do we need a redundant line?"
+          }
+        },
+        {
+          "id": "basic-infrastructure-q3",
+          "source": "kompass-original",
+          "tags": [
+            "infrastructure",
+            "connectivity"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Sind kabelgebundene und kabellose Anschlüsse überall vorhanden wo nötig?",
+            "en": "Are wired and wireless connections available where needed?"
+          }
+        },
+        {
+          "id": "basic-infrastructure-q4",
+          "source": "kompass-original",
+          "tags": [
+            "infrastructure",
+            "multimedia"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Multimedia-Technik brauchen wir in welchen Räumen? Welche Lehr- und Lernformen werden dadurch begünstigt?",
+            "en": "Which multimedia technology do we need in which rooms? What forms of teaching and learning does it encourage?"
+          }
+        },
+        {
+          "id": "basic-infrastructure-q5",
+          "source": "kompass-original",
+          "tags": [
+            "infrastructure",
+            "printing"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wer muss wo drucken können?",
+            "en": "Who must be able to print where?"
+          }
+        },
+        {
+          "id": "basic-infrastructure-q6",
+          "source": "kompass-original",
+          "tags": [
+            "infrastructure",
+            "equipment"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welches Zubehör brauchen wir?",
+            "en": "What equipment do we need?"
+          }
+        },
+        {
+          "id": "basic-infrastructure-q7",
+          "source": "kompass-original",
+          "tags": [
+            "infrastructure",
+            "security"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Ist unsere Gebäude- und Sicherheitstechnik auf dem neuesten Stand?",
+            "en": "Is the safety technology in our buildings up to date?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "software-services",
+      "number": 31,
+      "dimension": "infrastructure",
+      "illustration": "Software-Dienste.png",
+      "links": [
+        "security",
+        "cooperation",
+        "funding",
+        "legal-aspects",
+        "learning-platforms-tools"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Software/Dienste"
+        },
+        "en": {
+          "name": "Software/services"
+        }
+      },
+      "questions": [
+        {
+          "id": "software-services-q1",
+          "source": "kompass-original",
+          "tags": [
+            "infrastructure",
+            "operating-systems"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Mit welchem Betriebssystem arbeiten wir?",
+            "en": "Which operating system do we work with?"
+          }
+        },
+        {
+          "id": "software-services-q2",
+          "source": "kompass-original",
+          "tags": [
+            "infrastructure",
+            "software"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Software / Tools / Plattformen brauchen wir, um unsere Ziele zu erreichen?",
+            "en": "What software / tools / platforms do we need to achieve our goals?"
+          }
+        },
+        {
+          "id": "software-services-q3",
+          "source": "kompass-original",
+          "tags": [
+            "infrastructure",
+            "management"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie wird die Software verwaltet? Wer ist für Lizenzen und Accounts zuständig?",
+            "en": "How is the software managed? Who is responsible for licenses and accounts?"
+          }
+        },
+        {
+          "id": "software-services-q4",
+          "source": "kompass-original",
+          "tags": [
+            "infrastructure",
+            "procurement"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie ist der Beschaffungs- und Erneuerungsprozess für Software und Lizenzen?",
+            "en": "How is the procurement and renewal process for software and licenses organised?"
+          }
+        },
+        {
+          "id": "software-services-q5",
+          "source": "kompass-original",
+          "tags": [
+            "infrastructure",
+            "data-protection"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wo werden die Daten gespeichert? Arbeitet unsere Schule datenschutzkonform?",
+            "en": "Where is the data stored? Does our school comply with the rules on data protection?"
+          }
+        },
+        {
+          "id": "software-services-q6",
+          "source": "kompass-original",
+          "tags": [
+            "infrastructure",
+            "access"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie gewährleisten wir, dass jederzeit orts- und zeitunabhängig gearbeitet und gelernt werden kann?",
+            "en": "How do we ensure that students and employees can work and learn regardless of location and time?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "number": 32,
+      "dimension": "infrastructure",
+      "illustration": "Sicherheit.png",
+      "links": [
+        "concept",
+        "support",
+        "legal-aspects"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Sicherheit"
+        },
+        "en": {
+          "name": "Security"
+        }
+      },
+      "questions": [
+        {
+          "id": "security-q1",
+          "source": "kompass-original",
+          "tags": [
+            "security",
+            "risk-culture"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie sieht unsere Risikokultur aus? Wie können wir als Schule sicherstellen, dass sich alle Beteiligten sicher bewegen können und genügend Spielraum haben?",
+            "en": "What does our risk culture look like? How can the school ensure that everyone involved can move safely?"
+          }
+        },
+        {
+          "id": "security-q2",
+          "source": "kompass-original",
+          "tags": [
+            "security",
+            "awareness"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Sicherheitsaspekte müssen berücksichtigt werden?",
+            "en": "Which safety aspects have to be considered?"
+          }
+        },
+        {
+          "id": "security-q3",
+          "source": "kompass-original",
+          "tags": [
+            "security",
+            "training"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Was müssen Beteiligte (Schüler:innen, Lehrpersonen, Schulleitung, PICTS etc.) in Bezug auf Sicherheit wissen? Wie müssen sie sich entsprechend verhalten?",
+            "en": "What do stakeholders (students, teachers, school management, PICTS, TICTS, etc.) need to know about safety? How do they have to act accordingly?"
+          }
+        },
+        {
+          "id": "security-q4",
+          "source": "kompass-original",
+          "tags": [
+            "security",
+            "technical-measures"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche technischen Sicherheitsmassnahmen treffen wir (Virenschutz, Updates, Filter...)?",
+            "en": "What technical security measures do we have (virus protection, updates, filters, etc.)?"
+          }
+        },
+        {
+          "id": "security-q5",
+          "source": "kompass-original",
+          "tags": [
+            "security",
+            "physical-protection"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie stellen wir physischen Schutz sicher? (Aufbewahrung, Serverraum, Schränke, Zutrittsregelungen)",
+            "en": "How do we ensure physical protection? (storage, server room, cabinets, access regulations)"
+          }
+        },
+        {
+          "id": "security-q6",
+          "source": "kompass-original",
+          "tags": [
+            "security",
+            "data-protection"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie gewährleisten wir die Datensicherheit? Wer ist für Backups verantwortlich?",
+            "en": "How do we ensure data security? Who is responsible for backups?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "number": 33,
+      "dimension": "infrastructure",
+      "illustration": "Dienstleister.png",
+      "links": [
+        "concept",
+        "structures-processes",
+        "funding",
+        "application-skills-teachers"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Dienstleistungen"
+        },
+        "en": {
+          "name": "Services"
+        }
+      },
+      "questions": [
+        {
+          "id": "services-q1",
+          "source": "kompass-original",
+          "tags": [
+            "services",
+            "support"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie ist der technische Support organisiert (1st, 2nd, 3rd-Level)?",
+            "en": "How is the technical support organised (1st, 2nd, 3rd level)?"
+          }
+        },
+        {
+          "id": "services-q2",
+          "source": "kompass-original",
+          "tags": [
+            "services",
+            "offerings"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Welche Dienstleistungen stehen uns zur Verfügung?",
+            "en": "What services are available to us?"
+          }
+        },
+        {
+          "id": "services-q3",
+          "source": "kompass-original",
+          "tags": [
+            "services",
+            "satisfaction"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie schnell und zufriedenstellend ist die Unterstützung durch die externe Dienstleistungsfirma?",
+            "en": "How fast and reliable is the support provided by external service companies?"
+          }
+        },
+        {
+          "id": "services-q4",
+          "source": "kompass-original",
+          "tags": [
+            "services",
+            "advice"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie gut werden wir bei Neuanschaffungen beraten? Inwiefern sind dabei pädagogische Anforderungen im Zentrum?",
+            "en": "How well are we advised on new acquisitions? How important are pedagogical requirements?"
+          }
+        },
+        {
+          "id": "services-q5",
+          "source": "kompass-original",
+          "tags": [
+            "services",
+            "training"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie werden wir für die Nutzung neuer Dienste geschult?",
+            "en": "How will we be trained to use new services?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "legal-aspects",
+      "number": 34,
+      "dimension": "infrastructure",
+      "illustration": "Rechtliche_Aspekte.png",
+      "links": [
+        "security",
+        "concept"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Rechtliche Aspekte"
+        },
+        "en": {
+          "name": "Legal aspects"
+        }
+      },
+      "questions": [
+        {
+          "id": "legal-aspects-q1",
+          "source": "kompass-original",
+          "tags": [
+            "legal",
+            "data-protection"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie sensibilisieren wir für Datenschutzfragen? Wie schützen wir die Daten aller Beteiligten?",
+            "en": "How do we raise awareness of data protection issues? How do we protect the data of all stakeholders?"
+          }
+        },
+        {
+          "id": "legal-aspects-q2",
+          "source": "kompass-original",
+          "tags": [
+            "legal",
+            "liability"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Sind Haftungsfragen für materielle und immaterielle Schäden geklärt?",
+            "en": "Have liability issues for material and immaterial damage been clarified?"
+          }
+        },
+        {
+          "id": "legal-aspects-q3",
+          "source": "kompass-original",
+          "tags": [
+            "legal",
+            "licensing"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie und von wem werden Lizenzen verwaltet? Wie verhindern wir Verstösse gegen Lizenzvereinbarungen?",
+            "en": "How are licences managed and by whom? How do we ensure there are no licence agreement violations?"
+          }
+        },
+        {
+          "id": "legal-aspects-q4",
+          "source": "kompass-original",
+          "tags": [
+            "legal",
+            "copyright"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie stellen wir sicher, dass alle Beteiligten das Urheberrecht einhalten? Welche Rechte gewähren wir auf geistiges Eigentum der Schule?",
+            "en": "How do we make sure that all parties involved comply with copyright law? What rights do we grant to the school's intellectual property?"
+          }
+        },
+        {
+          "id": "legal-aspects-q5",
+          "source": "kompass-original",
+          "tags": [
+            "legal",
+            "responsibility"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie nehmen wir unsere strafrechtliche Verantwortung wahr? Wie verfahren wir bei Verstössen?",
+            "en": "How do we assume our responsibility under criminal law? How do we proceed in the event of violations?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "funding",
+      "number": 35,
+      "dimension": "infrastructure",
+      "illustration": "Finanzierung.png",
+      "links": [
+        "working-devices",
+        "basic-infrastructure",
+        "software-services",
+        "services"
+      ],
+      "i18n": {
+        "de": {
+          "name": "Finanzierung"
+        },
+        "en": {
+          "name": "Funding"
+        }
+      },
+      "questions": [
+        {
+          "id": "funding-q1",
+          "source": "kompass-original",
+          "tags": [
+            "funding",
+            "procurement"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie läuft der Beschaffungsprozess der Schule ab?",
+            "en": "What is the school's procurement process?"
+          }
+        },
+        {
+          "id": "funding-q2",
+          "source": "kompass-original",
+          "tags": [
+            "funding",
+            "decision-making"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wer schafft die Entscheidungsgrundlage für Neuanschaffungen? Wer wird wann und wie in die Entscheidung einbezogen?",
+            "en": "Who determines the decision-making basis for new acquisitions? Who is involved in the decision, when and how?"
+          }
+        },
+        {
+          "id": "funding-q3",
+          "source": "kompass-original",
+          "tags": [
+            "funding",
+            "procurement"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Braucht es eine öffentliche Ausschreibung? Brauchen wir hierfür Unterstützung?",
+            "en": "Do we need a public bidding process? Do we need support for this?"
+          }
+        },
+        {
+          "id": "funding-q4",
+          "source": "kompass-original",
+          "tags": [
+            "funding",
+            "cost-calculation"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Wie werden (wiederkehrende) Kosten für die Software, den Support, die Schulung und die Wartung berechnet?",
+            "en": "How are (recurring) costs for the software, support, training and maintenance calculated?"
+          }
+        },
+        {
+          "id": "funding-q5",
+          "source": "kompass-original",
+          "tags": [
+            "funding",
+            "financing"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Finanzieren wir die Erneuerungen über Leasing oder Kauf?",
+            "en": "Do we fund the renewals through leasing or purchase?"
+          }
+        },
+        {
+          "id": "funding-q6",
+          "source": "kompass-original",
+          "tags": [
+            "funding",
+            "byod"
+          ],
+          "roles": [
+            "leader"
+          ],
+          "quickPulse": false,
+          "i18n": {
+            "de": "Falls die Lehrpersonen eigene Geräte mitbringen: Welchen jährlichen Betrag erhalten sie dafür?",
+            "en": "If teachers bring their own devices: what annual amount do they receive for this?"
+          }
+        }
+      ]
+    }
+  ],
+  "barrierMapping": {
+    "teacher-level": [
+      "personal-social-skills",
+      "professional-skills-media-cs",
+      "specialised-didactics-media-cs",
+      "media-didactics",
+      "application-skills-teachers",
+      "mindsets",
+      "artificial-intelligence"
+    ],
+    "school-level": [
+      "learning-culture",
+      "interdisciplinary-skills",
+      "assessment",
+      "teaching-learning-units",
+      "learning-platforms-tools",
+      "media-cs-curriculum",
+      "media-education-rules",
+      "class-administration",
+      "vision",
+      "structures-processes",
+      "concept",
+      "support",
+      "leadership",
+      "learning-spaces",
+      "innovation",
+      "cooperation",
+      "knowledge-management",
+      "communication",
+      "team-culture",
+      "dynamics-emotions"
+    ],
+    "system-level": [
+      "working-devices",
+      "basic-infrastructure",
+      "software-services",
+      "security",
+      "services",
+      "legal-aspects",
+      "funding"
+    ]
+  },
+  "quickPulseQuestions": [
+    "mindsets-q1",
+    "learning-culture-q3",
+    "vision-q4",
+    "dynamics-emotions-q1",
+    "working-devices-q1"
+  ]
+};

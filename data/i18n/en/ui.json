@@ -1,0 +1,68 @@
+{
+  "app": {
+    "title": "Navigator for Digital Transformation",
+    "subtitle": "Self-reflection for schools in digital transformation",
+    "description": "An interactive tool based on the Compass for Digital Transformation by PH Zurich"
+  },
+  "nav": {
+    "home": "Home",
+    "explore": "Explore",
+    "reflect": "Reflect",
+    "chat": "Chat",
+    "about": "About",
+    "language": "Language"
+  },
+  "dimensions": {
+    "label": "Dimensions",
+    "count": "{{count}} topics"
+  },
+  "topics": {
+    "questions": "Reflection questions",
+    "connections": "Connections",
+    "relatedTopics": "Related topics",
+    "explore": "Explore topic",
+    "back": "Back to overview"
+  },
+  "reflection": {
+    "title": "Guided self-reflection",
+    "intro": "These questions are meant to provoke thought — there are no right or wrong answers.",
+    "startPrompt": "Which dimension would you like to start with?",
+    "yourThoughts": "Your thoughts...",
+    "next": "Next",
+    "previous": "Previous",
+    "skip": "Skip",
+    "finish": "Finish",
+    "progress": "Progress",
+    "explored": "explored",
+    "unexplored": "open"
+  },
+  "chat": {
+    "title": "Free reflection",
+    "placeholder": "Ask a question about digital transformation...",
+    "send": "Send",
+    "thinking": "Thinking...",
+    "disclaimer": "The Navigator supports your reflection — it does not assess or judge."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Try again",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "footer": {
+    "basedOn": "Based on the",
+    "framework": "Compass for Digital Transformation",
+    "by": "by PH Zurich, Centre for Media Education and Computer Science",
+    "license": "Licensed under CC BY-SA 4.0"
+  },
+  "glossary": {
+    "picts": "PICTS: Pedagogical ICT Support — experts in the didactic implementation of media and computer science",
+    "ticts": "TICTS: Technical ICT Support",
+    "fourCs": "4 Cs: Creativity, Critical thinking, Collaboration, Communication",
+    "mi": "Media and Computer Science"
+  }
+}

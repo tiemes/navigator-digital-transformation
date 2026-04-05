@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Build output
+app/build/
+app/.svelte-kit/
+api/dist/
+
+# Environment
+.env
+.env.local
+.env.production
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Source materials (too large, not open-licensable)
+Unterlagen/
+
+# Literature review (binary, tracked separately)
+*.docx

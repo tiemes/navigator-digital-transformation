@@ -1,0 +1,51 @@
+{
+  "app": {
+    "title": "Navigator Digital Transformation",
+    "subtitle": "Self-reflection for schools in digital transformation"
+  },
+  "compass": {
+    "title": "Explore the Compass",
+    "description": "Choose a topic that interests you. There is no right order — follow your curiosity.",
+    "questionCount": "questions",
+    "newQuestions": "NEW",
+    "visited": "visited"
+  },
+  "nav": {
+    "back": "Back",
+    "quickPulse": "Quick Pulse",
+    "barriers": "Barriers"
+  },
+  "topic": {
+    "questions": "Reflection questions",
+    "connected": "Connected topics — where would you like to go next?",
+    "notes": "Your thoughts (optional)..."
+  },
+  "pulse": {
+    "skip": "Skip",
+    "next": "Next",
+    "finish": "See result",
+    "result": "Your Starting Point",
+    "resultDesc": "Based on your responses, this topic might be a good starting point for deeper reflection:",
+    "startHere": "Start here"
+  },
+  "barriers": {
+    "title": "What's holding you back?",
+    "description": "Instead of walking through the compass linearly, explore the barriers. At which level do you suspect the biggest obstacles?",
+    "teacherLevel": "Teacher Level",
+    "teacherLevelDesc": "Skills, mindsets, insecurity, lack of time",
+    "schoolLevel": "School Level",
+    "schoolLevelDesc": "Missing vision, weak leadership, no structures, limited cooperation",
+    "systemLevel": "System Level",
+    "systemLevelDesc": "Infrastructure, funding, legal framework, external support"
+  },
+  "footer": {
+    "basedOn": "Based on the",
+    "framework": "Compass for Digital Transformation",
+    "by": "by PH Zurich",
+    "license": "CC BY-SA"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred"
+  }
+}

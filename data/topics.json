@@ -1,0 +1,285 @@
+{
+  "version": "1.0.0",
+  "framework": {
+    "name": "Kompass Digitaler Wandel",
+    "source": "PHZH — Zentrum Medienbildung und Informatik",
+    "authors": ["Andrea Kern", "Thomas Staub", "Larissa Meyer", "Reto Braun"],
+    "license": "CC BY-SA 4.0",
+    "website": "https://kompassdigitalerwandel.ch/",
+    "reference": "Schulz-Zander, Renate. Neue Medien als Bestandteil von Schulentwicklung. In: Jahrbuch Medienpädagogik 1. Opladen: Leske + Budrich, 2001, S. 263-281."
+  },
+  "dimensions": [
+    {
+      "id": "people-skills",
+      "color": "#E6007E",
+      "illustration": "_Personen-Kompetenzen.png"
+    },
+    {
+      "id": "teaching-learning",
+      "color": "#E30613",
+      "illustration": "_Unterricht.png"
+    },
+    {
+      "id": "organisation-structures",
+      "color": "#95C11F",
+      "illustration": "_Organisation-Strukturen.png"
+    },
+    {
+      "id": "cooperation-team",
+      "color": "#F5A623",
+      "illustration": "_Kooperation-Team.png"
+    },
+    {
+      "id": "infrastructure",
+      "color": "#00B4D5",
+      "illustration": "_Infrastruktur.png"
+    }
+  ],
+  "topics": [
+    {
+      "id": "personal-social-skills",
+      "number": 1,
+      "dimension": "people-skills",
+      "illustration": "Personale-soziale-Kompetenzen.png",
+      "links": ["mindsets", "learning-culture", "team-culture", "cooperation", "communication"]
+    },
+    {
+      "id": "professional-skills-media-cs",
+      "number": 2,
+      "dimension": "people-skills",
+      "illustration": "Fachkompetenz-Medien-Informatik.png",
+      "links": ["media-cs-curriculum", "specialised-didactics-media-cs"]
+    },
+    {
+      "id": "specialised-didactics-media-cs",
+      "number": 3,
+      "dimension": "people-skills",
+      "illustration": "Fachdidaktik-Medien-Informatik.png",
+      "links": ["media-cs-curriculum", "teaching-learning-units", "interdisciplinary-skills", "media-didactics", "support"]
+    },
+    {
+      "id": "media-didactics",
+      "number": 4,
+      "dimension": "people-skills",
+      "illustration": "Mediendidaktik.png",
+      "links": ["teaching-learning-units", "support", "application-skills-teachers", "specialised-didactics-media-cs", "media-cs-curriculum"]
+    },
+    {
+      "id": "application-skills-teachers",
+      "number": 5,
+      "dimension": "people-skills",
+      "illustration": "Anwendungskompetenzen.png",
+      "links": ["media-cs-curriculum", "concept", "support", "professional-skills-media-cs", "services"]
+    },
+    {
+      "id": "mindsets",
+      "number": 6,
+      "dimension": "people-skills",
+      "illustration": "Haltungen.png",
+      "links": ["personal-social-skills", "team-culture", "learning-culture", "vision", "dynamics-emotions"]
+    },
+    {
+      "id": "parent-participation",
+      "number": 7,
+      "dimension": "people-skills",
+      "illustration": "Elternzusammenarbeit.png",
+      "links": ["communication", "public-relations", "vision", "media-education-rules", "learning-culture"]
+    },
+    {
+      "id": "learning-culture",
+      "number": 8,
+      "dimension": "teaching-learning",
+      "illustration": "Lernkultur.png",
+      "links": ["vision", "mindsets", "learning-spaces", "team-culture", "teaching-learning-units"]
+    },
+    {
+      "id": "interdisciplinary-skills",
+      "number": 9,
+      "dimension": "teaching-learning",
+      "illustration": "Ueberfachliche_Kompetenzen.png",
+      "links": ["learning-culture", "vision", "assessment", "learning-platforms-tools"]
+    },
+    {
+      "id": "assessment",
+      "number": 10,
+      "dimension": "teaching-learning",
+      "illustration": "Beurteilung.png",
+      "links": ["learning-culture", "teaching-learning-units", "interdisciplinary-skills"]
+    },
+    {
+      "id": "teaching-learning-units",
+      "number": 11,
+      "dimension": "teaching-learning",
+      "illustration": "Arrangements.jpg.png",
+      "links": ["vision", "learning-culture", "media-didactics", "support"]
+    },
+    {
+      "id": "learning-platforms-tools",
+      "number": 12,
+      "dimension": "teaching-learning",
+      "illustration": "Lernplattformen_Lehrmittel-Tools.png",
+      "links": ["media-didactics", "assessment", "teaching-learning-units", "software-services", "class-administration"]
+    },
+    {
+      "id": "media-cs-curriculum",
+      "number": 13,
+      "dimension": "teaching-learning",
+      "illustration": "Modullehrplan_Medien-Informatik.png",
+      "links": ["professional-skills-media-cs", "specialised-didactics-media-cs", "media-didactics", "teaching-learning-units"]
+    },
+    {
+      "id": "media-education-rules",
+      "number": 14,
+      "dimension": "teaching-learning",
+      "illustration": "Medienerziehung.png",
+      "links": ["mindsets", "professional-skills-media-cs", "support", "parent-participation", "legal-aspects"]
+    },
+    {
+      "id": "class-administration",
+      "number": 15,
+      "dimension": "teaching-learning",
+      "illustration": "Klassenadministration.png",
+      "links": ["structures-processes", "cooperation", "assessment", "learning-platforms-tools", "learning-culture"]
+    },
+    {
+      "id": "vision",
+      "number": 16,
+      "dimension": "organisation-structures",
+      "illustration": "Vision.png",
+      "links": ["innovation", "mindsets", "concept", "leadership", "public-relations"]
+    },
+    {
+      "id": "structures-processes",
+      "number": 17,
+      "dimension": "organisation-structures",
+      "illustration": "Strukturen-Prozesse.png",
+      "links": ["cooperation", "concept", "leadership", "funding"]
+    },
+    {
+      "id": "concept",
+      "number": 18,
+      "dimension": "organisation-structures",
+      "illustration": "Konzept.png",
+      "links": ["vision", "structures-processes", "leadership"]
+    },
+    {
+      "id": "support",
+      "number": 19,
+      "dimension": "organisation-structures",
+      "illustration": "Support.png",
+      "links": ["concept", "structures-processes", "cooperation"]
+    },
+    {
+      "id": "leadership",
+      "number": 20,
+      "dimension": "organisation-structures",
+      "illustration": "Fuehrung.png",
+      "links": ["mindsets", "innovation", "structures-processes", "team-culture", "dynamics-emotions"]
+    },
+    {
+      "id": "learning-spaces",
+      "number": 21,
+      "dimension": "organisation-structures",
+      "illustration": "Lernorte.png",
+      "links": ["learning-culture", "vision", "teaching-learning-units", "concept"]
+    },
+    {
+      "id": "innovation",
+      "number": 22,
+      "dimension": "organisation-structures",
+      "illustration": "Innovation.png",
+      "links": ["vision", "leadership", "team-culture"]
+    },
+    {
+      "id": "public-relations",
+      "number": 23,
+      "dimension": "organisation-structures",
+      "illustration": "Oeffentlichkeitsarbeit.png",
+      "links": ["parent-participation", "concept", "communication"]
+    },
+    {
+      "id": "cooperation",
+      "number": 24,
+      "dimension": "cooperation-team",
+      "illustration": "Kooperation.png",
+      "links": ["knowledge-management", "team-culture", "teaching-learning-units", "class-administration"]
+    },
+    {
+      "id": "knowledge-management",
+      "number": 25,
+      "dimension": "cooperation-team",
+      "illustration": "Wissensmanagement.png",
+      "links": ["cooperation", "leadership", "structures-processes"]
+    },
+    {
+      "id": "communication",
+      "number": 26,
+      "dimension": "cooperation-team",
+      "illustration": "Kommunikation.png",
+      "links": ["interdisciplinary-skills", "leadership", "structures-processes", "public-relations"]
+    },
+    {
+      "id": "team-culture",
+      "number": 27,
+      "dimension": "cooperation-team",
+      "illustration": "Teamkultur.png",
+      "links": ["dynamics-emotions", "learning-culture", "mindsets", "communication", "cooperation"]
+    },
+    {
+      "id": "dynamics-emotions",
+      "number": 28,
+      "dimension": "cooperation-team",
+      "illustration": "Dynamiken_Emotionen.png",
+      "links": ["mindsets", "team-culture", "cooperation", "personal-social-skills"]
+    },
+    {
+      "id": "working-devices",
+      "number": 29,
+      "dimension": "infrastructure",
+      "illustration": "Arbeitsgeräte.png",
+      "links": ["concept", "funding", "services"]
+    },
+    {
+      "id": "basic-infrastructure",
+      "number": 30,
+      "dimension": "infrastructure",
+      "illustration": "Basisinfrastruktur.png",
+      "links": ["concept", "funding", "services", "security", "support"]
+    },
+    {
+      "id": "software-services",
+      "number": 31,
+      "dimension": "infrastructure",
+      "illustration": "Software-Dienste.png",
+      "links": ["security", "cooperation", "funding", "legal-aspects", "learning-platforms-tools"]
+    },
+    {
+      "id": "security",
+      "number": 32,
+      "dimension": "infrastructure",
+      "illustration": "Sicherheit.png",
+      "links": ["concept", "support", "legal-aspects"]
+    },
+    {
+      "id": "services",
+      "number": 33,
+      "dimension": "infrastructure",
+      "illustration": "Dienstleister.png",
+      "links": ["concept", "structures-processes", "funding", "application-skills-teachers"]
+    },
+    {
+      "id": "legal-aspects",
+      "number": 34,
+      "dimension": "infrastructure",
+      "illustration": "Rechtliche_Aspekte.png",
+      "links": ["security", "concept"]
+    },
+    {
+      "id": "funding",
+      "number": 35,
+      "dimension": "infrastructure",
+      "illustration": "Finanzierung.png",
+      "links": ["working-devices", "basic-infrastructure", "software-services", "services"]
+    }
+  ]
+}

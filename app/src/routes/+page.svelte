@@ -1,123 +1,154 @@
 <!--
-  +page.svelte — Conversational landing page.
-  Welcome intro → open prompt → AI conversation with inline topic suggestions.
-  Primary interaction mode for the Navigator.
+  +page.svelte — Primary landing page.
+  Welcome intro → vision prompt → AI barrier analysis → deeper reflection → summary.
+  The vision is the main starting point of the Navigator.
 -->
 <script>
   import { lang, t } from '$lib/i18n';
   import { chat, speak } from '$lib/api.js';
-  import { browser } from '$app/environment';
-  import ChatMessage from '$lib/components/ChatMessage.svelte';
-  import ChatInput from '$lib/components/ChatInput.svelte';
-  import { startSession, addMessage, addAiInteraction, markVoiceUsed, finalizeSession, getSessionSnapshot } from '$lib/stores/session.js';
+  import { getTopic, topicName, getTopicsByDimension } from '$lib/data.js';
+  import { session, startSession, setVision, addBarrier, addAiInteraction, finalizeSession, getSessionSnapshot } from '$lib/stores/session.js';
   import { saveSession } from '$lib/stores/db.js';
+  import { browser } from '$app/environment';
+  import BarrierVision from '$lib/components/BarrierVision.svelte';
+  import BarrierSelect from '$lib/components/BarrierSelect.svelte';
+  import BarrierReflect from '$lib/components/BarrierReflect.svelte';
+  import BarrierSummary from '$lib/components/BarrierSummary.svelte';
 
-  // Start a fresh conversation session
-  startSession('conversation');
-
-  /** @type {Array<{role: string, content: string, topics?: string[]}>} */
-  let messages = $state([]);
-  let loading = $state(false);
+  /** @type {'vision' | 'analysis' | 'reflection' | 'summary'} */
+  let step = $state('vision');
+  let visionText = $state('');
+  let analyzing = $state(false);
   let ttsEnabled = $state(false);
-  let chatArea = $state(null);
+  let aiAnalysis = $state(null);
+  let selectedBarriers = $state([]);
+  let currentBarrierIndex = $state(0);
+  let reflections = $state([]);
 
-  // Load the system prompt for the LLM
-  const SYSTEM_PROMPT = `Du bist ein Reflexionspartner für Lehrpersonen und Schulleitungen, die über den digitalen Wandel an ihrer Schule nachdenken. Du basierst auf dem «Kompass Digitaler Wandel» der PH Zürich mit 5 Dimensionen und 35 Themen.
+  // Start a fresh barrier-lens session
+  startSession('barrier-lens');
 
-Deine Rolle:
-- Du bist ein aufmerksamer Zuhörer und Gesprächspartner, kein Experte oder Berater
-- Du stellst offene Fragen, die zum Nachdenken anregen
-- Du bewertest und beurteilst NIEMALS — du förderst Selbstreflexion
-- Du antwortest in der Sprache, in der die Person schreibt
+  const BARRIER_PROMPT = `Du bist ein Analysepartner für Schulentwicklung im digitalen Wandel. Eine Lehrperson oder Schulleitung hat eine Vision für ihre Schule beschrieben. Deine Aufgabe ist es, mögliche Hindernisse zu identifizieren, die dieser Vision im Weg stehen könnten.
+
+Ordne die Hindernisse den drei Ebenen zu (nach Gkrimpizi et al., 2023):
+- **teacher-level**: Kompetenzen, Haltungen, Unsicherheit einzelner Lehrpersonen
+- **school-level**: Führung, Vision, Strukturen, Zusammenarbeit im Team
+- **system-level**: Infrastruktur, Finanzierung, rechtliche Rahmenbedingungen, externer Support
 
 Antworte IMMER als JSON mit genau diesem Format:
-{"message": "Dein Gesprächsbeitrag hier...", "topics": ["topic-id-1"]}
+{"analysis": "2-3 Sätze, die die Vision wertschätzend zusammenfassen", "barriers": [{"level": "teacher-level|school-level|system-level", "topicId": "topic-id-from-compass", "reason": "Kurze Begründung"}]}
 
-Das topics-Array enthält 0-3 IDs der relevanten Kompass-Themen:
-Dimension 1 (Personen): personal-social-skills, professional-skills-media-cs, specialised-didactics-media-cs, media-didactics, application-skills-teachers, mindsets, parent-participation
-Dimension 2 (Unterricht): learning-culture, interdisciplinary-skills, assessment, teaching-learning-units, learning-platforms-tools, media-cs-curriculum, media-education-rules, class-administration
-Dimension 3 (Organisation): vision, structures-processes, concept, support, leadership, learning-spaces, innovation, public-relations
-Dimension 4 (Team): cooperation, knowledge-management, communication, team-culture, dynamics-emotions
-Dimension 5 (Infrastruktur): working-devices, basic-infrastructure, software-services, security, services, legal-aspects, funding, artificial-intelligence
+Verwende NUR diese Topic-IDs:
+Personen: personal-social-skills, professional-skills-media-cs, specialised-didactics-media-cs, media-didactics, application-skills-teachers, mindsets, parent-participation
+Unterricht: learning-culture, interdisciplinary-skills, assessment, teaching-learning-units, learning-platforms-tools, media-cs-curriculum, media-education-rules, class-administration
+Organisation: vision, structures-processes, concept, support, leadership, learning-spaces, innovation, public-relations
+Team: cooperation, knowledge-management, communication, team-culture, dynamics-emotions
+Infrastruktur: working-devices, basic-infrastructure, software-services, security, services, legal-aspects, funding, artificial-intelligence
 
-Halte deine Antworten kurz (2-4 Sätze + eine Frage). Nenne maximal 2-3 Themen pro Antwort. Zwinge keine Themen auf.`;
+Nenne 4-8 Hindernisse, verteilt auf mindestens 2 Ebenen. Antworte in der Sprache der Vision. Sei wertschätzend.`;
 
-  function scrollToBottom() {
-    if (browser && chatArea) {
-      requestAnimationFrame(() => {
-        chatArea.scrollTop = chatArea.scrollHeight;
-      });
-    }
-  }
-
-  async function handleSend(text) {
-    // Add user message
-    messages = [...messages, { role: 'user', content: text }];
-    addMessage('user', text);
-    loading = true;
-    scrollToBottom();
+  async function handleVisionSubmit(text) {
+    visionText = text;
+    setVision(text);
+    step = 'analysis';
+    analyzing = true;
 
     try {
-      // Build messages array for LLM (system + conversation history)
-      const llmMessages = [
-        { role: 'system', content: SYSTEM_PROMPT },
-        ...messages.map((m) => ({ role: m.role, content: m.content })),
-      ];
-
       const startTime = Date.now();
-      const response = await chat(llmMessages, { temperature: 0.7, max_tokens: 512 });
+      const response = await chat([
+        { role: 'system', content: BARRIER_PROMPT },
+        { role: 'user', content: text },
+      ], { temperature: 0.5, max_tokens: 1024 });
+
       const raw = response.choices?.[0]?.message?.content ?? '';
+      const latencyMs = Date.now() - startTime;
 
       addAiInteraction({
-        promptTemplate: 'conversation-v1',
+        promptTemplate: 'barrier-analysis-v1',
         model: response.model || 'unknown',
         inputTokens: response.usage?.prompt_tokens,
         outputTokens: response.usage?.completion_tokens,
-        latencyMs: Date.now() - startTime,
+        latencyMs,
       });
 
-      // Parse structured JSON response
-      let aiMessage = '';
-      let topics = [];
       try {
-        const parsed = JSON.parse(raw);
-        aiMessage = parsed.message || raw;
-        topics = parsed.topics || [];
+        aiAnalysis = JSON.parse(raw);
       } catch {
-        // If not valid JSON, use raw text
-        aiMessage = raw;
+        const match = raw.match(/\{[\s\S]*\}/);
+        if (match) {
+          aiAnalysis = JSON.parse(match[0]);
+        } else {
+          throw new Error('Could not parse AI response');
+        }
       }
 
-      messages = [...messages, { role: 'assistant', content: aiMessage, topics }];
-      addMessage('assistant', aiMessage, topics);
-      scrollToBottom();
-
-      // TTS: read aloud if enabled
-      if (ttsEnabled && aiMessage) {
+      // TTS: read analysis aloud if enabled
+      if (ttsEnabled && aiAnalysis?.analysis) {
         try {
-          const audioBlob = await speak(aiMessage);
+          const audioBlob = await speak(aiAnalysis.analysis);
           const url = URL.createObjectURL(audioBlob);
           const audio = new Audio(url);
           audio.play();
           audio.onended = () => URL.revokeObjectURL(url);
-        } catch (e) {
-          console.error('TTS error:', e);
+        } catch (ttsErr) {
+          console.error('TTS error:', ttsErr);
         }
       }
     } catch (e) {
-      messages = [...messages, {
-        role: 'assistant',
-        content: `Error: ${e.message}`,
-        topics: [],
-      }];
-      scrollToBottom();
+      console.error('Barrier analysis error:', e);
+      aiAnalysis = {
+        analysis: 'Analyse konnte nicht durchgeführt werden.',
+        barriers: [],
+        error: e.message,
+      };
     } finally {
-      loading = false;
+      analyzing = false;
     }
   }
 
-  function toggleTts() {
-    ttsEnabled = !ttsEnabled;
+  function handleBarriersSelected(barriers) {
+    selectedBarriers = barriers;
+    currentBarrierIndex = 0;
+    reflections = barriers.map((b) => ({
+      ...b,
+      selectedByUser: true,
+      suggestedByAI: true,
+      responses: [],
+    }));
+    step = 'reflection';
+  }
+
+  function handleReflectionDone(barrierReflections) {
+    reflections[currentBarrierIndex].responses = barrierReflections;
+
+    addBarrier({
+      level: reflections[currentBarrierIndex].level,
+      topicId: reflections[currentBarrierIndex].topicId,
+      topicVersion: getTopic(reflections[currentBarrierIndex].topicId)?.version || 1,
+      selectedByUser: true,
+      suggestedByAI: true,
+      reflections: barrierReflections,
+    });
+
+    if (currentBarrierIndex < selectedBarriers.length - 1) {
+      currentBarrierIndex++;
+    } else {
+      step = 'summary';
+      finalizeSession();
+      if (browser) {
+        saveSession(getSessionSnapshot()).catch(console.error);
+      }
+    }
+  }
+
+  function handleStartOver() {
+    step = 'vision';
+    visionText = '';
+    aiAnalysis = null;
+    selectedBarriers = [];
+    currentBarrierIndex = 0;
+    reflections = [];
+    startSession('barrier-lens');
   }
 </script>
 
@@ -125,105 +156,75 @@ Halte deine Antworten kurz (2-4 Sätze + eine Frage). Nenne maximal 2-3 Themen p
   <title>{$t('app.title')}</title>
 </svelte:head>
 
-<div class="conversation-page">
-  {#if messages.length === 0}
-    <!-- Welcome screen -->
+<div class="main-page">
+  <div class="tts-bar">
+    <button class="tts-toggle" onclick={() => ttsEnabled = !ttsEnabled}
+      title={ttsEnabled ? $t('chat.ttsOff') : $t('chat.ttsOn')}>
+      {ttsEnabled ? '🔊' : '🔇'}
+    </button>
+  </div>
+
+  {#if step === 'vision'}
     <div class="welcome">
       <h2>{$t('chat.welcome')}</h2>
       <p class="intro">{$t('chat.intro')}</p>
       <p class="disclaimer">{$t('chat.disclaimer')}</p>
     </div>
+    <BarrierVision onsubmit={handleVisionSubmit} />
+  {:else if step === 'analysis'}
+    <BarrierSelect
+      {analyzing}
+      analysis={aiAnalysis}
+      onselect={handleBarriersSelected}
+    />
+  {:else if step === 'reflection'}
+    <BarrierReflect
+      barrier={selectedBarriers[currentBarrierIndex]}
+      index={currentBarrierIndex}
+      total={selectedBarriers.length}
+      ondone={handleReflectionDone}
+    />
+  {:else if step === 'summary'}
+    <BarrierSummary
+      vision={visionText}
+      {reflections}
+      onrestart={handleStartOver}
+    />
   {/if}
-
-  <!-- Chat messages -->
-  <div class="chat-area" bind:this={chatArea}>
-    {#each messages as message, i (i)}
-      <ChatMessage {message} />
-    {/each}
-
-    {#if loading}
-      <div class="thinking">
-        <span class="dot-pulse"></span>
-        {$t('chat.thinking')}
-      </div>
-    {/if}
-  </div>
-
-  <!-- Input area -->
-  <div class="input-area">
-    <div class="input-controls">
-      <button class="tts-toggle" onclick={toggleTts} title={ttsEnabled ? $t('chat.ttsOff') : $t('chat.ttsOn')}>
-        {ttsEnabled ? '🔊' : '🔇'}
-      </button>
-    </div>
-    <ChatInput onsend={handleSend} disabled={loading} />
-  </div>
 </div>
 
 <style>
-  .conversation-page {
-    display: flex;
-    flex-direction: column;
-    height: calc(100vh - 120px);
-    max-width: 800px;
+  .main-page {
+    max-width: 700px;
     margin: 0 auto;
+    padding: 24px 16px;
   }
   .welcome {
     text-align: center;
-    padding: 48px 24px 32px;
-    flex-shrink: 0;
+    padding: 24px 0 8px;
   }
   .welcome h2 {
     font-size: 26px;
     font-weight: 600;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
   .intro {
     font-size: 16px;
     line-height: 1.6;
     color: var(--text);
     max-width: 560px;
-    margin: 0 auto 12px;
+    margin: 0 auto 10px;
   }
   .disclaimer {
     font-size: 13px;
     color: var(--text-light);
     font-style: italic;
+    margin-bottom: 16px;
   }
-  .chat-area {
-    flex: 1;
-    overflow-y: auto;
-    padding: 16px 0;
-  }
-  .thinking {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--text-light);
-    font-size: 14px;
-    padding: 8px 0;
-  }
-  .dot-pulse {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--text-light);
-    animation: pulse-dot 1.2s infinite;
-  }
-  @keyframes pulse-dot {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 1; }
-  }
-  .input-area {
-    flex-shrink: 0;
-    padding: 12px 0 8px;
-    border-top: 1px solid #e8e8e8;
-  }
-  .input-controls {
+  .tts-bar {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
   .tts-toggle {
     border: none;
@@ -232,6 +233,7 @@ Halte deine Antworten kurz (2-4 Sätze + eine Frage). Nenne maximal 2-3 Themen p
     padding: 4px 8px;
     opacity: 0.6;
     transition: opacity 0.15s;
+    cursor: pointer;
   }
   .tts-toggle:hover { opacity: 1; }
 </style>

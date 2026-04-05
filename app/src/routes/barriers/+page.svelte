@@ -7,7 +7,7 @@
 -->
 <script>
   import { lang, t } from '$lib/i18n';
-  import { chat } from '$lib/api.js';
+  import { chat, speak } from '$lib/api.js';
   import { getTopic, topicName, getTopicsByDimension } from '$lib/data.js';
   import { session, startSession, setVision, addBarrier, addAiInteraction, finalizeSession, getSessionSnapshot } from '$lib/stores/session.js';
   import { saveSession } from '$lib/stores/db.js';
@@ -21,6 +21,7 @@
   let step = $state('vision');
   let visionText = $state('');
   let analyzing = $state(false);
+  let ttsEnabled = $state(false);
   let aiAnalysis = $state(null);
   let selectedBarriers = $state([]);
   let currentBarrierIndex = $state(0);
@@ -81,6 +82,18 @@ Nenne 4-8 Hindernisse, verteilt auf mindestens 2 Ebenen. Antworte in der Sprache
           aiAnalysis = JSON.parse(match[0]);
         } else {
           throw new Error('Could not parse AI response');
+        }
+      }
+      // TTS: read analysis aloud if enabled
+      if (ttsEnabled && aiAnalysis?.analysis) {
+        try {
+          const audioBlob = await speak(aiAnalysis.analysis);
+          const url = URL.createObjectURL(audioBlob);
+          const audio = new Audio(url);
+          audio.play();
+          audio.onended = () => URL.revokeObjectURL(url);
+        } catch (ttsErr) {
+          console.error('TTS error:', ttsErr);
         }
       }
     } catch (e) {
@@ -146,6 +159,13 @@ Nenne 4-8 Hindernisse, verteilt auf mindestens 2 Ebenen. Antworte in der Sprache
 </svelte:head>
 
 <div class="barrier-page">
+  <div class="tts-bar">
+    <button class="tts-toggle" onclick={() => ttsEnabled = !ttsEnabled}
+      title={ttsEnabled ? $t('chat.ttsOff') : $t('chat.ttsOn')}>
+      {ttsEnabled ? '🔊' : '🔇'}
+    </button>
+  </div>
+
   {#if step === 'vision'}
     <BarrierVision onsubmit={handleVisionSubmit} />
   {:else if step === 'analysis'}
@@ -176,4 +196,19 @@ Nenne 4-8 Hindernisse, verteilt auf mindestens 2 Ebenen. Antworte in der Sprache
     margin: 0 auto;
     padding: 24px 16px;
   }
+  .tts-bar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+  }
+  .tts-toggle {
+    border: none;
+    background: none;
+    font-size: 18px;
+    padding: 4px 8px;
+    opacity: 0.6;
+    transition: opacity 0.15s;
+    cursor: pointer;
+  }
+  .tts-toggle:hover { opacity: 1; }
 </style>

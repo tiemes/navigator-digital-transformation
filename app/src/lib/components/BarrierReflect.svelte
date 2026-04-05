@@ -14,6 +14,11 @@
 <script>
   import { lang, t } from '$lib/i18n';
   import { getTopic, topicName } from '$lib/data.js';
+  import VoiceButton from './VoiceButton.svelte';
+
+  function handleTranscript(transcript) {
+    response = response ? `${response} ${transcript}` : transcript;
+  }
 
   let { barrier, index, total, ondone } = $props();
   let currentQ = $state(0);
@@ -83,11 +88,14 @@
         {questions[currentQ].i18n?.[$lang] || questions[currentQ].i18n?.de || ''}
       </p>
 
-      <textarea
-        bind:value={response}
-        placeholder={$t('topic.notes')}
-        rows="4"
-      ></textarea>
+      <div class="input-row">
+        <VoiceButton ontranscript={handleTranscript} />
+        <textarea
+          bind:value={response}
+          placeholder={$t('topic.notes')}
+          rows="4"
+        ></textarea>
+      </div>
 
       <div class="actions">
         <button class="btn-skip" onclick={() => submitResponse(true)}>
@@ -152,8 +160,13 @@
     line-height: 1.5;
     margin-bottom: 20px;
   }
+  .input-row {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
   textarea {
-    width: 100%;
+    flex: 1;
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 8px;

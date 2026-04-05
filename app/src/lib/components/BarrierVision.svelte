@@ -7,9 +7,14 @@
 -->
 <script>
   import { t } from '$lib/i18n';
+  import VoiceButton from './VoiceButton.svelte';
 
   let { onsubmit } = $props();
   let text = $state('');
+
+  function handleTranscript(transcript) {
+    text = text ? `${text} ${transcript}` : transcript;
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -24,11 +29,14 @@
   <p class="prompt">{$t('barriers.visionPrompt')}</p>
 
   <form onsubmit={handleSubmit}>
-    <textarea
-      bind:value={text}
-      placeholder={$t('barriers.visionPlaceholder')}
-      rows="6"
-    ></textarea>
+    <div class="input-row">
+      <VoiceButton ontranscript={handleTranscript} />
+      <textarea
+        bind:value={text}
+        placeholder={$t('barriers.visionPlaceholder')}
+        rows="6"
+      ></textarea>
+    </div>
     <button type="submit" class="btn-primary" disabled={!text.trim()}>
       {$t('barriers.continue')}
     </button>
@@ -49,8 +57,13 @@
     max-width: 520px;
     margin: 0 auto 24px;
   }
+  .input-row {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
   textarea {
-    width: 100%;
+    flex: 1;
     padding: 14px;
     border: 1px solid #ddd;
     border-radius: 10px;

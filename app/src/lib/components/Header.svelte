@@ -17,6 +17,9 @@
 <header class="header">
   <a href="/" class="title">{$t('app.title')}</a>
   <div class="controls">
+    <a href="/barriers" class="nav-link" class:active={page.url?.pathname?.startsWith('/barriers')}>
+      {$t('nav.barriers')}
+    </a>
     <a href="/explore" class="nav-link" class:active={page.url?.pathname === '/explore'}>
       {$t('nav.explore')}
     </a>

@@ -9,6 +9,11 @@
   import { browser } from '$app/environment';
   import ChatMessage from '$lib/components/ChatMessage.svelte';
   import ChatInput from '$lib/components/ChatInput.svelte';
+  import { startSession, addMessage, addAiInteraction, markVoiceUsed, finalizeSession, getSessionSnapshot } from '$lib/stores/session.js';
+  import { saveSession } from '$lib/stores/db.js';
+
+  // Start a fresh conversation session
+  startSession('conversation');
 
   /** @type {Array<{role: string, content: string, topics?: string[]}>} */
   let messages = $state([]);
@@ -48,6 +53,7 @@ Halte deine Antworten kurz (2-4 Sätze + eine Frage). Nenne maximal 2-3 Themen p
   async function handleSend(text) {
     // Add user message
     messages = [...messages, { role: 'user', content: text }];
+    addMessage('user', text);
     loading = true;
     scrollToBottom();
 
@@ -58,8 +64,17 @@ Halte deine Antworten kurz (2-4 Sätze + eine Frage). Nenne maximal 2-3 Themen p
         ...messages.map((m) => ({ role: m.role, content: m.content })),
       ];
 
+      const startTime = Date.now();
       const response = await chat(llmMessages, { temperature: 0.7, max_tokens: 512 });
       const raw = response.choices?.[0]?.message?.content ?? '';
+
+      addAiInteraction({
+        promptTemplate: 'conversation-v1',
+        model: response.model || 'unknown',
+        inputTokens: response.usage?.prompt_tokens,
+        outputTokens: response.usage?.completion_tokens,
+        latencyMs: Date.now() - startTime,
+      });
 
       // Parse structured JSON response
       let aiMessage = '';
@@ -74,6 +89,7 @@ Halte deine Antworten kurz (2-4 Sätze + eine Frage). Nenne maximal 2-3 Themen p
       }
 
       messages = [...messages, { role: 'assistant', content: aiMessage, topics }];
+      addMessage('assistant', aiMessage, topics);
       scrollToBottom();
 
       // TTS: read aloud if enabled

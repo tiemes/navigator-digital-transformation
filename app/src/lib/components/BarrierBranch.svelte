@@ -49,9 +49,9 @@
     const linkedTopics = lastTopic?.links || [];
     const remainingTopicIds = remainingBarriers.map((b) => b.topicId);
 
-    const system = `Du bist ein Reflexionsbegleiter für Schulen im digitalen Wandel. Die Lehrperson hat gerade über "${topicName(lastBarrier.topicId, $lang)}" nachgedacht. Schlage DREI mögliche nächste Richtungen vor.
+    const system = `Du bist ein Reflexionsbegleiter. Du hast gerade mit jemandem über "${topicName(lastBarrier.topicId, $lang)}" gesprochen. Jetzt schlägst du DREI mögliche nächste Richtungen vor — in DU-Form, als würdest du direkt mit dieser Person reden.
 
-Vision: "${vision}"
+Vision der Person: "${vision}"
 
 Bereits reflektierte Themen: ${exploredTopicIds.join(', ') || '(keine)'}
 Ursprünglich als Hindernis vorgeschlagen, noch nicht bearbeitet: ${remainingTopicIds.join(', ') || '(keine)'}
@@ -66,7 +66,8 @@ Regeln:
 - Eine "another" (anderer Blickwinkel, andere Ebene — Lehrperson / Schule / System).
 - Die dritte wählst du frei.
 - NUTZE KEINE topicId aus "bereits reflektierte Themen".
-- Jedes "why" ist EIN kurzer Satz, bezogen auf die Person.
+- Jedes "why" ist EIN Satz in DU-Form, der sich auf etwas bezieht, das du eben gehört hast. Z.B. "Du hast erwähnt, dass..." oder "Ich höre bei dir...". Keine abstrakten Begründungen, kein "die Lehrperson", kein "die Schule".
+- "label" ist ein kurzer, konkreter Titel (3-5 Wörter) — keine Frage.
 - Antworte in der Sprache der Vision.
 
 Antworte als reines JSON:

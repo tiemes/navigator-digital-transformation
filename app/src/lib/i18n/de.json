@@ -28,7 +28,15 @@
     "ttsOn": "Vorlesen an",
     "ttsOff": "Vorlesen aus",
     "autoSendLabel": "Automatisch senden nach Pause",
-    "autoSendHint": "Mikrofon stoppt selbstständig, wenn du aufhörst zu sprechen"
+    "autoSendHint": "Mikrofon stoppt selbstständig, wenn du aufhörst zu sprechen",
+    "voiceSettingsTitle": "Stimme & Tempo",
+    "voiceSettingsHint": "Stimme und Sprechtempo anpassen",
+    "voiceLabel": "Stimme",
+    "speedLabel": "Tempo",
+    "speedSlow": "Langsam",
+    "speedNormal": "Normal",
+    "speedFast": "Schnell",
+    "close": "Schliessen"
   },
   "topic": {
     "questions": "Reflexionsfragen",

@@ -61,13 +61,18 @@ export async function transcribe(audioBlob, language = 'de') {
 /**
  * Send text to the TTS proxy and get audio back.
  * @param {string} text - Text to speak
+ * @param {object} [options] - Optional: voice, speed (proxy enforces allowlist)
  * @returns {Promise<Blob>} Audio blob (mp3)
  */
-export async function speak(text) {
+export async function speak(text, options = {}) {
+  const body = { text };
+  if (options.voice) body.voice = options.voice;
+  if (options.speed !== undefined) body.speed = options.speed;
+
   const res = await fetch(`${API_BASE}/tts`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ text }),
+    body: JSON.stringify(body),
   });
 
   if (!res.ok) {

@@ -44,3 +44,33 @@ if (browser) {
     localStorage.setItem('navigator-auto-send', value ? 'true' : 'false');
   });
 }
+
+/** Curated TTS voices that handle German acceptably. */
+export const VOICE_OPTIONS = ['shimmer', 'coral', 'sage'];
+/** Curated speeds exposed in the UI. */
+export const SPEED_OPTIONS = [0.85, 1.0, 1.15];
+
+/** TTS voice — persists to localStorage. Default 'shimmer' (soft, warm). */
+const storedVoice = browser ? localStorage.getItem('navigator-tts-voice') : null;
+export const ttsVoice = writable(
+  VOICE_OPTIONS.includes(storedVoice) ? storedVoice : 'shimmer'
+);
+
+/** TTS speed — persists to localStorage. Default 1.0. */
+const storedSpeedRaw = browser ? parseFloat(localStorage.getItem('navigator-tts-speed')) : NaN;
+export const ttsSpeed = writable(
+  SPEED_OPTIONS.includes(storedSpeedRaw) ? storedSpeedRaw : 1.0
+);
+
+if (browser) {
+  ttsVoice.subscribe((value) => {
+    if (VOICE_OPTIONS.includes(value)) {
+      localStorage.setItem('navigator-tts-voice', value);
+    }
+  });
+  ttsSpeed.subscribe((value) => {
+    if (SPEED_OPTIONS.includes(value)) {
+      localStorage.setItem('navigator-tts-speed', String(value));
+    }
+  });
+}

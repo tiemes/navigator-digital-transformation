@@ -12,7 +12,7 @@
     startSession, setVision, addBarrier, addBranchChoice,
     addAiInteraction, markEndedEarly, finalizeSession, getSessionSnapshot,
   } from '$lib/stores/session.js';
-  import { autoSend } from '$lib/stores/settings.js';
+  import { autoSend, ttsVoice, ttsSpeed } from '$lib/stores/settings.js';
   import { saveSession } from '$lib/stores/db.js';
   import { browser } from '$app/environment';
   import BarrierVision from '$lib/components/BarrierVision.svelte';
@@ -20,6 +20,7 @@
   import BarrierReflect from '$lib/components/BarrierReflect.svelte';
   import BarrierBranch from '$lib/components/BarrierBranch.svelte';
   import BarrierSummary from '$lib/components/BarrierSummary.svelte';
+  import VoiceSettings from '$lib/components/VoiceSettings.svelte';
 
   /** @type {'vision' | 'analysis' | 'reflection' | 'branch' | 'summary'} */
   let step = $state('vision');
@@ -37,15 +38,26 @@
 
   startSession('barrier-lens');
 
-  const BARRIER_PROMPT = `Du bist ein Analysepartner für Schulentwicklung im digitalen Wandel. Eine Lehrperson oder Schulleitung hat eine Vision für ihre Schule beschrieben. Deine Aufgabe ist es, mögliche Hindernisse zu identifizieren, die dieser Vision im Weg stehen könnten.
+  const BARRIER_PROMPT = `Du bist ein Reflexionspartner. Jemand hat dir gerade seine Vision für die Schule erzählt. Deine Aufgabe: hör genau hin und spiegel zurück, was du wahrnimmst — dann benenne mögliche Hindernisse.
+
+Sprich die Person IMMER mit "du" an, nie mit "Sie". Schreibe aus DEINER Perspektive — "ich höre...", "was ich wahrnehme...". Beziehe dich auf konkrete Formulierungen, nicht auf Abstraktes. Keine Floskeln, keine Wiederholung.
 
 Ordne die Hindernisse den drei Ebenen zu (nach Gkrimpizi et al., 2023):
 - **teacher-level**: Kompetenzen, Haltungen, Unsicherheit einzelner Lehrpersonen
 - **school-level**: Führung, Vision, Strukturen, Zusammenarbeit im Team
 - **system-level**: Infrastruktur, Finanzierung, rechtliche Rahmenbedingungen, externer Support
 
-Antworte IMMER als JSON mit genau diesem Format:
-{"analysis": "2-3 Sätze, die die Vision wertschätzend zusammenfassen", "barriers": [{"level": "teacher-level|school-level|system-level", "topicId": "topic-id-from-compass", "reason": "Kurze Begründung"}]}
+Antworte IMMER als reines JSON:
+{
+  "analysis": "2-3 Sätze in DU-Form, die zurückspiegeln was du gehört hast. Beginne z.B. mit 'Ich höre bei dir...', 'Du beschreibst...', 'Was bei dir mitschwingt...'. Warm, konkret, persönlich.",
+  "barriers": [
+    {
+      "level": "teacher-level|school-level|system-level",
+      "topicId": "topic-id-from-compass",
+      "reason": "EIN Satz in DU-Form, der sich auf etwas Konkretes bezieht, das du gerade gehört hast. Z.B. 'Du sprichst davon, dass...' oder 'Ich höre, dass dir...'. Keine abstrakten Begründungen, kein 'die Lehrperson', kein 'die Schule'."
+    }
+  ]
+}
 
 Verwende NUR diese Topic-IDs:
 Personen: personal-social-skills, professional-skills-media-cs, specialised-didactics-media-cs, media-didactics, application-skills-teachers, mindsets, parent-participation
@@ -54,7 +66,7 @@ Organisation: vision, structures-processes, concept, support, leadership, learni
 Team: cooperation, knowledge-management, communication, team-culture, dynamics-emotions
 Infrastruktur: working-devices, basic-infrastructure, software-services, security, services, legal-aspects, funding, artificial-intelligence
 
-Nenne 4-8 Hindernisse, verteilt auf mindestens 2 Ebenen. Antworte in der Sprache der Vision. Sei wertschätzend.`;
+Nenne 4-8 Hindernisse, verteilt auf mindestens 2 Ebenen. Antworte in der Sprache der Vision.`;
 
   async function handleVisionSubmit(text) {
     visionText = text;
@@ -88,7 +100,10 @@ Nenne 4-8 Hindernisse, verteilt auf mindestens 2 Ebenen. Antworte in der Sprache
 
       if (ttsEnabled && aiAnalysis?.analysis) {
         try {
-          const audioBlob = await speak(aiAnalysis.analysis);
+          const audioBlob = await speak(aiAnalysis.analysis, {
+            voice: $ttsVoice,
+            speed: $ttsSpeed,
+          });
           const url = URL.createObjectURL(audioBlob);
           const audio = new Audio(url);
           audio.play();
@@ -215,6 +230,7 @@ Nenne 4-8 Hindernisse, verteilt auf mindestens 2 Ebenen. Antworte in der Sprache
       title={ttsEnabled ? $t('chat.ttsOff') : $t('chat.ttsOn')}>
       {ttsEnabled ? '🔊' : '🔇'}
     </button>
+    <VoiceSettings />
   </div>
 
   {#if step === 'vision'}

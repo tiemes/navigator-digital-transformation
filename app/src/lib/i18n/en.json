@@ -28,7 +28,15 @@
     "ttsOn": "Read aloud on",
     "ttsOff": "Read aloud off",
     "autoSendLabel": "Auto-send after pause",
-    "autoSendHint": "Microphone stops on its own when you stop speaking"
+    "autoSendHint": "Microphone stops on its own when you stop speaking",
+    "voiceSettingsTitle": "Voice & Speed",
+    "voiceSettingsHint": "Change the voice and speaking speed",
+    "voiceLabel": "Voice",
+    "speedLabel": "Speed",
+    "speedSlow": "Slow",
+    "speedNormal": "Normal",
+    "speedFast": "Fast",
+    "close": "Close"
   },
   "topic": {
     "questions": "Reflection questions",

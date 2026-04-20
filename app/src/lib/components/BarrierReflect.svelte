@@ -17,7 +17,7 @@
   import { getTopic, topicName } from '$lib/data.js';
   import { chat, speak } from '$lib/api.js';
   import { addAiInteraction } from '$lib/stores/session.js';
-  import { autoSend } from '$lib/stores/settings.js';
+  import { autoSend, ttsVoice, ttsSpeed } from '$lib/stores/settings.js';
   import VoiceButton from './VoiceButton.svelte';
 
   let { barrier, vision = '', ttsEnabled = false, ondone, onendnow } = $props();
@@ -65,7 +65,7 @@
     if (!ttsEnabled || !text) return;
     speaking = true;
     try {
-      const audioBlob = await speak(text);
+      const audioBlob = await speak(text, { voice: $ttsVoice, speed: $ttsSpeed });
       const url = URL.createObjectURL(audioBlob);
       const audio = new Audio(url);
       audio.onended = () => {
@@ -110,18 +110,19 @@
         .map((t) => `F: ${t.q}\nA: ${t.a}`)
         .join('\n\n');
 
-      const system = `Du bist ein empathischer Reflexionsbegleiter. Eine Lehrperson reflektiert über das Thema "${topicName(barrier.topicId, $lang)}" im Kontext ihrer Vision.
+      const system = `Du bist ein empathischer Reflexionsbegleiter. Du sprichst mit einem Menschen über "${topicName(barrier.topicId, $lang)}" im Kontext seiner/ihrer Vision. Sprich zu dieser Person wie ein Mensch zu einem Menschen — direkt, neugierig, warm.
 
-Vision: "${vision}"
+Vision der Person: "${vision}"
 
 Bisheriger Dialog:
 ${qaRendered}
 
 Regeln:
-- Frage NUR, wenn die Antwort einen roten Faden zum Weitermachen hat.
-- Wiederhole keine Frage, die schon gestellt wurde.
+- Stelle NUR dann eine nächste Frage, wenn die letzte Antwort einen roten Faden hergibt (konkrete Situation, Emotion, Widerspruch, blinde Stelle).
+- Die Frage ist DIREKT an die Person gerichtet — DU-Form, nie "die Lehrperson" oder ähnliches.
+- Kurz: 1 Satz, ~15 Wörter. Konkret, offen, keine Floskel, keine Wiederholung.
+- Keine Einleitung wie "Danke für die Antwort" — sofort die Frage.
 - Max. ${MAX_FOLLOW_UPS} Vertiefungsfragen insgesamt. Bisher: ${followUpCount}/${MAX_FOLLOW_UPS}.
-- Frage ist kurz (1 Satz, ~15 Wörter), konkret, offen.
 - Antworte in der Sprache der letzten Nutzerantwort.
 
 Antworte als reines JSON:

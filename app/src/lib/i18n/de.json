@@ -26,7 +26,9 @@
     "thinking": "Nachdenken...",
     "disclaimer": "Der Navigator bewertet nicht — er regt zum Nachdenken an.",
     "ttsOn": "Vorlesen an",
-    "ttsOff": "Vorlesen aus"
+    "ttsOff": "Vorlesen aus",
+    "autoSendLabel": "Automatisch senden nach Pause",
+    "autoSendHint": "Mikrofon stoppt selbstständig, wenn du aufhörst zu sprechen"
   },
   "topic": {
     "questions": "Reflexionsfragen",

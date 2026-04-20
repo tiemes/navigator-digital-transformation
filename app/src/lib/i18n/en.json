@@ -26,7 +26,9 @@
     "thinking": "Thinking...",
     "disclaimer": "The Navigator does not judge — it provokes reflection.",
     "ttsOn": "Read aloud on",
-    "ttsOff": "Read aloud off"
+    "ttsOff": "Read aloud off",
+    "autoSendLabel": "Auto-send after pause",
+    "autoSendHint": "Microphone stops on its own when you stop speaking"
   },
   "topic": {
     "questions": "Reflection questions",

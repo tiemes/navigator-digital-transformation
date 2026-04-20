@@ -1,15 +1,16 @@
 <!--
-  VoiceButton.svelte — Voice recording button with silence detection.
-  Uses MediaRecorder API to capture audio, auto-stops on silence,
-  sends to /api/transcribe, returns text via ontranscript callback.
+  VoiceButton.svelte — Voice recording button.
+  Uses MediaRecorder API to capture audio, sends to /api/transcribe,
+  returns text via ontranscript callback. Always calls onsend after a
+  successful transcription so click-to-stop also submits in one action.
 
   Props:
     disabled — disables the button
     ontranscript(text) — called with transcribed text
-    onsend() — called after transcript if autoSend is true
-    autoSend — auto-trigger onsend after successful transcription (default: true)
+    onsend() — called after successful transcription (click-end-and-send)
+    autoSend — if true, a silence detector also auto-stops after ~1.5s
+               of silence (default: false; user can enable in settings)
     large — render as large primary CTA (default: false)
-    transcribing — expose transcription state
 
   Used by: ChatInput, BarrierVision, BarrierReflect
 -->
@@ -22,7 +23,7 @@
     disabled = false,
     ontranscript,
     onsend,
-    autoSend = true,
+    autoSend = false,
     large = false,
   } = $props();
 
@@ -83,7 +84,7 @@
           const text = await transcribe(blob);
           if (text) {
             ontranscript?.(text);
-            if (autoSend) onsend?.();
+            onsend?.();
           }
         } catch (err) {
           error = err.message;
@@ -93,18 +94,20 @@
         }
       };
 
-      // Set up silence detection
-      silenceDetector = createSilenceDetector(stream, {
-        silenceThreshold: 0.008,
-        silenceDuration: 1500,
-        onSilence: () => {
-          if (recording) {
-            mediaRecorder?.stop();
-            silenceDetector?.stop();
-            silenceDetector = null;
-          }
-        },
-      });
+      // Silence detection is opt-in (autoSend). Default: user clicks to stop.
+      if (autoSend) {
+        silenceDetector = createSilenceDetector(stream, {
+          silenceThreshold: 0.008,
+          silenceDuration: 1500,
+          onSilence: () => {
+            if (recording) {
+              mediaRecorder?.stop();
+              silenceDetector?.stop();
+              silenceDetector = null;
+            }
+          },
+        });
+      }
 
       recorder.start();
       mediaRecorder = recorder;

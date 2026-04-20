@@ -17,6 +17,7 @@
   import { getTopic, topicName } from '$lib/data.js';
   import { chat, speak } from '$lib/api.js';
   import { addAiInteraction } from '$lib/stores/session.js';
+  import { autoSend } from '$lib/stores/settings.js';
   import VoiceButton from './VoiceButton.svelte';
 
   let { barrier, vision = '', ttsEnabled = false, ondone, onendnow } = $props();
@@ -240,7 +241,7 @@ oder
             large={true}
             ontranscript={handleTranscript}
             onsend={() => { if (response.trim()) recordAndContinue(false); }}
-            autoSend={true}
+            autoSend={$autoSend}
             disabled={speaking}
           />
         </div>

@@ -12,6 +12,7 @@
     startSession, setVision, addBarrier, addBranchChoice,
     addAiInteraction, markEndedEarly, finalizeSession, getSessionSnapshot,
   } from '$lib/stores/session.js';
+  import { autoSend } from '$lib/stores/settings.js';
   import { saveSession } from '$lib/stores/db.js';
   import { browser } from '$app/environment';
   import BarrierVision from '$lib/components/BarrierVision.svelte';
@@ -206,6 +207,10 @@ Nenne 4-8 Hindernisse, verteilt auf mindestens 2 Ebenen. Antworte in der Sprache
 
 <div class="main-page">
   <div class="tts-bar">
+    <label class="auto-send-toggle" title={$t('chat.autoSendHint')}>
+      <input type="checkbox" bind:checked={$autoSend} />
+      <span>{$t('chat.autoSendLabel')}</span>
+    </label>
     <button class="tts-toggle" onclick={() => ttsEnabled = !ttsEnabled}
       title={ttsEnabled ? $t('chat.ttsOff') : $t('chat.ttsOn')}>
       {ttsEnabled ? '🔊' : '🔇'}
@@ -281,9 +286,25 @@ Nenne 4-8 Hindernisse, verteilt auf mindestens 2 Ebenen. Antworte in der Sprache
   }
   .tts-bar {
     display: flex;
+    align-items: center;
     justify-content: flex-end;
+    gap: 12px;
     margin-bottom: 8px;
   }
+  .auto-send-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--text-light);
+    cursor: pointer;
+    user-select: none;
+  }
+  .auto-send-toggle input {
+    margin: 0;
+    cursor: pointer;
+  }
+  .auto-send-toggle:hover { color: var(--text); }
   .tts-toggle {
     border: none;
     background: none;

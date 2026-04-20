@@ -8,6 +8,7 @@
 -->
 <script>
   import { t } from '$lib/i18n';
+  import { autoSend } from '$lib/stores/settings.js';
   import VoiceButton from './VoiceButton.svelte';
 
   let { onsubmit } = $props();
@@ -41,7 +42,7 @@
       large={true}
       ontranscript={handleTranscript}
       onsend={handleAutoSend}
-      autoSend={true}
+      autoSend={$autoSend}
     />
   </div>
 

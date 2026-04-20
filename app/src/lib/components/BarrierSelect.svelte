@@ -1,12 +1,11 @@
 <!--
-  BarrierSelect.svelte — AI analysis results + barrier selection with illustrated cards.
-  Shows AI-suggested barriers as visual topic cards with Kompass illustrations.
-  User selects which barriers to reflect on.
+  BarrierSelect.svelte — AI analysis results. User picks ONE barrier to start.
+  After that barrier is reflected on, the branch screen offers next directions.
 
   Props:
     analyzing — true while waiting for AI response
     analysis — parsed AI response { analysis, barriers[] }
-    onselect(barriers[]) — called when user confirms selection
+    onselect(barrier) — called when user picks one barrier
 
   Used by: +page.svelte (barrier flow)
 -->
@@ -15,29 +14,16 @@
   import TopicCardVisual from './TopicCardVisual.svelte';
 
   let { analyzing, analysis, onselect } = $props();
-  let selected = $state(new Set());
+  let picked = $state(null);
 
-  function toggleBarrier(topicId) {
-    const next = new Set(selected);
-    if (next.has(topicId)) {
-      next.delete(topicId);
-    } else {
-      next.add(topicId);
-    }
-    selected = next;
+  function pickBarrier(topicId) {
+    picked = picked === topicId ? null : topicId;
   }
 
   function handleContinue() {
-    const barriers = analysis.barriers.filter((b) => selected.has(b.topicId));
-    onselect(barriers);
+    const barrier = analysis.barriers.find((b) => b.topicId === picked);
+    if (barrier) onselect(barrier);
   }
-
-  // Auto-select all barriers when analysis arrives
-  $effect(() => {
-    if (analysis?.barriers) {
-      selected = new Set(analysis.barriers.map((b) => b.topicId));
-    }
-  });
 </script>
 
 <div class="select-step">
@@ -52,7 +38,7 @@
     {/if}
 
     <h2>{$t('barriers.suggestedBarriers')}</h2>
-    <p class="desc">{$t('barriers.suggestedDesc')}</p>
+    <p class="desc">{$t('barriers.pickOne')}</p>
 
     <div class="card-grid">
       {#each analysis.barriers as barrier}
@@ -60,20 +46,19 @@
           topicId={barrier.topicId}
           reason={barrier.reason}
           level={barrier.level}
-          selected={selected.has(barrier.topicId)}
-          onclick={() => toggleBarrier(barrier.topicId)}
+          selected={picked === barrier.topicId}
+          onclick={() => pickBarrier(barrier.topicId)}
         />
       {/each}
     </div>
 
     <div class="actions">
-      <span class="count">{selected.size} {$t('barriers.selectedCount')}</span>
       <button
         class="btn-primary"
-        disabled={selected.size === 0}
+        disabled={!picked}
         onclick={handleContinue}
       >
-        {$t('barriers.reflect')}
+        {$t('barriers.startWithThis')}
       </button>
     </div>
   {/if}
@@ -126,13 +111,9 @@
   .actions {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding-top: 16px;
     border-top: 1px solid #e8e8e8;
-  }
-  .count {
-    font-size: 14px;
-    color: var(--text-light);
   }
   .btn-primary {
     padding: 10px 32px;

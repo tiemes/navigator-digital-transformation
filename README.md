@@ -8,11 +8,13 @@ Based on the **Kompass Digitaler Wandel** framework developed by [PHZH](https://
 
 ## What It Does
 
-The Navigator provides five modes of interaction:
+The landing experience is **voice-first and conversational**. You speak (or type) a vision for your school, and the Navigator guides you through short reflections with branching choice points — never a fixed sequence, always "you or end" at every step. The closing page is a set of **themes heard + ideas to sit with**, not a score.
 
-1. **Free Exploration** — Browse the compass, pick any topic, follow connections
-2. **Quick Pulse** — 5 questions (one per dimension), 5–10 min, suggests a starting topic
-3. **Barrier Lens** — Vision prompt → AI-assisted barrier identification → deeper reflection
+Modes of interaction:
+
+1. **Barrier Lens** *(primary)* — Vision prompt → AI suggests possible barriers → pick one → one seed question + up to 3 AI follow-ups → 3-chip branch screen (go deeper / another angle / wrap up) → loop or summary
+2. **Free Exploration** — Browse the compass, pick any topic, follow connections
+3. **Quick Pulse** — 5 questions (one per dimension), 5–10 min, suggests a starting topic *(future)*
 4. **Guided Reflection** — Curated path through connected topics *(future)*
 5. **Team/School Mode** — Collective reflection with perspective comparison *(future)*
 

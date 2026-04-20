@@ -1,31 +1,39 @@
 <!--
   +page.svelte — Primary landing page.
-  Welcome intro → vision prompt → AI barrier analysis → deeper reflection → summary.
-  The vision is the main starting point of the Navigator.
+  Flow: vision → AI barrier analysis → pick 1 barrier → reflect
+        → branch screen (3 AI threads + wrap) → loop OR summary.
+  "End now" is available from every barrier/branch screen.
 -->
 <script>
-  import { lang, t } from '$lib/i18n';
+  import { t } from '$lib/i18n';
   import { chat, speak } from '$lib/api.js';
-  import { getTopic, topicName, getTopicsByDimension } from '$lib/data.js';
-  import { session, startSession, setVision, addBarrier, addAiInteraction, finalizeSession, getSessionSnapshot } from '$lib/stores/session.js';
+  import { getTopic } from '$lib/data.js';
+  import {
+    startSession, setVision, addBarrier, addBranchChoice,
+    addAiInteraction, markEndedEarly, finalizeSession, getSessionSnapshot,
+  } from '$lib/stores/session.js';
   import { saveSession } from '$lib/stores/db.js';
   import { browser } from '$app/environment';
   import BarrierVision from '$lib/components/BarrierVision.svelte';
   import BarrierSelect from '$lib/components/BarrierSelect.svelte';
   import BarrierReflect from '$lib/components/BarrierReflect.svelte';
+  import BarrierBranch from '$lib/components/BarrierBranch.svelte';
   import BarrierSummary from '$lib/components/BarrierSummary.svelte';
 
-  /** @type {'vision' | 'analysis' | 'reflection' | 'summary'} */
+  /** @type {'vision' | 'analysis' | 'reflection' | 'branch' | 'summary'} */
   let step = $state('vision');
   let visionText = $state('');
   let analyzing = $state(false);
   let ttsEnabled = $state(true);
   let aiAnalysis = $state(null);
-  let selectedBarriers = $state([]);
-  let currentBarrierIndex = $state(0);
-  let reflections = $state([]);
 
-  // Start a fresh barrier-lens session
+  /** The barrier currently being reflected on. */
+  let currentBarrier = $state(null);
+  /** Array of finalised barrier reflections (what the summary reads). */
+  let reflections = $state([]);
+  /** Topic IDs that have been explored so far. */
+  let exploredTopicIds = $state([]);
+
   startSession('barrier-lens');
 
   const BARRIER_PROMPT = `Du bist ein Analysepartner für Schulentwicklung im digitalen Wandel. Eine Lehrperson oder Schulleitung hat eine Vision für ihre Schule beschrieben. Deine Aufgabe ist es, mögliche Hindernisse zu identifizieren, die dieser Vision im Weg stehen könnten.
@@ -61,28 +69,22 @@ Nenne 4-8 Hindernisse, verteilt auf mindestens 2 Ebenen. Antworte in der Sprache
       ], { temperature: 0.5, max_tokens: 1024 });
 
       const raw = response.choices?.[0]?.message?.content ?? '';
-      const latencyMs = Date.now() - startTime;
-
       addAiInteraction({
         promptTemplate: 'barrier-analysis-v1',
         model: response.model || 'unknown',
         inputTokens: response.usage?.prompt_tokens,
         outputTokens: response.usage?.completion_tokens,
-        latencyMs,
+        latencyMs: Date.now() - startTime,
       });
 
       try {
         aiAnalysis = JSON.parse(raw);
       } catch {
         const match = raw.match(/\{[\s\S]*\}/);
-        if (match) {
-          aiAnalysis = JSON.parse(match[0]);
-        } else {
-          throw new Error('Could not parse AI response');
-        }
+        if (match) aiAnalysis = JSON.parse(match[0]);
+        else throw new Error('Could not parse AI response');
       }
 
-      // TTS: read analysis aloud if enabled
       if (ttsEnabled && aiAnalysis?.analysis) {
         try {
           const audioBlob = await speak(aiAnalysis.analysis);
@@ -106,38 +108,80 @@ Nenne 4-8 Hindernisse, verteilt auf mindestens 2 Ebenen. Antworte in der Sprache
     }
   }
 
-  function handleBarriersSelected(barriers) {
-    selectedBarriers = barriers;
-    currentBarrierIndex = 0;
-    reflections = barriers.map((b) => ({
-      ...b,
-      selectedByUser: true,
+  function startReflectionOn(barrier) {
+    currentBarrier = {
+      level: barrier.level,
+      topicId: barrier.topicId,
+      reason: barrier.reason,
       suggestedByAI: true,
-      responses: [],
-    }));
+      selectedByUser: true,
+    };
     step = 'reflection';
   }
 
-  function handleReflectionDone(barrierReflections) {
-    reflections[currentBarrierIndex].responses = barrierReflections;
+  function handleBarrierSelected(barrier) {
+    startReflectionOn(barrier);
+  }
 
+  /** Persist a completed reflection and advance to the branch screen. */
+  function finishBarrier(barrierReflections) {
+    const topic = getTopic(currentBarrier.topicId);
     addBarrier({
-      level: reflections[currentBarrierIndex].level,
-      topicId: reflections[currentBarrierIndex].topicId,
-      topicVersion: getTopic(reflections[currentBarrierIndex].topicId)?.version || 1,
-      selectedByUser: true,
-      suggestedByAI: true,
+      level: currentBarrier.level,
+      topicId: currentBarrier.topicId,
+      topicVersion: topic?.version ?? 1,
+      selectedByUser: currentBarrier.selectedByUser,
+      suggestedByAI: currentBarrier.suggestedByAI,
       reflections: barrierReflections,
     });
+    reflections.push({
+      level: currentBarrier.level,
+      topicId: currentBarrier.topicId,
+      responses: barrierReflections,
+    });
+    exploredTopicIds.push(currentBarrier.topicId);
+    step = 'branch';
+  }
 
-    if (currentBarrierIndex < selectedBarriers.length - 1) {
-      currentBarrierIndex++;
-    } else {
-      step = 'summary';
-      finalizeSession();
-      if (browser) {
-        saveSession(getSessionSnapshot()).catch(console.error);
-      }
+  function handleBranchChoice(choice) {
+    addBranchChoice({
+      afterBarrierIndex: reflections.length - 1,
+      offeredTopicIds: choice.offeredTopicIds || [],
+      pickedTopicId: choice.topicId || null,
+      pickedType: choice.type,
+    });
+
+    if (choice.type === 'wrap') {
+      finishSession();
+      return;
+    }
+
+    const topic = getTopic(choice.topicId);
+    const level = inferLevel(topic?.dimension);
+    startReflectionOn({
+      level,
+      topicId: choice.topicId,
+      reason: choice.why || '',
+    });
+  }
+
+  /** Map a dimension ID to a Gkrimpizi level for the badge colour. */
+  function inferLevel(dimension) {
+    if (dimension === 'people-skills') return 'teacher-level';
+    if (dimension === 'infrastructure') return 'system-level';
+    return 'school-level';
+  }
+
+  function handleEndNow() {
+    markEndedEarly();
+    finishSession();
+  }
+
+  function finishSession() {
+    step = 'summary';
+    finalizeSession();
+    if (browser) {
+      saveSession(getSessionSnapshot()).catch(console.error);
     }
   }
 
@@ -145,11 +189,15 @@ Nenne 4-8 Hindernisse, verteilt auf mindestens 2 Ebenen. Antworte in der Sprache
     step = 'vision';
     visionText = '';
     aiAnalysis = null;
-    selectedBarriers = [];
-    currentBarrierIndex = 0;
+    currentBarrier = null;
     reflections = [];
+    exploredTopicIds = [];
     startSession('barrier-lens');
   }
+
+  const remainingBarriers = $derived(
+    (aiAnalysis?.barriers || []).filter((b) => !exploredTopicIds.includes(b.topicId))
+  );
 </script>
 
 <svelte:head>
@@ -175,15 +223,24 @@ Nenne 4-8 Hindernisse, verteilt auf mindestens 2 Ebenen. Antworte in der Sprache
     <BarrierSelect
       {analyzing}
       analysis={aiAnalysis}
-      onselect={handleBarriersSelected}
+      onselect={handleBarrierSelected}
     />
-  {:else if step === 'reflection'}
+  {:else if step === 'reflection' && currentBarrier}
     <BarrierReflect
-      barrier={selectedBarriers[currentBarrierIndex]}
-      index={currentBarrierIndex}
-      total={selectedBarriers.length}
+      barrier={currentBarrier}
+      vision={visionText}
       {ttsEnabled}
-      ondone={handleReflectionDone}
+      ondone={finishBarrier}
+      onendnow={handleEndNow}
+    />
+  {:else if step === 'branch'}
+    <BarrierBranch
+      vision={visionText}
+      lastBarrier={currentBarrier}
+      {exploredTopicIds}
+      {remainingBarriers}
+      onpick={handleBranchChoice}
+      onendnow={handleEndNow}
     />
   {:else if step === 'summary'}
     <BarrierSummary

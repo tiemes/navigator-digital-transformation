@@ -25,9 +25,9 @@ Interactive self-reflection tool for teachers, school leaders, and whole schools
 - [x] HTML prototype with compass view, quick pulse, barrier lens, topic detail, language switching
 - [x] Technology stack decisions: SvelteKit + Hono + Docker + OpenAI-compatible API
 - [x] Phase 1: SvelteKit scaffold, API proxy, Docker, ADRs, per-question versioning
-- [ ] Phase 2: Barrier lens MVP (vision → AI barrier analysis → deeper reflection)
-- [ ] Phase 3: Voice integration (TTS/STT spike, then integrate)
-- [ ] Phase 4: Other modes, English translation, data export, polish
+- [x] Phase 2: Barrier lens MVP — voice-first landing, vision → AI barrier analysis → pick one → seed question + up to 3 AI follow-ups → 3-chip branch screen (deeper / another / wrap) → AI-generated themes + ideas summary; IndexedDB persistence; JSON/CSV export with versions
+- [x] Phase 3: Voice integration (TTS/STT, voice-first landing, auto-mic after TTS)
+- [ ] Phase 4: Other modes (quick pulse, guided reflection), English QA pass, polish
 
 See `TODO.md` for detailed task breakdown per phase.
 
@@ -60,7 +60,10 @@ curl http://localhost:3001/api/health
 | UI strings | `app/src/lib/i18n/{de,en}.json` |
 | i18n module | `app/src/lib/i18n/index.js` — `lang` store + `t` translate function |
 | Data helpers | `app/src/lib/data.js` — `getTopic()`, `getDimension()`, etc. |
-| Components | `app/src/lib/components/` — Header, Footer, TopicCard |
+| Components | `app/src/lib/components/` — BarrierVision, BarrierSelect, BarrierReflect, BarrierBranch, BarrierSummary, VoiceButton, Header, Footer, TopicCardVisual |
+| LLM prompts | `data/prompts/` — `barrier-analysis.md`, `follow-up-question.md`, `branch-options.md`, `ideas-summary.md`, `conversation.md` |
+| Session store | `app/src/lib/stores/session.js` — session shape + helpers (`addBarrier`, `addBranchChoice`, `markEndedEarly`, `addAiInteraction`) |
+| IndexedDB | `app/src/lib/stores/db.js` — `saveSession`, `listSessions` |
 | ADRs | `docs/adr/` — Architecture Decision Records |
 | Research docs | `research/` — question mapping, literature review |
 | Design docs | `docs/design/` — design plan, research insights |
@@ -250,13 +253,35 @@ Every reflection session captures structured data for later analysis:
       "suggestedByAI": true,
       "reflections": [
         {
-          "questionId": "mindsets-q3",
+          "questionId": "mindsets-q1",
           "questionVersion": 2,
+          "questionSource": "navigator",
+          "questionText": "Wie offen sind wir für neue Ansätze?",
           "response": "free text or null",
           "skipped": false,
           "timestamp": "2026-06-10T14:32:15Z"
+        },
+        {
+          "questionId": "mindsets-fu-1",
+          "questionVersion": null,
+          "questionSource": "ai-generated",
+          "questionText": "Was würde euch helfen, offener zu werden?",
+          "response": "...",
+          "skipped": false,
+          "timestamp": "2026-06-10T14:33:02Z"
         }
       ]
+    }
+  ],
+  "branchChoices": [
+    {
+      "afterBarrierIndex": 0,
+      "offeredTopicIds": ["team-culture", "leadership", "learning-culture"],
+      "pickedTopicId": "team-culture",
+      "pickedType": "deeper",
+      "suggestedByAI": true,
+      "pickedByUser": true,
+      "timestamp": "2026-06-10T14:36:12Z"
     }
   ],
   "aiInteractions": [
@@ -266,23 +291,31 @@ Every reflection session captures structured data for later analysis:
       "model": "gpt-4.1-mini",
       "inputTokens": 847,
       "outputTokens": 234,
-      "latencyMs": 1200,
-      "suggestedTopics": ["mindsets", "vision", "cooperation"]
+      "latencyMs": 1200
     }
   ],
   "voiceUsed": false,
+  "endedEarly": false,
   "duration": { "totalSeconds": 480, "activeSeconds": 390 }
 }
 ```
 
-Session data is stored client-side (IndexedDB) and exportable as JSON/CSV. The `questionVersion` and `topicVersion` fields ensure every response can be traced to the exact wording shown, regardless of later edits. No separate mapping file needed — the version travels with the data.
+Session data is stored client-side (IndexedDB) and exportable as JSON/CSV. Research traceability rules:
+
+- `questionVersion` + `topicVersion` let a response be linked to the exact wording shown from `navigator.json`.
+- `questionSource: 'navigator' | 'ai-generated'` distinguishes seed questions from AI follow-ups. AI-generated follow-ups have `questionVersion: null` (no stable version — the text itself is the record).
+- `questionText` is stored verbatim on every response so the exact wording is always recoverable, even for AI-generated follow-ups.
+- `branchChoices[]` logs each branch point: what the AI offered, what the user picked, and whether the session was wrapped up.
+- `endedEarly: true` signals the user clicked "end now" instead of running out of barriers.
+
+No separate mapping file needed — the version and text travel with the data.
 
 ### Modes of Interaction
-1. **Free Exploration:** Browse the compass, pick any topic, follow connections — connection-based navigation
-2. **Quick Pulse:** 5 questions (one per dimension), 5-10 min, suggests a starting topic
-3. **Barrier Lens (primary mode):** Vision prompt → AI-assisted barrier identification → deeper reflection per barrier. Uses Gkrimpizi's three-level framework (teacher / school / system). AI suggests relevant topics from free-text answers.
-4. **Guided Reflection:** Curated path through 6-8 connected topics (future)
-5. **Team/School Mode:** Collective reflection with perspective comparison (future)
+1. **Barrier Lens (primary mode, voice-first):** Vision prompt (voice or text) → AI identifies 4–8 possible barriers on three levels (Gkrimpizi et al., 2023: teacher / school / system) → user picks ONE barrier → one seed question from `navigator.json` + up to 3 AI-generated follow-up questions (AI decides when the reflection is deep enough, user can click "enough on this") → **3-chip branch screen** with AI-suggested next threads (deeper / another angle / third free pick) plus a "wrap up with ideas" button → loop back into a new barrier OR go to the closing page. Closing page = AI-generated **themes heard + ideas to sit with** (NOT an assessment). "End now" link visible throughout. All branch choices and AI-generated follow-ups are logged with version/source metadata for research.
+2. **Free Exploration:** Browse the compass, pick any topic, follow connections — connection-based navigation (compass view at `/explore`)
+3. **Quick Pulse:** 5 questions (one per dimension), 5-10 min, suggests a starting topic *(future)*
+4. **Guided Reflection:** Curated path through 6-8 connected topics *(future)*
+5. **Team/School Mode:** Collective reflection with perspective comparison *(future)*
 
 ### Technical Considerations
 - **LLM-agnostic:** OpenAI-compatible API — same endpoint format for cloud and local (Ollama)
@@ -305,13 +338,16 @@ Session data is stored client-side (IndexedDB) and exportable as JSON/CSV. The `
 ├── app/                              # SvelteKit frontend (adapter-static)
 │   ├── src/
 │   │   ├── lib/
-│   │   │   ├── components/           # Header, Footer, TopicCard, ...
-│   │   │   ├── stores/               # settings.js (language persistence)
+│   │   │   ├── components/           # BarrierVision, BarrierSelect, BarrierReflect,
+│   │   │   │                         #   BarrierBranch, BarrierSummary, VoiceButton, ...
+│   │   │   ├── stores/               # session.js, db.js (IndexedDB), settings.js
 │   │   │   ├── i18n/                 # index.js, de.json, en.json
 │   │   │   ├── data.js               # Data access helpers (getTopic, getDimension, ...)
 │   │   │   └── api.js                # Client-side API calls to proxy
 │   │   ├── routes/
-│   │   │   ├── +page.svelte          # Compass overview (home)
+│   │   │   ├── +page.svelte          # Landing: voice-first barrier-lens flow
+│   │   │   ├── chat/                 # Alternative conversational mode
+│   │   │   ├── explore/              # Compass overview
 │   │   │   └── topic/[id]/           # Topic detail page
 │   │   └── data/
 │   │       └── navigator.json        # Copy of master data (for build)
@@ -320,13 +356,16 @@ Session data is stored client-side (IndexedDB) and exportable as JSON/CSV. The `
 ├── api/                              # Hono proxy server
 │   ├── server.js                     # Entry point + static file serving
 │   ├── routes/chat.js                # POST /api/chat → LLM
+│   ├── routes/transcribe.js          # POST /api/transcribe → STT
+│   ├── routes/tts.js                 # POST /api/tts → TTS
 │   └── .env.example                  # Template for API keys + endpoints
 │
 ├── data/                             # Master data
 │   ├── navigator.json                # MASTER: versioned topics + questions (DE+EN)
 │   ├── navigator.js                  # JS wrapper for browser (prototype)
 │   ├── CHANGELOG.md                  # Log of question/topic changes
-│   └── prompts/                      # LLM system prompts (future)
+│   └── prompts/                      # LLM system prompts (barrier-analysis, follow-up-question,
+│                                     #   branch-options, ideas-summary, conversation)
 │
 ├── docs/
 │   ├── adr/                          # Architecture Decision Records (001-005)

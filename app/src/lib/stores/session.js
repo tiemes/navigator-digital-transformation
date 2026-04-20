@@ -31,9 +31,11 @@ function createSession(mode = 'conversation') {
     },
     visionStatement: null,
     barriers: [],
+    branchChoices: [],
     messages: [],
     aiInteractions: [],
     voiceUsed: false,
+    endedEarly: false,
     duration: { startTime: Date.now(), activeSeconds: 0 },
   };
 }
@@ -94,6 +96,34 @@ export function addBarrier(barrier) {
 export function markVoiceUsed() {
   session.update((s) => {
     s.voiceUsed = true;
+    return s;
+  });
+}
+
+/**
+ * Record a branch choice point (what was offered, what was picked).
+ * @param {object} data
+ *   - afterBarrierIndex: number — index of the barrier just reflected on
+ *   - offeredTopicIds: string[] — the AI-suggested options
+ *   - pickedTopicId: string|null — the chosen topic (null if "wrap")
+ *   - pickedType: 'deeper' | 'another' | 'wrap'
+ */
+export function addBranchChoice(data) {
+  session.update((s) => {
+    s.branchChoices.push({
+      ...data,
+      suggestedByAI: true,
+      pickedByUser: true,
+      timestamp: new Date().toISOString(),
+    });
+    return s;
+  });
+}
+
+/** Mark that the user ended the session early (before running out of barriers). */
+export function markEndedEarly() {
+  session.update((s) => {
+    s.endedEarly = true;
     return s;
   });
 }
